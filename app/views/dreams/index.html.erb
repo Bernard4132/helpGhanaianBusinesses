@@ -24,9 +24,6 @@
         <td><%= dream.dreamername %></td>
         <td><%= dream.dreameremail %></td>
         <td><%= dream.dreamerphone %></td>
-        <td><%= link_to 'Show', dream %></td>
-        <td><%= link_to 'Edit', edit_dream_path(dream) %></td>
-        <td><%= link_to 'Destroy', dream, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Dream', new_dream_path %>
+
