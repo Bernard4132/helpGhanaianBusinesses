@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dreamtype: MyString
+  dreambudget: MyString
+  dreamaddinfo: MyString
+  dreamername: MyString
+  dreameremail: MyString
+  dreamerphone: MyString
+
+two:
+  dreamtype: MyString
+  dreambudget: MyString
+  dreamaddinfo: MyString
+  dreamername: MyString
+  dreameremail: MyString
+  dreamerphone: MyString
