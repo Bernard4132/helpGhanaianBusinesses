@@ -26,15 +26,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
   </head>
 
-  <body style="background-color: #5cc804; border-top: 5px solid #ffffff;">
+ 
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'bootstrap.js' %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
-<script type="text/javascript">
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').focus()
-})
-</script>
-  </body>
+
+
 </html>

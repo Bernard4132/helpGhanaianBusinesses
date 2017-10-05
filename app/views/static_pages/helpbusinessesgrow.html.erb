@@ -1,42 +1,71 @@
-<meta name="description" content="">
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
     <meta name="author" content="">
 
     <title>Help Ghanaian Businesses | Helping Ghanaian Business Grow their Online Presence</title>
 
-<style type="text/css">
+    <script src="https://use.fontawesome.com/fc6d352727.js"></script>
 
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+<style type="text/css">
 .landingheader{
-        color:  #ffffff;
+        color:  #5cc804;
         font-family: 'Roboto Slab', serif;    
         margin: 10px;
         text-align: center;
         margin-top: 25px;
 }
 
-.phead{
-     color:  #5cc804;
+.testimonial{
         font-family: 'Roboto Slab', serif;    
-        margin: 10px;
         text-align: center;
-        padding-bottom: 10px;
-        border-bottom: 3px dashed #5cc804;
+        color: #ffffff;
 }
-
 
 .landsubtext{
-        color: #ffffff;
-        font-family: 'Raleway', sans-serif;    
-        margin: 10px;
-        text-align: center;
-        margin-top: 25px;
-}
-
-.landsubtext1{
         color: #5cc804;
         font-family: 'Raleway', sans-serif;    
         margin: 10px;
         text-align: center;
         margin-top: 25px;
+}
+
+.landhypes{
+    color: #ffffff;
+    font-family: 'Roboto Slab', serif;    
+}
+
+.centerform{
+  margin: auto;
+  background-color: transparent;
+  padding: 20px;
+}
+
+.autocent{
+    margin-left: 30%;
+margin-right:30%;
+width: 40%; 
 }
 
 .autocent1{
@@ -45,24 +74,49 @@ margin-right:35%;
 width: 30%; 
 }
 
-.quanfirm{
-   background-color: #fdca00;
-    border: 1px solid #5cc804;
-    color: #ffffff;
-    font-weight: 900;
-    -webkit-box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.33);
--moz-box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.33);
-box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.33);
+.form-control:focus {
+  border-color: rgba(252, 209, 22, 0.8);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(252, 209, 22, 0.6);
 }
 
-.quanfirm:hover{
-   background-color: #ffd11a;
+.input-lg{
+        border: 1px solid #5cc804;
+}
+
+.form-control::-moz-placeholder {
+  color: #4d4d4d;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #4d4d4d;
+}
+.form-control::-webkit-input-placeholder {
+  color: #4d4d4d;
+}
+
+.btnbuy{
+    background-color: #fdca00;
+    border: 1px solid #5cc804;
+    color: #5cc804;
+    font-weight: 900;
+}
+
+.quanfirm{
+   background-color: #fdca00;
     border: 1px solid #5cc804;
     color: #ffffff;
     font-weight: 900;
     -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
 -moz-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
 box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
+}
+
+.quanfirm:hover{
+   background-color: #fdca00;
+    border: 1px solid #5cc804;
+    color: #ffffff;
+    font-weight: 900;
+
 }
 
 .quanfirm:active{
@@ -70,9 +124,7 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
     border: 1px solid #5cc804;
     color: #ffffff;
     font-weight: 900;
-    -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
--moz-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
+
 }
 
 .quanfirm1{
@@ -80,50 +132,77 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
     border: 1px solid #5cc804;
     color: #ffffff;
     font-weight: 900;
-    -webkit-box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.33);
--moz-box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.33);
-box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.33);
+    -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
+-moz-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
+box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
 }
 
 .quanfirm1:hover{
-   background-color: #68e105;
+   background-color: #5cc804;
     border: 1px solid #5cc804;
     color: #ffffff;
     font-weight: 900;
-    -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
--moz-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
+
 }
 
 .quanfirm1:active{
-   background-color: #68e105;
+   background-color: #5cc804;
     border: 1px solid #5cc804;
     color: #ffffff;
     font-weight: 900;
-    -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
--moz-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
+
+}
+
+.btnbuy:hover{
+    background-color: #5cc804;
+    border: 1px solid #5cc804;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+.btnbuy:active{
+    background-color: #5cc804;
+    border: 1px solid #5cc804;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+.informationadded{
+    background-color: #5cc804;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.infoaddlh{
+         font-family: 'Raleway', sans-serif;
+         text-align: justify;
+         color: white;       
+}
+
+.informationhypecontainer{
+    margin: 20px;
+}
+
+.landfooter{
+    background-color: white;
+    padding: 40px;
 }
 
 .modalsubmit{
-    background-color: #ffffff;
-    border: 1.5px solid #5cc804;
-    width: 100%;
-    color: #5cc804;
-    font-weight: 700;
+    background-color: #5cc804;
+    border: 0px solid #5cc804;
 }
 
 .modalsubmit:hover{
-    background-color: #5cc804;
+    background-color: #ffffff;
     border: 1px solid #5cc804;
-    color: #ffffff;
-    font-weight: 900;
+    color: #5cc804;
 }
 
 .modalsubmit:active{
-    background-color: #5cc804;
+    background-color: #ffffff;
     border: 1px solid #5cc804;
-    color: #ffffff;
+    color: #5cc804;
 }
 
 .sidemarg{
@@ -131,7 +210,7 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
 }
 
 .modalbuytitle{
-  font-size: 16px;
+  font-size: 25px;
   font-family: 'Roboto Slab', serif;
   text-align: center;
   color: #000;
@@ -147,6 +226,12 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
 
 .testibreak{
    visibility: hidden;
+}
+
+.fillform{
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
 }
 
 .portfolio{
@@ -299,48 +384,28 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
    
 }
 
-.infoaddlh{
-         font-family: 'Raleway', sans-serif;
-         text-align: justify;
-         color: white;       
+.phead{
+     color:  #5cc804;
+        font-family: 'Roboto Slab', serif;    
+        margin: 10px;
+        text-align: center;
+        padding-bottom: 10px;
+        border-bottom: 3px dashed #5cc804;
 }
 
-.informationhypecontainer{
-    margin: 20px;
+.landsubtext1{
+        color: #5cc804;
+        font-family: 'Raleway', sans-serif;    
+        margin: 10px;
+        text-align: center;
+        margin-top: 25px;
 }
-
-.form-control:focus {
-  border-color: rgba(140, 140, 140, 0.8);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(140, 140, 140, 0.6);
-}
-
-
-.landhypes{
-    color: #ffffff;
-    font-family: 'Roboto Slab', serif;    
-}
-
-.landfooter{
-    background-color: #5cc804;
-    padding: 40px;
-}
-
-.fillform{
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 20px;
-  padding-top: 10px;
-   -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.35);
--moz-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.35);
-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.35);
-}
-
 
 
 @media only screen and (min-width : 100px) and (max-width : 600px) {
 
     .landingheader{
-        color:  #ffffff;
+        color:  #5cc804;
         font-family: 'Roboto Slab', serif;    
         margin: 10px;
         text-align: center;
@@ -356,7 +421,7 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.35);
 }
 
 .landsubtext{
-        color: #ffffff;
+        color: #5cc804;
         font-family: 'Raleway', sans-serif;    
         margin: 10px;
         text-align: center;
@@ -395,35 +460,90 @@ width: 80%;
 box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
 }
 
+
+
 }
-
-
 
 </style>
 
- <body style="background-color: #5cc804; border-top: 5px solid #ffffff;">
 
-<section class="topbody">
-     <div class="container" style="">
-    <div class="row">
+<body style="background-color: #ffffff; border-top: 5px solid #5cc804;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+<br>
+    <p style="width: 100%; margin-left: auto; margin-right: auto;"><img style="margin-left: auto; margin-right: auto;" 
+      src="https://res.cloudinary.com/nikasemo/image/upload/v1507221925/sitelogogbnh_xzbfky.png" class="img-responsive"></p>
+    
+    <h1 class="landingheader">We Help Ghanaian Businesses Grow Online!</h1>
+<h3 class="landsubtext">We build Solution Oriented Websites that will help you get more sales, more customers, and more clients.</h3>
 
+             <p style="width: 100%; text-align: center;">
+            <button type="button" class="btn btn-primary btn-lg autocent1 quanfirm" data-toggle="modal" data-target="#myModal"><a style="color: #fff; text-decoration: none;" href="#loyalty">Get Online With Us Now!</a></button></p>
+
+
+<p style="text-align: center; color: #5cc804; margin-top: 7px;"><small>Get all your social media accounts setup for you for free by professionals</small></p>
+</div>
 
  <p style="width: 100%; margin-left: auto; margin-right: auto;"><img style="margin-left: auto; margin-right: auto;" 
-  src="https://res.cloudinary.com/nikasemo/image/upload/v1506955677/sitelogogbnh_xsb7tx.jpg" class="img-responsive"></p>
-     <% if notice %>
-<div class="alert alert-success alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <p class="notice"><%= notice %></p>
-</div>
-<% end %>
+  src="https://res.cloudinary.com/nikasemo/image/upload/v1507221815/homewebimg_cj7n9a.png" class="img-responsive"></p>
 
-    <h1 class="landingheader" style="margin-bottom: 25px;">We help businesses grow online</h1>
+</div>
+</div>
+</div>
+<section class="informationadded">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 co-lg-4 col-sm-12">
+            <div class="informationhypecontainer">
+                <img src="https://res.cloudinary.com/nikasemo/image/upload/v1507221814/webdesign_xg11ar.png" width="40px" height="40px" class="img-responsive">
+                <h4 class="landhypes">Modern websites with modern technology.</h4>
+                <p class="infoaddlh">
+                 You have nothing to bother about when it comes to competence. Our team of experienced designers and programmers use the latest techniques and trends to build your beautiful, charming, and purpose driven websites. We do it with the passion that brings results.
+                
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4 co-lg-4 col-sm-12">
+            <div class="informationhypecontainer">
+                <img src="https://res.cloudinary.com/nikasemo/image/upload/v1507221814/marketingpeformance_yygryf.png" width="40px" height="40px" class="img-responsive">
+                <h4 class="landhypes">Marketing your website to the World.</h4>
+                <p class="infoaddlh">
+                 Having a website alone does not guarantee you success in this web 2.0 era. Our Internet marketing experts use various platforms, like facebook, google search and email marketing to ensure continous engagement for positive results in your business.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4 co-lg-4 col-sm-12" style="margin-bottom: 20px;">
+            <div class="informationhypecontainer">
+                <img src="https://res.cloudinary.com/nikasemo/image/upload/v1507221814/maintenancewebsites_aiur7x.png" width="40px" height="40px" class="img-responsive">
+                <h4 class="landhypes">Best Website Support and Maintenance.</h4>
+                <p class="infoaddlh">
+                 With Maintenance being key to longevity, we always update your website with the newest web technologies that will put you at the cutting edge of the market. The internet is the fastest growing engine the world has ever seen in its entire history. We won't leave you behind.
+                </p>
+            </div>
+        </div>
+   <div id="loyalty">
+      <h2 class="landingheader" style="margin-bottom: 25px; color: white; margin-top: 20px;">Get online with us. Fill form below..</h2>
+   </div>
 
 <div class="col-sm-12 col-md-6 col-md-offset-3">
-<div class="fillform" id="loyalty">
+<div class="fillform">
 <h1 class="landingheader" style="color: #000; font-size: 25px; margin-bottom: 25px;">Kindly fill this form.</h1>
 
        <%= form_for(@dream) do |f| %>
+        <div class="form-group">
+    <label>Name</label>
+    <input type="text" name="dream[dreamername]" id="dream_dreamername" class="form-control" placeholder="Your Name">
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" name="dream[dreameremail]" id="dream_dreameremail" class="form-control" placeholder="Email Address">
+  </div>
+  <div class="form-group">
+    <label>Phone Number</label>
+    <input type="number" name="dream[dreamerphone]" id="dream_dreamerphone" class="form-control" placeholder="Your Phone number">
+  </div>
+  <br>
    <div class="form-group">
     <label>What type of website do you want?</label><br>
         <select class="selectpicker" name="dream[dreamtype]" id="dream_dreamtype" style="width: 100%;">
@@ -455,25 +575,7 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
       Urgent
     </label>
   </div>
-  <div class="form-group">
-    <label for="textarea">Anything we didn't ask? Kindly let us know.</label>
-   <textarea class="form-control" name="dream[dreamaddinfo]" id="dream_dreamaddinfo" rows="3"></textarea>
-  </div>
-  <hr>
-<h4 style="font-weight: bold; text-align: center;">Your Contact Details</h4><br>
-  <div class="form-group">
-    <div class="form-group">
-    <label>Name</label>
-    <input type="text" name="dream[dreamername]" id="dream_dreamername" class="form-control" placeholder="Your Name">
-  </div>
-    <label>Email</label>
-    <input type="email" name="dream[dreameremail]" id="dream_dreameremail" class="form-control" placeholder="Email Address">
-  </div>
-  <div class="form-group">
-    <label>Phone Number</label>
-    <input type="number" name="dream[dreamerphone]" id="dream_dreamerphone" class="form-control" placeholder="Your Phone number">
-  </div>
-  <br>
+ 
        <p style="color: #5cc804; text-align: center;">Response time is usually within a day.</p> 
         <button type="submit" class="btn btn-primary modalsubmit">Submit</button>
       </div>
@@ -484,7 +586,9 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
 
 </div>
 
+
         
+
     </div>
 </div>
 </section>
@@ -575,33 +679,53 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
             </div>
           <br>
           <h3 class="landsubtext1">Our websites provided real value to our client and they have never regretted working a website. Having a website in this day and age a great way to grow your business.</h3>
-          <p style="width: 100%; margin-top: 20px;">
-            <button type="button" class="btn btn-primary btn-lg autocent1 quanfirm1" data-toggle="modal" data-target="#myModal">
-           <a style="color: #fff;" href="#loyalty">Contact Us Today</a>
-            </button>
-          </p>
+           <p style="width: 100%; text-align: center; margin-top: 20px;">
+            <button type="button" class="btn btn-primary btn-lg autocent1 quanfirm1" data-toggle="modal" data-target="#myModal"><a style="color: #fff; text-decoration: none;" href="#loyalty">Get Online With Us Now!</a></button></p>
           <p style="text-align: center; color: #000; font-size: 12px; margin-top: 10px; font-family: 'Raleway', sans-serif;"><small>Get all your social media accounts setup for you <br>for free by professionals</small></p>
         </div>
 </div>
 
 
 </section>
+
+<section class="informationadded">
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+            <h1 class="testimonial">
+              "Having had prior experience with other<br> web developers, The experience Help<br> Ghanaian Businesses gave me was<br> different because they truly<br> are. I think they<br> are the Best!"<br>
+              <br class="testibreak">
+              <span class="testimon" style="font-size: 16px; font-weight: 500; font-family: 'Raleway', sans-serif;">Agent Kofi, C.E.O of Ghanagold</span>
+            </h1>
+        </div>
+
+        <div class="col-sm-12">
+             <p style="width: 100%;">
+            <button type="button" class="btn btn-primary btn-lg autocent1 quanfirm" data-toggle="modal" data-target="#myModal"><a style="color: #fff; text-decoration: none;" href="#loyalty">Get Online With Us Now!</a></button>
+             </p>
+        </div>
+</div>
+</div>
+</section>
+
+
 <section class="landfooter">
 <p style="text-align: center; line-height: 25px;">
-<span style="margin-right: 15px;"><i class="fa fa-envelope-o" aria-hidden="true" style="color: #fff;"></i>
-<span style="margin-left: 0px; color: #fff;">help@helpghanaianbusinesses.com</span>
+<span style="margin-right: 15px;"><i class="fa fa-envelope-o" aria-hidden="true" style="color: #000;"></i>
+<span style="margin-left: 0px; color: #000;">help@helpghanaianbusinesses.com</span>
 </span><br>
 <span style="margin-right: 15px;">
- <i class="fa fa-phone" aria-hidden="true" style="color: #fff;"></i>
-<span style="margin-left: 0px; color: #fff;">+233 507177187, +233 553393260</span>
+ <i class="fa fa-phone" aria-hidden="true" style="color: #000;"></i>
+<span style="margin-left: 0px; color: #000;">+233 507177187, +233 553393260</span>
 </span><br>
 <span>
-<i class="fa fa-whatsapp" aria-hidden="true" style="color: #fff;"></i>
-<span style="margin-left: 0px; color: #fff;">+233 553393260</span>
+<i class="fa fa-whatsapp" aria-hidden="true" style="color: #000;"></i>
+<span style="margin-left: 0px; color: #000;">+233 553393260</span>
 </span>
 </p>
 </section>
 
+
 </body>
 
-
+</html>
