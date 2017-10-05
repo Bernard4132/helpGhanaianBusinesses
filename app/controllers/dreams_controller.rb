@@ -28,7 +28,7 @@ class DreamsController < ApplicationController
 
     respond_to do |format|
       if @dream.save
-        format.html { redirect_to "/", notice: 'Form successfully Submitted. We will get back to you soon. Thank you.' }
+        format.html { redirect_to "/helpbusinessesgrow", notice: 'Form successfully Submitted. We will get back to you soon. Thank you.' }
         format.json { render :show, status: :created, location: @dream }
       else
         format.html { render :new }
