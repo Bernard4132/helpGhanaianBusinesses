@@ -484,7 +484,7 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
 <h3 class="landsubtext">We build Solution Oriented Websites that will help you get more sales, more customers, and more clients.</h3>
 
              <p style="width: 100%; text-align: center;">
-            <button type="button" class="btn btn-primary btn-lg autocent1 quanfirm" data-toggle="modal" data-target="#myModal"><a style="color: #fff; text-decoration: none;" href="#loyalty">Get Online With Us Now!</a></button></p>
+            <button type="button" class="btn btn-primary btn-lg autocent1 quanfirm" data-toggle="modal" data-target="#myModal"><a style="color: #fff; text-decoration: none;" id="loyalty">Get Online With Us Now!</a></button></p>
 
 
 <p style="text-align: center; color: #5cc804; margin-top: 7px;"><small>Get all your social media accounts setup for you for free by professionals</small></p>
@@ -527,7 +527,7 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
                 </p>
             </div>
         </div>
-   <div id="loyalty">
+   <div id="myDiv">
       <h2 class="landingheader" style="margin-bottom: 25px; color: white; margin-top: 20px;">Get online with us. Fill form below..</h2>
    </div>
 
@@ -685,7 +685,7 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
           <br>
           <h3 class="landsubtext1">Our websites provided real value to our client and they have never regretted working a website. Having a website in this day and age a great way to grow your business.</h3>
            <p style="width: 100%; text-align: center; margin-top: 20px;">
-            <button type="button" class="btn btn-primary btn-lg autocent1 quanfirm1" data-toggle="modal" data-target="#myModal"><a style="color: #fff; text-decoration: none;" href="#loyalty">Get Online With Us Now!</a></button></p>
+            <button type="button" class="btn btn-primary btn-lg autocent1 quanfirm1" data-toggle="modal" data-target="#myModal"><a style="color: #fff; text-decoration: none;" id="loyalty1">Get Online With Us Now!</a></button></p>
           <p style="text-align: center; color: #000; font-size: 12px; margin-top: 10px; font-family: 'Raleway', sans-serif;"><small>Get all your social media accounts setup for you <br>for free by professionals</small></p>
         </div>
 </div>
@@ -706,7 +706,7 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
 
         <div class="col-sm-12">
              <p style="width: 100%;">
-            <button type="button" class="btn btn-primary btn-lg autocent1 quanfirm" data-toggle="modal" data-target="#myModal"><a style="color: #fff; text-decoration: none;" href="#loyalty">Get Online With Us Now!</a></button>
+            <button type="button" class="btn btn-primary btn-lg autocent1 quanfirm" data-toggle="modal" data-target="#myModal"><a style="color: #fff; text-decoration: none;" id="loyalty2">Get Online With Us Now!</a></button>
              </p>
         </div>
 </div>
@@ -732,5 +732,27 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
 
 
 </body>
+
+<script type="text/javascript">
+
+$("#loyalty").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#myDiv").offset().top
+    }, 1000);
+});
+
+$("#loyalty1").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#myDiv").offset().top
+    }, 1000);
+});
+
+$("#loyalty2").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#myDiv").offset().top
+    }, 1000);
+});
+
+</script>
 
 </html>
