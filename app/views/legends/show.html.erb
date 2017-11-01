@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @legend.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @legend.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @legend.phone %>
+</p>
+
+<%= link_to 'Edit', edit_legend_path(@legend) %> |
+<%= link_to 'Back', legends_path %>

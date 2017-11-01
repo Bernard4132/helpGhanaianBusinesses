@@ -1,0 +1,216 @@
+<style type="text/css">
+.aduins{
+ background:linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.1)),url(https://res.cloudinary.com/nikasemo/image/upload/v1509509744/webbss_abifyz.jpg);
+  background-position:center;
+  min-height: 200px;
+}
+
+.sectionname{
+   text-align: left; 
+   color: white; 
+   position: relative; 
+   top: 75px; 
+   font-weight: 500; 
+   font-size: 30px; 
+   text-shadow: 1px 0px 6px rgba(0, 0, 0, 1);
+}
+
+.sectiondescrip{
+	text-align: left; 
+   color: white; 
+   position: relative; 
+   top: 80px; 
+   font-weight: 300; 
+   font-size: 18px; 
+}
+
+.descriphold{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.ctahold{
+  margin: 30px;
+  background-color: #2d76ed;
+  border: 8px solid #77a9f9;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.websubmit{
+  background-color: #43cc30;
+  width: 80%;
+  border-bottom: 2px solid #67f254;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}
+
+.websubmit:hover{
+  background-color: #43cc30;
+  width: 80%;
+  border-bottom: 3px solid #2ae00f;
+  font-weight: 500;
+  color: white;
+}
+
+.websubmit:active{
+  background-color: #43cc30;
+  width: 80%;
+  border-bottom: 3px solid #2ae00f;
+  font-weight: 500;
+  color: white;
+}
+
+.leadsection{
+  padding-left: 50px;
+  padding-top: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+.registerbox{
+  margin: 12px;
+  background-color: #2d76ed;
+  border: 8px solid #77a9f9;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.websubmit1{
+  background-color: #43cc30;
+  border-bottom: 2px solid #67f254;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}
+
+.websubmit1:hover{
+  background-color: #43cc30;
+  border-bottom: 3px solid #2ae00f;
+  font-weight: 500;
+  color: white;
+}
+
+.websubmit1:active{
+  background-color: #43cc30;
+  border-bottom: 3px solid #2ae00f;
+  font-weight: 500;
+  color: white;
+}
+
+.leadsection{
+  background:linear-gradient(0deg,rgba(255,255,255,0.98),rgba(255,255,255,0.90)),url(https://res.cloudinary.com/nikasemo/image/upload/v1509525706/digireg_mnpncv.jpg);
+      background-position:center;
+}
+
+.learnregh1{
+  text-align: center;
+  color: #2d76ed;
+  font-weight: 900;
+  text-shadow: 1px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+</style>
+
+<section class="aduins">
+  <div class="container">
+    <div class="row" style="margin-top: 50px">
+      <div class="col-lg-12">
+        <h1 class="sectionname" style="">Websites</h1>
+        <p class="sectiondescrip">Websites are an essential part of your presence online because it is your front facing view to the internet. That's your gateway to the internet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sectionbody">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-7 col-md-12">
+				<div class="descriphold">
+          <h1>Why have a Website?</h1>
+          <p style="font-weight: 700;">Websites have become a necessary instrument for every successful internet presence. It is a basic and a required pre-requisite for online success.</p>
+          <p style="font-weight: 300; text-align: left;">
+           A website is the gateway between every brand and the internet. It must be great! Just like having an office in the the physical world, so is owning a website in the digital world. A website is your own real estate in the digital world on which you can build. Having a website gives you the needed exposure by putting you company to the whole wide world. You can receive requests from all parts of the globe. Lets look at it this way. If you put up a billboard to promote your product it will cost you not less than 5000 cedis. Your billboard is limited as to whom can see it. A good website will cost you way less and here is the catch... everyone from every part of the world can see it. You become unlimited. And websites can do just more than promoting your brand. Currently there are 10 million Ghanaians visitiong the internet everyday. You do not want to miss out on your potential customers. Your competetion will if you dont. 
+           <strong>Dont miss out on this opportunity.</strong> Fill our website request form and lets get you from ground up. You wont be dissapointed. There is no reason to wait. Make your request today!
+          </p>
+        </div>
+			</div>
+			<div class="col-lg-5 col-md-12">
+        <div class="ctahold">
+          <h1 class="landingheader" style="font-weight: bold; text-align: center; color: white; font-size: 25px; margin-bottom: 25px;">Kindly fill this form.</h1>
+
+       <%= form_for(@dream) do |f| %>
+   <div class="form-group">
+    <label style="font-weight: bold; color: white;">What type of website do you want?</label><br>
+        <select class="selectpicker" name="dream[dreamtype]" id="dream_dreamtype" style="width: 100%;">
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Personal Website">Personal Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Portfolio Website">Portfolio Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Company Website">Company Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Church Website">Church Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="School Website">School Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Business Website">Business Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Ecommerce Web Applications">Ecommerce Web Applications</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Job Portal Web Applications">Job Portal Web Applications</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Customized Business Web Applications">Customized Business Web Applications</option>
+        </select>
+      </div>
+       <div class="form-group">
+    <label style="font-weight: bold; color: white;">What is your budget Allocation for your website?</label><br>
+        <select class="selectpicker" name="dream[dreambudget]" id="dream_dreambudget" style="width: 100%;">
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="300 - 499">300 - 499 cedis</option>
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="500 - 699">500 - 699 cedis</option>
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="700 - 999">700 - 999 cedis</option>
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="1000 - 1499">1000 - 1499 cedis</option>
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="2000 - 3999">2000 - 3999 cedis</option>
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="4000 +">4000 cedis +</option>
+        </select>
+      </div>
+  <hr>
+<h4 style="font-weight: bold; text-align: center; color: white;">Your Contact Details</h4><hr>
+  <div class="form-group">
+    <div class="form-group">
+    <label style="font-weight: bold; color: white;">Name</label>
+    <input type="text" name="dream[dreamername]" id="dream_dreamername" class="form-control" placeholder="Your Name">
+  </div>
+    <label style="font-weight: bold; color: white;">Email</label>
+    <input type="email" name="dream[dreameremail]" id="dream_dreameremail" class="form-control" placeholder="Email Address">
+  </div>
+  <div class="form-group">
+    <label style="font-weight: bold; color: white;">Phone Number</label>
+    <input type="text" name="dream[dreamerphone]" id="dream_dreamerphone" class="form-control" placeholder="Your Phone number">
+  </div>
+  <br>
+       <p style="color: #fff; text-align: center;">Response time is usually within an hour.</p> 
+        <p style="text-align: center;"><button type="submit" class="btn btn-primary websubmit btn-lg">Send Enquiry</button></p>
+      </div>
+       
+      
+      <% end %>
+        </div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Potentials</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Digim</th>
+      <th>Searcheo</th>
+      <th>Socem</th>
+      <th>Orgname</th>
+      <th>Goal</th>
+      <th>Webs</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @potentials.each do |potential| %>
+      <tr>
+        <td><%= potential.name %></td>
+        <td><%= potential.phone %></td>
+        <td><%= potential.email %></td>
+        <td><%= potential.digim %></td>
+        <td><%= potential.searcheo %></td>
+        <td><%= potential.socem %></td>
+        <td><%= potential.orgname %></td>
+        <td><%= potential.goal %></td>
+        <td><%= potential.webs %></td>
+        <td><%= link_to 'Show', potential %></td>
+        <td><%= link_to 'Edit', edit_potential_path(potential) %></td>
+        <td><%= link_to 'Destroy', potential, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Potential', new_potential_path %>
