@@ -40,6 +40,8 @@ gem 'bcrypt', '~> 3.1.11', platforms: [:ruby, :x64_mingw, :mingw]
 
 gem 'carrierwave', '~> 1.0'
 
+gem 'fog'
+
 gem 'friendly_id', '~> 5.1.0'
 
 group :production do
