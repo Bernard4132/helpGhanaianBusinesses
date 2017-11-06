@@ -10,6 +10,7 @@ class PotentialsController < ApplicationController
   # GET /potentials/1
   # GET /potentials/1.json
   def show
+     render layout: "lead"
   end
 
   # GET /potentials/new

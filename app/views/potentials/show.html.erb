@@ -1,49 +1,273 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @potential.name %>
-</p>
+ 
+ <style type="text/css">
 
-<p>
-  <strong>Phone:</strong>
-  <%= @potential.phone %>
-</p>
+   a {
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
 
-<p>
-  <strong>Email:</strong>
-  <%= @potential.email %>
-</p>
+a:hover {
+  text-decoration: none;
+}
 
-<p>
-  <strong>Digim:</strong>
-  <%= @potential.digim %>
-</p>
 
-<p>
-  <strong>Searcheo:</strong>
-  <%= @potential.searcheo %>
-</p>
+  .navbackground{
+     background-color: #ffffff;
+    -webkit-box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.89);
+-moz-box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.89);
+box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.89);
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 999;
+  }
 
-<p>
-  <strong>Socem:</strong>
-  <%= @potential.socem %>
-</p>
 
-<p>
-  <strong>Orgname:</strong>
-  <%= @potential.orgname %>
-</p>
 
-<p>
-  <strong>Goal:</strong>
-  <%= @potential.goal %>
-</p>
+.navbar-brand1 {
+  margin-right: 1rem;
+  margin-top: 14px;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
 
-<p>
-  <strong>Webs:</strong>
-  <%= @potential.webs %>
-</p>
 
-<%= link_to 'Edit', edit_potential_path(@potential) %> |
-<%= link_to 'Back', potentials_path %>
+.logtins{
+  color: #000; 
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+}
+
+
+
+.sectionname{
+   text-align: left; 
+   color: white; 
+   position: relative; 
+   top: 75px; 
+   font-weight: 500; 
+   font-size: 30px; 
+   text-shadow: 1px 0px 6px rgba(0, 0, 0, 1);
+}
+
+.sectiondescrip{
+  text-align: left; 
+   color: white; 
+   position: relative; 
+   top: 80px; 
+   font-weight: 300; 
+   font-size: 18px; 
+}
+
+.descriphold{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.ctahold{
+  margin: 30px;
+  background-color: #2d76ed;
+  border: 8px solid #77a9f9;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.websubmit{
+  background-color: #43cc30;
+  width: 80%;
+  border-bottom: 2px solid #67f254;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}
+
+.websubmit:hover{
+  background-color: #43cc30;
+  width: 80%;
+  border-bottom: 3px solid #2ae00f;
+  font-weight: 500;
+  color: white;
+}
+
+.websubmit:active{
+  background-color: #43cc30;
+  width: 80%;
+  border-bottom: 3px solid #2ae00f;
+  font-weight: 500;
+  color: white;
+}
+
+.leadsection{
+  padding-left: 50px;
+  padding-top: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+.registerbox{
+  margin: 12px;
+  background-color: #2d76ed;
+  border: 8px solid #77a9f9;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.websubmit1{
+  background-color: #43cc30;
+  border-bottom: 2px solid #67f254;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}
+
+.websubmit1:hover{
+  background-color: #43cc30;
+  border-bottom: 3px solid #2ae00f;
+  font-weight: 500;
+  color: white;
+}
+
+.websubmit1:active{
+  background-color: #43cc30;
+  border-bottom: 3px solid #2ae00f;
+  font-weight: 500;
+  color: white;
+}
+
+.headerlandfont{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 39px;
+}
+
+ .foothead{
+      color: white;
+     }
+
+     .page-footer{
+      background:linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(https://res.cloudinary.com/nikasemo/image/upload/v1509525706/digireg_mnpncv.jpg);
+      background-position:center;
+     }
+
+@media only screen and (min-width : 100px) and (max-width : 600px) {
+
+  .sectionname{
+   text-align: left; 
+   color: white; 
+   position: relative; 
+   top: 45px; 
+   font-weight: 500; 
+   font-size: 25px; 
+   text-shadow: 1px 0px 6px rgba(0, 0, 0, 1);
+}
+
+.sectiondescrip{
+  text-align: left; 
+   color: white; 
+   position: relative; 
+   top: 50px; 
+   font-weight: 300; 
+   font-size: 18px; 
+}
+
+.ctahold{
+  margin: 10px;
+  background-color: #2d76ed;
+  border: 8px solid #77a9f9;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.leadsection{
+  padding-left: 10px;
+  padding-top: 50px;
+  padding-right: 10px;
+  padding-bottom: 50px;
+}
+
+.headingholding{
+  font-size: 25px;
+}
+
+.headerlandfont{
+  font-size: 30px;
+}
+
+}
+
+
+  </style>
+
+ <section class="navbackground">
+      <div class="container">
+    <p style="text-align: center;" class="navbar-brand1"><a class="navbar-brand1" href="/" style="text-align: center;"><img src="https://res.cloudinary.com/nikasemo/image/upload/v1509928153/nlogosmall_vbfl6d.png" height="48px" width="55px" style="margin-right:5px; margin-top: 0px;">
+          <span style="position:relative; top: 0px; color: #000;" class="logtins">Help Ghanaian Businesses</span></a></p>
+      </div>
+    </section>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <section class="leadmain">
+
+      <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h1 style="text-align: center;" class="headerlandfont">Thank you for Contacting Us!<br>
+              We are going to help you grow your Business with proven tactics...</h1>
+              <p style="text-align: center;"><img src="https://res.cloudinary.com/nikasemo/image/upload/v1509523565/targetregister_fbrvd8.png" class="img-fluid"></p>
+              <p style="text-align: center;">Building and growing your business needs three main pillars; Having a website, leveraging social media, and using email marketing.<br>
+              We are going to help you setup these three pillars and most importantly use them to grow your business. You will receive an email from us soon.
+              </p>
+              <p style="text-align: center;"><a href="/">Retun to our Homepage</a></p>
+            </div>
+          </div>
+      </div>
+    </section>
+<br>
+   
+
+    <footer class="py-5 bg-dark page-footer">
+      <div class="container">
+        <div class="row">
+        <div class="col-lg-4">
+          <div class="innerfooter">
+            <h5 class="foothead">About Us</h5>
+            <ul style="list-style:none; padding-left:0;">
+            <li><a href="" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">
+              Help Ghanaian Businesses is a digital marketing agency that helps Ghanaian Businesses to leverage the power of the internet to grow their businesses.
+            </a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-lg-4">
+          <div class="innerfooter">
+           
+            <ul style="list-style:none; padding-left:0;">
+           
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="innerfooter">
+             <h5 class="foothead">Visit Our Social Media</h5>
+             <span><a href=""><i class="fa fa-facebook-official fa-2x" style="color: white; margin-right: 5px;" aria-hidden="true"></i></a></span>
+             <span><a href=""><i class="fa fa-twitter-square fa-2x" style="color: white; margin-right: 5px;" aria-hidden="true"></i></a></span>
+             <span><a href=""><i class="fa fa-instagram fa-2x" style="color: white; margin-right: 5px;" aria-hidden="true"></i></a></span>
+             <span><a href=""><i class="fa fa-google-plus-square fa-2x" style="color: white; margin-right: 5px;" aria-hidden="true"></i></a></span>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-sm-12">
+        <p class="m-0 text-center text-white">Copyright &copy; Help Ghanaian Businesses, 2017</p>
+      </div>
+    </div>
+      </div>
+      <!-- /.container -->
+    </footer>
