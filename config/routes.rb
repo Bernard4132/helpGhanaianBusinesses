@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   match 'seo', to: 'static_pages#seo', via: 'get'
   match 'socialandemailmarketing', to: 'static_pages#socialandemailmarketing', via: 'get'
   match 'aboutus', to: 'static_pages#aboutus', via: 'get'
+  match 'helpghanaianbusinessesleads', to: 'static_pages#helpghanaianbusinessesleads', via: 'get'
 end

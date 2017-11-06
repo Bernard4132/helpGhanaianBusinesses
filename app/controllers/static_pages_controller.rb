@@ -37,4 +37,9 @@ def aboutus
 	@lead = Lead.new
 end
 
+def helpghanaianbusinessesleads
+ @potential = Potential.new
+ render layout: "lead"
+end
+
 end
