@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  active: false
+  deploy: false
+  cost_id: 1
+  timeline_id: 1
+  details: MyText
+
+two:
+  title: MyString
+  active: false
+  deploy: false
+  cost_id: 1
+  timeline_id: 1
+  details: MyText

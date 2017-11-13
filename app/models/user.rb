@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   
   after_create :send_admin_mail
+  has_many :userprojects, :dependent => :destroy, :autosave => true
+  has_many :projects, through: :userprojects
 
      
   def send_admin_mail

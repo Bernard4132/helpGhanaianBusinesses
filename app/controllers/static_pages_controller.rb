@@ -6,6 +6,7 @@ end
 
 def helpbusinessesgrow
 @dream = Dream.new
+render layout: "lead"
 end
 
 def homebig
@@ -38,8 +39,12 @@ def aboutus
 end
 
 def helpghanaianbusinessesleads
- @potential = Potential.new
+ @dream = Dream.new
  render layout: "lead"
+end
+
+def thankyoulead
+  render layout: "lead"
 end
 
 end

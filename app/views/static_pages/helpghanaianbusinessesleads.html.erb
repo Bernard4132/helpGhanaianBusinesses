@@ -139,6 +139,7 @@ font-family: 'Poppins', sans-serif;
 .headerlandfont{
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
+  color: #5cc804;
 }
 
  .foothead{
@@ -146,9 +147,14 @@ font-family: 'Poppins', sans-serif;
      }
 
      .page-footer{
-      background:linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(https://res.cloudinary.com/nikasemo/image/upload/v1509525706/digireg_mnpncv.jpg);
-      background-position:center;
+      
      }
+
+  .abtinsmobile{
+    display: none;
+  }
+
+
 
 @media only screen and (min-width : 100px) and (max-width : 600px) {
 
@@ -171,8 +177,18 @@ font-family: 'Poppins', sans-serif;
    font-size: 18px; 
 }
 
+.abtins{
+  display: none;
+}
+
+.abtinsmobile{
+    display: block;
+    margin-top: 50px;
+  }
+
 .ctahold{
   margin: 10px;
+
   background-color: #2d76ed;
   border: 8px solid #77a9f9;
   border-radius: 12px;
@@ -194,15 +210,18 @@ font-family: 'Poppins', sans-serif;
   font-size: 30px;
 }
 
+
 }
 
 
   </style>
 
+  <body style="background-color: #f2f2f2;">
+
  <section class="navbackground">
       <div class="container">
-    <p style="text-align: center;" class="navbar-brand1"><a class="navbar-brand1" href="/" style="text-align: center;"><img src="https://res.cloudinary.com/nikasemo/image/upload/v1509928153/nlogosmall_vbfl6d.png" height="48px" width="55px" style="margin-right:5px; margin-top: 0px;">
-          <span style="position:relative; top: 0px; color: #000;" class="logtins">Help Ghanaian Businesses</span></a></p>
+    <p style="text-align: center;" class="navbar-brand1"><a class="navbar-brand1" href="/" style="text-align: center;"><img src="https://res.cloudinary.com/nikasemo/image/upload/v1510539413/loghelp_nyacwd.png" height="55px" width="146px" style="margin-right:5px; margin-top: 0px;">
+          </a></p>
       </div>
     </section>
 <br>
@@ -216,7 +235,7 @@ font-family: 'Poppins', sans-serif;
           <div class="row">
             <div class="col-sm-12">
               <h1 style="text-align: center;" class="headerlandfont">Grow your Business Online!<br>
-              Your business is never going to be the same...</h1>
+              Solution Oriented Websites that will help you get more sales, more customers, and more clients..</h1>
             </div>
           </div>
       </div>
@@ -227,40 +246,64 @@ font-family: 'Poppins', sans-serif;
     <div class="row">
       <div class="col-lg-7 col-md-12">
         <div class="descriphold">
-          <p style="font-weight: 700;">Digital marketing will be the major diffrentiator between an organization that is doing well and one which is not. The next wave is here. Are you already riding it?</p>
-          <p style="font-weight: 400; text-align: left;">
-           Help Ghanaian Businesses is a digital agency aimed at helping Ghanaian Businesses and institutions leverage the internet to grow their brands both offline and online. We believe that the internet is a great and underpriced tool for marketing. Many Businesses use the traditional ways of marketing; radio, tv, and newspapers. These tools over the past few years have become overpriced and under effective. Gone were the days when we used to spend all our time on television, radio and newspapers. The new game is the internet, that's where we all live and we believe that businesses should leverage in its power to grow their businesses in a scalable but cheaper way. 
-          </p>
+          
+          <ul style="font-weight: 700; font-size: 18px; line-height: 30px;">
+            <li>Your website is going to help you increase your sales!</li>
+            <li>YOur website will position your business well online.</li>
+            <li>Your website will help you reach your clients andd potential clients.</li>
+            <li>Your website will promote your business to the world!</li>
+          </ul>
+           <p style="text-align: right;" class="abtins"><img src="https://res.cloudinary.com/nikasemo/image/upload/v1510555018/arrow_icriws.png"></p>
+          <p style="text-align: center;" class="abtinsmobile"><img src="https://res.cloudinary.com/nikasemo/image/upload/v1510555452/ab1_zqs48b.png"></p>
         </div>
       </div>
       <div class="col-lg-5 col-md-12">
-        <div class="ctahold">
-          <h1 class="landingheader" style="font-weight: bold; text-align: center; color: white; font-size: 25px; margin-bottom: 25px;">Contact Us Here!</h1>
+               <div class="ctahold">
+          <h1 class="landingheader" style="font-weight: bold; text-align: center; color: white; font-size: 25px; margin-bottom: 25px;">Kindly fill this form.</h1>
 
-       <%= form_for(@potential) do |f| %>
+       <%= form_for(@dream) do |f| %>
+   <div class="form-group">
+    <label style="font-weight: bold; color: white;">What type of website do you want?</label><br>
+        <select class="selectpicker" name="dream[dreamtype]" id="dream_dreamtype" style="width: 100%;">
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Personal Website">Personal Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Portfolio Website">Portfolio Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Company Website">Company Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Church Website">Church Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="School Website">School Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Business Website">Business Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Ecommerce Web Applications">Ecommerce Web Applications</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Job Portal Web Applications">Job Portal Web Applications</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Customized Business Web Applications">Customized Business Web Applications</option>
+        </select>
+      </div>
+       <div class="form-group">
+    <label style="font-weight: bold; color: white;">What is your budget Allocation for your website?</label><br>
+        <select class="selectpicker" name="dream[dreambudget]" id="dream_dreambudget" style="width: 100%;">
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="300 - 499">300 - 499 cedis</option>
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="500 - 699">500 - 699 cedis</option>
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="700 - 999">700 - 999 cedis</option>
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="1000 - 1499">1000 - 1499 cedis</option>
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="2000 - 3999">2000 - 3999 cedis</option>
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="4000 +">4000 cedis +</option>
+        </select>
+      </div>
+  <hr>
+<h4 style="font-weight: bold; text-align: center; color: white;">Your Contact Details</h4><hr>
   <div class="form-group">
     <div class="form-group">
     <label style="font-weight: bold; color: white;">Name</label>
-    <input type="text" name="potential[name]" id="potential_name" class="form-control" placeholder="Your Name">
+    <input type="text" name="dream[dreamername]" id="dream_dreamername" class="form-control" placeholder="Your Name" required>
   </div>
     <label style="font-weight: bold; color: white;">Email</label>
-    <input type="email" name="potential[email]" id="potential_email" class="form-control" placeholder="Email Address">
+<input type="email" name="dream[dreameremail]" id="dream_dreameremail" class="form-control" placeholder="Email Address" required>
   </div>
   <div class="form-group">
     <label style="font-weight: bold; color: white;">Phone Number</label>
-    <input type="text" name="potential[phone]" id="potential_phone" class="form-control" placeholder="Your Phone number">
-  </div>
-  <div class="form-group">
-    <label style="font-weight: bold; color: white;">Organization's Name</label>
-    <input type="text" name="potential[orgname]" id="potential_orgname" class="form-control" placeholder="Organization's Name">
-  </div>
-  <input type="hidden" name="potential[webs]" id="potential_webs" value="Contact Enquiry">
-  <div class="form-group">
-    <label style="font-weight: bold; color: white;">Your Message</label>
-   <textarea class="form-control" name="potential[goal]" id="potential_goal" rows="3" placeholder="What Message do you have for us?"></textarea>
+    <input type="text" name="dream[dreamerphone]" id="dream_dreamerphone" class="form-control" placeholder="Your Phone number">
   </div>
   <br>
-        <p style="text-align: center;"><button type="submit" class="btn btn-primary websubmit btn-lg">Send Enquiry</button></p>
+       <p style="color: #fff; text-align: center;">Response time is usually within an hour.</p> 
+        <p style="text-align: center;"><button type="submit" class="btn btn-primary websubmit btn-lg">Submit Form</button></p>
       </div>
        
       
@@ -311,3 +354,5 @@ font-family: 'Poppins', sans-serif;
       </div>
       <!-- /.container -->
     </footer>
+
+  </body>

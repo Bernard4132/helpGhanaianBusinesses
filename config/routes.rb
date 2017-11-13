@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :projecttypes
+  
+  resources :costs
+  resources :projects do
+   resources :timelines
+  end
   resources :potentials
   resources :legends
   resources :clients
@@ -18,4 +24,5 @@ Rails.application.routes.draw do
   match 'socialandemailmarketing', to: 'static_pages#socialandemailmarketing', via: 'get'
   match 'aboutus', to: 'static_pages#aboutus', via: 'get'
   match 'helpghanaianbusinessesleads', to: 'static_pages#helpghanaianbusinessesleads', via: 'get'
+  match 'thankyoulead', to: 'static_pages#thankyoulead', via: 'get'
 end

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  weareat: MyString
+  milestone: MyString
+  description: MyText
+  timelink: MyString
+  project_id: 1
+
+two:
+  weareat: MyString
+  milestone: MyString
+  description: MyText
+  timelink: MyString
+  project_id: 1

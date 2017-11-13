@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171101095526) do
+ActiveRecord::Schema.define(version: 20171112070224) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(version: 20171101095526) do
     t.string   "name"
     t.string   "email"
     t.string   "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "costs", force: :cascade do |t|
+    t.integer  "amount"
+    t.boolean  "paid"
+    t.integer  "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -87,6 +95,30 @@ ActiveRecord::Schema.define(version: 20171101095526) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "projects", force: :cascade do |t|
+    t.string   "title"
+    t.boolean  "active"
+    t.boolean  "deploy"
+    t.integer  "cost_id"
+    t.integer  "timeline_id"
+    t.text     "details"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "projecttypes", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "protypes", force: :cascade do |t|
+    t.integer  "projecttype_id"
+    t.integer  "project_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
   create_table "sections", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
@@ -100,6 +132,24 @@ ActiveRecord::Schema.define(version: 20171101095526) do
   create_table "sectors", force: :cascade do |t|
     t.integer  "section_id"
     t.integer  "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "timelines", force: :cascade do |t|
+    t.string   "weareat"
+    t.string   "milestone"
+    t.text     "description"
+    t.string   "timelink"
+    t.integer  "project_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "userprojects", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "project_id"
+    t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

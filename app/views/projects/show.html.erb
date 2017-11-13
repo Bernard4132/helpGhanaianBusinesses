@@ -1,0 +1,42 @@
+
+<br><br><br>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @project.title %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @project.active %>
+</p>
+
+<p>
+  <strong>Deploy:</strong>
+  <%= @project.deploy %>
+</p>
+
+<p><%= @project.costs.first.amount %></p>
+
+<p><%= @project.users.first.email %></p>
+
+<p><%= @project.projecttypes.first.name %></p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @project.cost_id %>
+</p>
+
+<p>
+  <strong>Timeline:</strong>
+  <%= @project.timeline_id %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @project.details %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

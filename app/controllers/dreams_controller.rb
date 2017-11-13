@@ -29,7 +29,7 @@ class DreamsController < ApplicationController
     respond_to do |format|
       if @dream.save
         DreamMailer.dream_message(@dream).deliver_later
-        format.html { redirect_to "/helpbusinessesgrow", notice: 'Great you filled the form. An email will be sent to you shortly as to how things will procede. Thanks Much!' }
+        format.html { redirect_to "/thankyoulead", notice: 'Thank you! An email will be sent to you shortly.' }
         format.json { render :show, status: :created, location: @dream }
       else
         format.html { render :new }

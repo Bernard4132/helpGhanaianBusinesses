@@ -303,6 +303,8 @@ GEM
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
+    trix (0.9.10)
+      rails
     trollop (2.1.2)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
@@ -329,7 +331,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  bcrypt (~> 3.1.11)
   byebug
   carrierwave (~> 1.0)
   coffee-rails (~> 4.2)
@@ -344,6 +345,7 @@ DEPENDENCIES
   rails_12factor
   sass-rails (~> 5.0)
   sqlite3
+  trix
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
