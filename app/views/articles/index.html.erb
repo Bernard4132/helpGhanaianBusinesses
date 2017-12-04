@@ -1,37 +1,358 @@
-<p id="notice"><%= notice %></p>
+<style type="text/css">
 
-<h1>Articles</h1>
+.homeer{
+  margin-top: 70px;
+}
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Articleimage</th>
-      <th>Videolink</th>
-      <th>Body</th>
-      <th>Metadescription</th>
-      <th>Metakeywords</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+.holderimg{
+ background:linear-gradient(0deg,rgba(0,0,0,0),rgba(0,0,0,0)),url(https://res.cloudinary.com/nikasemo/image/upload/v1511884876/businessdiscuss_wmdztp.png);
+  background-position:center;
+  min-height: 350px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1);
+}
 
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.articleimage %></td>
-        <td><%= article.videolink %></td>
-        <td><%= article.body %></td>
-        <td><%= article.metadescription %></td>
-        <td><%= article.metakeywords %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+.topthingstoknow{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-top: 7px solid #42ade7;
+  position: relative;
+  top: 0px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+}
 
-<br>
+.containit{
+  margin-left: 40px;
+  margin-right: 40px;
+}
 
-<%= link_to 'New Article', new_article_path %>
+.titler{
+  position: relative;
+  top: 100px;
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 30px;
+  color: white;
+  text-shadow: 1px 0px 6px rgba(0, 0, 0, 1);
+  font-family: 'Roboto Slab', serif;
+}
+
+.subtler{
+  position: relative;
+  top: 100px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 30px;
+  color: white;
+  text-shadow: 1px 0px 6px rgba(0, 0, 0, 1);
+}
+
+.ctaone{
+  position: relative;
+  top: 120px;
+  margin-left: 30px;
+  float: left;
+}
+
+.adonis{
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.sidebarhome{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.stepss{
+  margin-top: 15px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 15px;
+}
+
+.servss{
+  color: #595959;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 15px;
+}
+
+.icon1desc{
+  height: 80px;
+  width: 80px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+}
+
+.blogimgpart{
+  width: 100%;
+}
+
+.blogpart{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  margin-top: 15px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+}
+
+.homeer{
+  padding-bottom: 35px;
+}
+
+.alertthismsg{
+  padding: 50px;
+  background-color: #f2f2f2;
+}
+
+.alertmsgmsg{
+  font-weight: 500;
+  font-size: 29px;
+  font-family: 'Lora', serif;
+  line-height: 40px;
+}
+
+@media only screen and (min-width : 100px) and (max-width : 600px) {
+
+.homeer{
+  margin-top: 0px;
+}
+
+.containit{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.holderimg{
+ background:linear-gradient(0deg,rgba(0,0,0,0),rgba(0,0,0,0)),url(https://res.cloudinary.com/nikasemo/image/upload/v1511884876/businessdiscuss_wmdztp.png);
+  background-position:center;
+  min-height: 280px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1);
+}
+
+.titler{
+  position: relative;
+  top: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 30px;
+  color: white;
+  text-shadow: 1px 0px 6px rgba(0, 0, 0, 1);
+  font-family: 'Roboto Slab', serif;
+}
+
+.subtler{
+  position: relative;
+  top: 50px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 30px;
+  color: white;
+  text-shadow: 1px 0px 6px rgba(0, 0, 0, 1);
+}
+
+.ctaone{
+  position: relative;
+  top: 60px;
+  margin-left: 30px;
+  float: left;
+}
+
+.margdown{
+  margin-bottom: 20px;
+}
+
+.margtop{
+  margin-top: 25px;
+}
+
+.alertmsgmsg{
+  font-weight: 500;
+  font-size: 20px;
+  font-family: 'Lora', serif;
+  line-height: 30px;
+}
+
+.alertthismsg{
+  padding: 25px;
+  background-color: #f2f2f2;
+}
+
+.servss{
+  color: #595959;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 15px;
+}
+
+.propsser{
+  margin-left: 20px;
+}
+
+.icon1desc{
+  height: 80px;
+  width: 80px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+ 
+}
+
+</style>
+
+<section class="homeer">
+<div class="containit">
+<div class="row">
+  <div class="col-lg-9">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="holderimg">
+          <p class="titler">Grow your Business online!<br>By using Proven Online Tactics and Ways.</p>
+          <p class="subtler">All the expert articles, advice and services for you business to succeed online.</p>
+          <p class="ctaone"><a href="/users/sign_up" class="btn btn-primary adonis">Join Our Business Community!</a></p>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="row" style="margin-top: 10px;">
+          <div class="col-lg-5">
+             <h3 class="servss">Other Services</h3>
+            <div class="row propsser">
+              <div class="col-sm-4">
+                <div class="icon1desc">
+                  <i class="fa fa-desktop fa-2x" style="color: #ffffff; position: relative; top: 25px; left: 22px;" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <h2 style="font-weight: 700; font-size: 16px;">Website Services</h2>
+                <p>Get the best websites create for you to help your digital career</p>
+                <p><a href="" class="btn btn-primary adonis">Get a Quote</a></p>
+              </div>
+            </div>
+            <div class="row propsser" style="margin-top: 15px; border-top: 1px solid #e6e6e6; padding-top: 15px;">
+              <div class="col-sm-4">
+                <div class="icon1desc">
+                  <i class="fa fa-facebook fa-2x" style="color: #ffffff; position: relative; top: 25px; left: 27px;" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <h2 style="font-weight: 700; font-size: 17px;">Facebook Marketing</h2>
+                <p>Get the best websites create for you to help your digital career</p>
+                <p><a href="" class="btn btn-primary adonis">Get a Quote</a></p>
+              </div>
+            </div>
+            <div class="row propsser" style="margin-top: 15px; border-top: 1px solid #e6e6e6; padding-top: 15px;">
+              <div class="col-sm-4">
+                <div class="icon1desc">
+                  <i class="fa fa-envelope fa-2x" style="color: #ffffff; position: relative; top: 25px; left: 22px;" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <h2 style="font-weight: 700; font-size: 17px;">Email Marketing</h2>
+                <p>Get the best websites create for you to help your digital career</p>
+                <p><a href="" class="btn btn-primary adonis">Get a Quote</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <h3 class="servss">Latest Articles</h3>
+            <div class="blogpart">
+             <div class="row">
+              <div class="col-sm-4">
+                <div class="blogimgpart">
+                  <img src="https://res.cloudinary.com/nikasemo/image/upload/v1509113874/email1_yvr4vl.jpg" class="img-fluid">
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <h2 style="font-weight: 700; font-size: 17px;">Why having a website can help you grow exponentially.</h2>
+                <span style="color: #d9d9d9; font-weight: 500;">Authored By: Bernard Lomo</span>
+                <p>Find out how having a website and doing the right things can grow your business exponentially.</p>
+              </div>
+            </div>
+
+            <div class="row" style="margin-top: 15px; border-top: 1px solid #e6e6e6; padding-top: 15px;">
+              <div class="col-sm-4">
+                <div class="blogimgpart">
+                  <img src="https://res.cloudinary.com/nikasemo/image/upload/v1509113874/email1_yvr4vl.jpg" class="img-fluid">
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <h2 style="font-weight: 700; font-size: 17px;">Why having a website can help you grow exponentially.</h2>
+                <span style="color: #d9d9d9; font-weight: 500;">Authored By: Bernard Lomo</span>
+                <p>Find out how having a website and doing the right things can grow your business exponentially.</p>
+              </div>
+            </div>
+
+            <div class="row" style="margin-top: 15px; border-top: 1px solid #e6e6e6; padding-top: 15px;">
+              <div class="col-sm-4">
+                <div class="blogimgpart">
+                  <img src="https://res.cloudinary.com/nikasemo/image/upload/v1509113874/email1_yvr4vl.jpg" class="img-fluid">
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <h2 style="font-weight: 700; font-size: 17px;">Why having a website can help you grow exponentially.</h2>
+                <span style="color: #d9d9d9; font-weight: 500;">Authored By: Bernard Lomo</span>
+                <p>Find out how having a website and doing the right things can grow your business exponentially.</p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="topthingstoknow">
+      <h2 style="font-weight: 500;" class="sidebarhome">Important things to know! First!</h2>
+      <div class="row">
+      <div class="col-sm-12">
+        <div class="stepss">
+        <p style="font-weight: 700;">Websites and how they can grow your business</p>
+        <span style="color: #42ade7; font-weight: 700;">Step 1</span>
+      </div>
+      <div class="stepss">
+        <p style="font-weight: 700;">Websites and how they can grow your business</p>
+        <span style="color: #42ade7; font-weight: 700;">Step 1</span>
+      </div>
+      <div class="stepss">
+        <p style="font-weight: 700;">Websites and how they can grow your business</p>
+        <span style="color: #42ade7; font-weight: 700;">Step 1</span>
+      </div>
+      <div class="stepss">
+        <p style="font-weight: 700;">Websites and how they can grow your business</p>
+        <span style="color: #42ade7; font-weight: 700;">Step 1</span>
+      </div>
+      <div class="stepss">
+        <p style="font-weight: 700;">Websites and how they can grow your business</p>
+        <span style="color: #42ade7; font-weight: 700;">Step 1</span>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="alertthismsg">
+
+<h1 style="text-align: center;" class="alertmsgmsg">Ghanaian Businesses, both big and small depend<br> on <span style="color: #42ade7; font-weight: 700;">Helpghanaianbusinesses.com</span> for great advice,<br> relevant articles and other services they need to<br> grow their business online.<br>Join Ghana's Business Community.</h1>
+
+</section>

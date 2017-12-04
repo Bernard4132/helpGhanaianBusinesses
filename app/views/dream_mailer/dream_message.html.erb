@@ -1,148 +1,67 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Email</title>
-        <style type="text/css">
-        body {margin: 0; padding: 0; min-width: 100%!important;}
-        .content {width: 100%; max-width: 600px; background-color: white;} 
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Dream Email</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
 
-        .header {padding: 40px 30px 20px 30px;}
-        
-        .col425 {width: 425px!important;}
-
-        .subhead {font-size: 15px; color: #ffffff; font-family: sans-serif; letter-spacing: 10px;}
-        .h1 {font-size: 33px; line-height: 38px; font-weight: bold;}
-        .h1, .h2, .bodycopy {color: #153643; font-family: sans-serif;}
-
-        .innerpadding {padding: 30px 30px 30px 30px;}
-.borderbottom {border-bottom: 1px solid #f2eeed;}
-.h2 {padding: 0 0 15px 0; font-size: 24px; line-height: 28px; font-weight: bold;}
-.bodycopy {font-size: 16px; line-height: 22px;}
-
-.button {text-align: center; font-size: 18px; font-family: sans-serif; font-weight: bold; padding: 0 30px 0 30px;
-background-color: #1aa8ea;
-}
-.button a {color: #ffffff; text-decoration: none;}
-
-img {height: auto;}
-
-.footer {padding: 20px 30px 15px 30px;}
-.footercopy {font-family: sans-serif; font-size: 14px; color: #ffffff;}
-.footercopy a {color: #ffffff; text-decoration: underline;}
-
-        @media only screen and (min-device-width: 601px) {
-        .content {width: 100% !important;}
-         } 
-        </style>
-    </head>
-    <body yahoo bgcolor="#f6f8f1" style="margin: 0;padding: 0;min-width: 100%!important;">
-        <table width="100%" bgcolor="#f6f8f1" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-                <td>
-                   <!--[if (gte mso 9)|(IE)]>
-<table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
-    <tr>
-        <td>
-            <![endif]-->
-            <table class="content" align="center" cellpadding="0" cellspacing="0" border="0" style="width: 100%;max-width: 600px;background-color: white; margin-top: 20px;">
-                <tr>
-                    <td  bgcolor="#1aa8ea" style="padding: 0px 0px 0px 0px;">
-                       <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
-                          <tr>
-   
-                          </tr>
-                       </table>
-                       <!--[if (gte mso 9)|(IE)]>
-<table width="425" align="left" cellpadding="0" cellspacing="0" border="0">
-    <tr>
-        <td>
-        <![endif]-->
-           
-        <!--[if (gte mso 9)|(IE)]>
-        </td>
-    </tr>
-</table>
-<![endif]-->
-                    </td>
-                </tr>
-                <tr>
-    <td class="innerpadding borderbottom" style="padding: 30px 30px 30px 30px;border-bottom: 1px solid #f2eeed; border-top: 0px solid #1aa8ea;">
-        <table width="100%" style="padding-top: 10px;" border="0" cellspacing="0" cellpadding="0">
-          
-                <td align="center"> <img src="https://res.cloudinary.com/nikasemo/image/upload/v1510534042/emailheader_bvwdfo.jpg" style="height: auto;" width="100%" height="auto" border="0"></td>
-              </tr>
-            </tr>
-        </table>
-    </td>
-</tr>
-
-
-<tr>
-  
-    <td class="innerpadding borderbottom bodycopy" style="color: #1a1a1a; padding: 30px 30px 30px 30px;border-bottom: 1px solid #f2eeed;font-size: 16px;line-height: 22px; text-align: left;">
-    <table width="100%" style="padding-top: 10px;" border="0" cellspacing="0" cellpadding="0">
-    <p style="font-weight: 700; text-align: center; color: #1a1a1a;">Thanks for filling the form!</p>
-    <br>
-   Hi <%= @dream.dreamername %>,<br> 
+<body style="margin: 0; padding: 0; background-color: #f2f2f2;">
+ <table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+   <td style="padding: 20px 0 30px 0;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border: 1px solid #cccccc;">
+ <tr>
+  <td align="center" bgcolor="#70bbd9" style="padding: 0px 0 0px 0;">
+   <img src="emailheader.jpg" alt="Creating Email Magic" width="100%" height="100%" style="display: block;" />
+  </td>
+ </tr>
+ <tr>
+  <td bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;">
+    Hi <%= @dream.dreamername %>,<br> 
    Thanks for taking the a great step! You just requested a website. I am happy you have considered having a website.<br><br>
    As our name goes, help Ghanaian Business will help you leverage the opportunities the internet brings to grow your business's presence online. Having a website is your first and great step!<br><br>
    <span style="font-weight: 700;">Whats next now?</span><br>
    We will reach you within the hour and discuss with you your website and how can help you grow your business with it!
    <br>
-   Thank you. God Bless!
+   Thank you.
 
    <br><br>
    Best regards,<br>
-   Ben.<br><br><br>
+   Bernard Lomo.<br><br><br>
   <span style="font-weight: 500; font-size: 14px;">NB: As part of our commitment to making your business a success online, we will send you great stuff including interesting articles, sweet offers & deals and guides which will help you succeed online. Move them to your primary email to ensure you get them first!</span>
-    </td>
+    
+  </td>
+ </tr>
+ <tr>
+  <td bgcolor="#ee4c50" style="padding: 40px 30px 40px 30px;">
+   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tr>
+  <td width="75%">
+ &reg; help Ghanaian Businesses, 2017<br/>
+</td>
+  <td align="right">
+ <table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+   
+   <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
+   <td>
+    <a href="http://www.twitter.com/">
+     <img src="fblogo.png" alt="Facebook" width="38" height="38" style="display: block;" border="0" />
+    </a>
+   </td>
+  </tr>
+ </table>
+</td>
+ </tr>
 </table>
-</tr>
-
-
-
-<tr>
-    <td class="footer" bgcolor="#5cc804" style="padding: 20px 30px 15px 30px;">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td align="center" class="footercopy" style="font-family: sans-serif;font-size: 14px;color: #ffffff;">
-                    &reg; Help Ghanaian Businesses, 2017.<br>
-                    Find Us on Social Media.
-                </td>
-            </tr>
-            <tr>
-                <td align="center" style="padding: 20px 0 0 0;">
-                    <table border="0" cellspacing="0" cellpadding="0">
-                        <tr>
-                            <td width="37" style="text-align: center; padding: 0 10px 0 10px;">
-                                <a href="https://www.facebook.com/helpGhanaianBusinesses/">
-<img src="http://res.cloudinary.com/nikasemo/image/upload/v1475772104/fb_m3vopw.png" style="height: auto;" width="37" height="37" border="0">
-                                </a>
-                            </td>
-                            <td width="37" style="text-align: center; padding: 0 10px 0 10px;">
-                                <a href="#!">
-<img src="http://res.cloudinary.com/nikasemo/image/upload/v1475772102/twit_ah8xg6.png" style="height: auto;" width="37" height="37" border="0">
-                                </a>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-    </td>
-</tr>
-
-            </table>
-            <!--[if (gte mso 9)|(IE)]>
-        </td>
-    </tr>
+  </td>
+ </tr>
 </table>
-<![endif]-->
+   </td>
+  </tr>
+ </table>
+</body>
 
-                </td>
-            </tr>
-        </table>
-    </body>
+
 </html>

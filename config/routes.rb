@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :dreams
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: "static_pages#homebig"
+  root to: "articles#index"
   match 'helpbusinessesgrow', to: 'static_pages#helpbusinessesgrow', via: 'get'
   match 'homebig', to: 'static_pages#homebig', via: 'get'
   match 'home', to: 'static_pages#home', via: 'get'
