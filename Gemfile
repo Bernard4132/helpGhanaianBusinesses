@@ -36,6 +36,7 @@ gem 'trix'
 gem 'refile', github: 'refile/refile', require: 'refile/rails'
 gem 'refile-mini_magick', github: 'refile/refile-mini_magick'
 gem 'sinatra', github: 'sinatra/sinatra', branch: 'master'
+gem "refile-s3"
 # devise gem for authentication
 gem 'devise'
 # bcrypt for password encryption
