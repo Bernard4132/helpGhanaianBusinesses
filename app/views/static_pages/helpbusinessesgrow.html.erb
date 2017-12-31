@@ -8,7 +8,7 @@
 
     <script src="https://use.fontawesome.com/fc6d352727.js"></script>
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+   
 
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
@@ -16,9 +16,10 @@
 
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -278,8 +279,10 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
     padding: 0;
     border: none;
     border-radius: .28571429rem;
-    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
     margin-bottom: 30px;
+    -webkit-box-shadow: 2px 3px 12px 6px rgba(0,0,0,0.31);
+-moz-box-shadow: 2px 3px 12px 6px rgba(0,0,0,0.31);
+box-shadow: 2px 3px 12px 6px rgba(0,0,0,0.31);
 }
 
 .card-block {
@@ -472,7 +475,7 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
         <div class="row">
             <div class="col-sm-12">
 <br>
-    <p style="width: 100%; margin-left: auto; margin-right: auto;"><img style="margin-left: auto; margin-right: auto;" 
+    <p style="width: 100%; text-align: center;"><img
       src="https://res.cloudinary.com/nikasemo/image/upload/v1507221925/sitelogogbnh_xzbfky.png" class="img-responsive"></p>
          <% if notice %>
 <div class="alert alert-success alert-dismissible" role="alert">
@@ -484,15 +487,18 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
 <h3 class="landsubtext">We build Solution Oriented Websites that will help you get more sales, more customers, and more clients.</h3>
 
              <p style="width: 100%; text-align: center;">
-            <button type="button" class="btn btn-primary btn-lg autocent1 quanfirm" data-toggle="modal" data-target="#myModal"><a style="color: #fff; text-decoration: none;" id="loyalty">Get Online With Us Now!</a></button></p>
-
+<button type="button" class="btn btn-primary btn-lg autocent1 quanfirm" data-toggle="modal" data-target="#exampleModal">
+               Get Online With Us Now!
+              </button>
+            </p>
 
 <p style="text-align: center; color: #5cc804; margin-top: 7px;"><small>Get all your social media accounts setup for you for free by professionals</small></p>
+<p style="text-align: center;"><img  
+  src="https://res.cloudinary.com/nikasemo/image/upload/v1507221815/homewebimg_cj7n9a.png" class="img-fluid"></p>
+
 </div>
 
- <p style="width: 100%; margin-left: auto; margin-right: auto;"><img style="margin-left: auto; margin-right: auto;" 
-  src="https://res.cloudinary.com/nikasemo/image/upload/v1507221815/homewebimg_cj7n9a.png" class="img-responsive"></p>
-
+ 
 </div>
 </div>
 </div>
@@ -527,31 +533,24 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
                 </p>
             </div>
         </div>
-   <div id="myDiv">
+    </div>
+
+    <div id="myDiv">
       <h2 class="landingheader" style="margin-bottom: 25px; color: white; margin-top: 20px;">Get online with us. Fill form below..</h2>
    </div>
 
-<div class="col-sm-12 col-md-6 col-md-offset-3">
+    <div class="row justify-content-md-center">
+<div class="col-sm-12 col-md-6 col-lg-6 offset-lg-3">
 <div class="fillform">
 <h1 class="landingheader" style="color: #000; font-size: 25px; margin-bottom: 25px;">Kindly fill this form.</h1>
 
        <%= form_for(@dream) do |f| %>
-        <div class="form-group">
-    <label>Name</label>
-    <input type="text" name="dream[dreamername]" id="dream_dreamername" class="form-control" placeholder="Your Name">
-  </div>
-  <div class="form-group">
-    <label>Email</label>
-    <input type="email" name="dream[dreameremail]" id="dream_dreameremail" class="form-control" placeholder="Email Address">
-  </div>
-  <div class="form-group">
-    <label>Phone Number</label>
-    <input type="number" name="dream[dreamerphone]" id="dream_dreamerphone" class="form-control" placeholder="Your Phone number">
-  </div>
-  <br>
+<br>
+  <h5 style="text-align: center;">Website & Budget</h5>
+<hr>
    <div class="form-group">
     <label>What type of website do you want?</label><br>
-        <select class="selectpicker" name="dream[dreamtype]" id="dream_dreamtype" style="width: 100%;">
+        <select class="selecter" name="dream[dreamtype]" id="dream_dreamtype" style="width: 100%;">
           <option name="dream[dreamtype]" id="dream_dreamtype" value="Personal Website">Personal Website</option>
           <option name="dream[dreamtype]" id="dream_dreamtype" value="Portfolio Website">Portfolio Website</option>
           <option name="dream[dreamtype]" id="dream_dreamtype" value="Company Website">Company Website</option>
@@ -565,24 +564,39 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
       </div>
        <div class="form-group">
     <label>What is your budget Allocation for your website?</label><br>
-        <select class="selectpicker" name="dream[dreambudget]" id="dream_dreambudget" style="width: 100%;">
+        <select class="selecter" name="dream[dreambudget]" id="dream_dreambudget" style="width: 100%;">
           <option name="dream[dreambudget]" id="dream_dreambudget" value="300 - 499">300 - 499 cedis</option>
           <option name="dream[dreambudget]" id="dream_dreambudget" value="500 - 699">500 - 699 cedis</option>
           <option name="dream[dreambudget]" id="dream_dreambudget" value="700 - 999">700 - 999 cedis</option>
           <option name="dream[dreambudget]" id="dream_dreambudget" value="1000 - 1499">1000 - 1499 cedis</option>
-          <option name="dream[dreambudget]" id="dream_dreambudget" value="2000 - 3999">2000 - 3999 cedis</option>
-          <option name="dream[dreambudget]" id="dream_dreambudget" value="4000 +">4000 cedis +</option>
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="2000 - 2999">2000 - 2999 cedis</option>
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="3000 +">3000+ cedis </option>
         </select>
       </div>
       <div class="form-check">
     <label class="form-check-label">
          <%= f.check_box :urgent, :class => "form-check-input" %>
-      Urgent
+      Check box if urgent
     </label>
+  </div>
+<br>
+  <h5 style="text-align: center;">Your Contact details</h5>
+<hr>
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" name="dream[dreamername]" id="dream_dreamername" class="form-control" placeholder="Your Name">
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" name="dream[dreameremail]" id="dream_dreameremail" class="form-control" placeholder="Email Address">
+  </div>
+  <div class="form-group">
+    <label>Phone Number</label>
+    <input type="number" name="dream[dreamerphone]" id="dream_dreamerphone" class="form-control" placeholder="Your Phone number">
   </div>
  
        <p style="color: #5cc804; text-align: center;">Response time is usually within a day. More information will be requested when we contact you. Thank you.</p> 
-        <p style="text-align: center; "><button type="submit" class="btn btn-primary modalsubmit">Submit</button></p>
+        <p style="text-align: center; "><button type="submit" class="btn btn-primary btn-lg">Submit</button></p>
       </div>
        
       
@@ -590,11 +604,8 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
 </div>
 
 </div>
+</div>
 
-
-        
-
-    </div>
 </div>
 </section>
 
@@ -602,11 +613,13 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
 <section class="portfolio">
 <div class="container">
     <div class="row">
-        <h1 class="phead">Websites we have Built.</h1>
+      <div class="col-sm-12">
+        <h1 class="phead" style="text-align: center;">Websites we have Built.</h1>
     </div>
+  </div>
      <div class="row" style="margin-top: 35px;">
             
-            <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="col-sm-12 col-md-6 col-lg-12">
                 <div class="card">
                     <img class="card-img-top" src="https://res.cloudinary.com/nikasemo/image/upload/v1506955678/syria_c3hvqn.jpg">
                     <div class="card-block">
@@ -618,14 +631,14 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
                            Syriatex is one Ghana's top three upholstery shops. They sell kitchen furniture, office furniture, home furniture, curtains, blinds, beds and so on. it was a great experience working with them.
                         </div>
                     </div>
-                    <div class="card-footer">
-                        <span class="float-right"><a href="http://syriatexghana.com/" target="_blank" class="btn btn-primary visitsite">Visit Site</a></span>
-                        
+                    <div class="card-footer" style="padding-bottom: 5px;">
+                        <span class="float-right"><a href="http://syriatexghana.com/" target="_blank" style="font-family: 'Lobster', cursive; font-size: 20px;" class="">Visit Site</a></span>
+                      
                     </div>
                 </div>
             </div>
 
-             <div class="col-sm-12 col-md-6 col-lg-6">
+             <div class="col-sm-12 col-md-6 col-lg-12">
                 <div class="card">
                     <img class="card-img-top" src="https://res.cloudinary.com/nikasemo/image/upload/v1506955678/laanatis_bybr9y.jpg">
                     <div class="card-block">
@@ -638,13 +651,13 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
                         </div>
                     </div>
                     <div class="card-footer">
-                        <span class="float-right"><a href="http://legonanalytics.com/" target="_blank" class=" visitsite btn btn-primary">Visit Site</a></span>
+                        <span class="float-right"><a href="http://legonanalytics.com/" target="_blank" class=" visitsite btn btn-primary" >Visit Site</a></span>
                    
                     </div>
                 </div>
             </div>
 
- <div class="col-sm-12 col-md-6 col-lg-6">
+ <div class="col-sm-12 col-md-6 col-lg-12">
                 <div class="card">
                     <img class="card-img-top" src="https://res.cloudinary.com/nikasemo/image/upload/v1506955678/whfred_mhrsc7.jpg">
                     <div class="card-block">
@@ -663,7 +676,7 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
                 </div>
             </div>
 
-             <div class="col-sm-12 col-md-6 col-lg-6">
+             <div class="col-sm-12 col-md-6 col-lg-12">
                 <div class="card">
                     <img class="card-img-top" src="https://res.cloudinary.com/nikasemo/image/upload/v1506955678/oaks_xrh1fm.jpg">
                     <div class="card-block">
@@ -685,8 +698,11 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
           <br>
           <h3 class="landsubtext1">Our websites provided real value to our client and they have never regretted working a website. Having a website in this day and age a great way to grow your business.</h3>
            <p style="width: 100%; text-align: center; margin-top: 20px;">
-            <button type="button" class="btn btn-primary btn-lg autocent1 quanfirm1" data-toggle="modal" data-target="#myModal"><a style="color: #fff; text-decoration: none;" id="loyalty1">Get Online With Us Now!</a></button></p>
-          <p style="text-align: center; color: #000; font-size: 12px; margin-top: 10px; font-family: 'Raleway', sans-serif;"><small>Get all your social media accounts setup for you <br>for free by professionals</small></p>
+            <button type="button" class="btn btn-primary btn-lg autocent1 quanfirm1" data-toggle="modal" data-target="#exampleModal">
+               Get Online With Us Now!
+              </button>
+          </p>
+          <p style="text-align: center; color: #000; font-size: 14px; margin-top: 10px; font-family: 'Raleway', sans-serif;"><small>Get all your social media accounts setup for you <br>for free by professionals</small></p>
         </div>
 </div>
 
@@ -706,7 +722,9 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
 
         <div class="col-sm-12">
              <p style="width: 100%;">
-            <button type="button" class="btn btn-primary btn-lg autocent1 quanfirm" data-toggle="modal" data-target="#myModal"><a style="color: #fff; text-decoration: none;" id="loyalty2">Get Online With Us Now!</a></button>
+              <button type="button" class="btn btn-primary btn-lg autocent1 quanfirm" data-toggle="modal" data-target="#exampleModal">
+               Get Online With Us Now!
+              </button>
              </p>
         </div>
 </div>
@@ -731,7 +749,92 @@ box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.41);
 </section>
 
 
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Kindly fill this form.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+               <%= form_for(@dream) do |f| %>
+<br>
+  <h5 style="text-align: center;">Website & Budget</h5>
+<hr>
+   <div class="form-group">
+    <label>What type of website do you want?</label><br>
+        <select class="selecter" name="dream[dreamtype]" id="dream_dreamtype" style="width: 100%;">
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Personal Website">Personal Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Portfolio Website">Portfolio Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Company Website">Company Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Church Website">Church Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="School Website">School Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Business Website">Business Website</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Ecommerce Web Applications">Ecommerce Web Applications</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Job Portal Web Applications">Job Portal Web Applications</option>
+          <option name="dream[dreamtype]" id="dream_dreamtype" value="Customized Business Web Applications">Customized Business Web Applications</option>
+        </select>
+      </div>
+       <div class="form-group">
+    <label>What is your budget Allocation for your website?</label><br>
+        <select class="selecter" name="dream[dreambudget]" id="dream_dreambudget" style="width: 100%;">
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="300 - 499">300 - 499 cedis</option>
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="500 - 699">500 - 699 cedis</option>
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="700 - 999">700 - 999 cedis</option>
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="1000 - 1499">1000 - 1499 cedis</option>
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="2000 - 2999">2000 - 2999 cedis</option>
+          <option name="dream[dreambudget]" id="dream_dreambudget" value="3000 +">3000+ cedis </option>
+        </select>
+      </div>
+      <div class="form-check">
+    <label class="form-check-label">
+         <%= f.check_box :urgent, :class => "form-check-input" %>
+      Check box if urgent
+    </label>
+  </div>
+<br>
+  <h5 style="text-align: center;">Your Contact Details</h5>
+<hr>
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" name="dream[dreamername]" id="dream_dreamername" class="form-control" placeholder="Your Name">
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" name="dream[dreameremail]" id="dream_dreameremail" class="form-control" placeholder="Email Address">
+  </div>
+  <div class="form-group">
+    <label>Phone Number</label>
+    <input type="number" name="dream[dreamerphone]" id="dream_dreamerphone" class="form-control" placeholder="Your Phone number">
+  </div>
+ 
+       <p style="color: #5cc804; text-align: center;">Response time is usually within a day. More information will be requested when we contact you. Thank you.</p> 
+        <p style="text-align: center; "><button type="submit" class="btn btn-primary modalsubmit">Submit</button></p>
+      </div>
+       
+      
+      
+      </div>
+     
+      <% end %>
+    </div>
+  </div>
+</div>
+
 </body>
+
+<script type="text/javascript">
+  
+$(document).ready(function() {
+    $('selecter').select2();
+});
+
+</script>
 
 <script type="text/javascript">
 

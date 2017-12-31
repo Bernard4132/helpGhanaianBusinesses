@@ -1,0 +1,35 @@
+
+
+<br><br><br><br>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Results you want:</strong>
+  <%= @facebookad.resultsywant %>
+</p>
+
+<p>
+  <strong>Budget Allocation:</strong>
+  <%= @facebookad.budget %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @facebookad.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @facebookad.email %>
+</p>
+
+<p>
+  <strong>Phonenumber:</strong>
+  <%= @facebookad.phonenumber %>
+</p>
+
+<%= link_to 'Edit', edit_facebookad_path(@facebookad) %> |
+<%= link_to 'Back', facebookads_path %>
+
+<br><br>

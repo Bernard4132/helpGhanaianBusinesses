@@ -43,6 +43,11 @@ def helpghanaianbusinessesleads
  render layout: "lead"
 end
 
+def fbadvertisementsleads
+  @facebookad = Facebookad.new
+  render layout: "lead"	
+end
+
 def thankyoulead
   render layout: "lead"
 end

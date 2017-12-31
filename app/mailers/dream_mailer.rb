@@ -13,7 +13,7 @@ class DreamMailer < ApplicationMailer
 
   def dream_message2(dream)
   	@dream = dream
-  	mail to: dream.dreameremail , subject: "[Help Ghanaian Businesses] See how this company (Naaseon Properties) gets clients everyday with their website."
+  	mail to: dream.dreameremail , subject: "[Help Ghanaian Businesses] See how gets clients everyday with their website."
   end
 
   def dream_message3(dream)

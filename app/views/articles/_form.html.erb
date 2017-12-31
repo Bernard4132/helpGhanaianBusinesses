@@ -1,3 +1,18 @@
+
+<style type="text/css">
+  
+trix-editor {
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  margin: 0;
+  padding: 0.4em 0.6em;
+  min-height: 200px;
+  outline: none;
+  background-color: #ffffff;
+}
+
+</style>
+
 <%= form_for(article) do |f| %>
   <% if article.errors.any? %>
     <div id="error_explanation">
@@ -17,37 +32,42 @@
     {:required => true, class: "select", style: "width: 100%;"} %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class => "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :articleimage %>
-    <%= f.file_field :articleimage %>
+    <%= f.file_field :articleimage, :class => "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :videolink %>
-    <%= f.text_field :videolink %>
+    <%= f.text_field :videolink, :class => "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <p>Article Body</p>
     <%= f.trix_editor :body  , :rows => "6" %>
   </div>
 
-  <div class="field">
-    <%= f.label :metadescription %>
-    <%= f.text_field :metadescription %>
+  <div class="form-group">
+    <%= f.label :bleb %>
+    <%= f.text_field :bleb, :class => "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
+    <%= f.label :metadescription %>
+    <%= f.text_field :metadescription, :class => "form-control" %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :metakeywords %>
-    <%= f.text_field :metakeywords %>
+    <%= f.text_field :metakeywords, :class => "form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit", :class => "btn btn-success btn-lg" %>
   </div>
 <% end %>

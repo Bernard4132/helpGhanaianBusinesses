@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Facebookads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resultsywant</th>
+      <th>Budget</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phonenumber</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @facebookads.each do |facebookad| %>
+      <tr>
+        <td><%= facebookad.resultsywant %></td>
+        <td><%= facebookad.budget %></td>
+        <td><%= facebookad.name %></td>
+        <td><%= facebookad.email %></td>
+        <td><%= facebookad.phonenumber %></td>
+        <td><%= link_to 'Show', facebookad %></td>
+        <td><%= link_to 'Edit', edit_facebookad_path(facebookad) %></td>
+        <td><%= link_to 'Destroy', facebookad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Facebookad', new_facebookad_path %>

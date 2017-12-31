@@ -1,0 +1,2 @@
+class Facebookad < ApplicationRecord
+end

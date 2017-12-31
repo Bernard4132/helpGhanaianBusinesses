@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  resources :facebookads
   resources :projecttypes
   
   resources :costs
   resources :projects do
    resources :timelines
   end
+  resources :photos
   resources :potentials
   resources :legends
   resources :clients
@@ -25,4 +27,5 @@ Rails.application.routes.draw do
   match 'aboutus', to: 'static_pages#aboutus', via: 'get'
   match 'helpghanaianbusinessesleads', to: 'static_pages#helpghanaianbusinessesleads', via: 'get'
   match 'thankyoulead', to: 'static_pages#thankyoulead', via: 'get'
+  match 'fbadvertisementsleads', to: 'static_pages#fbadvertisementsleads', via: 'get'
 end

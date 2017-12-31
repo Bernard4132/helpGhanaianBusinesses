@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171201130019) do
+ActiveRecord::Schema.define(version: 20171231132501) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -19,9 +19,12 @@ ActiveRecord::Schema.define(version: 20171201130019) do
     t.text     "body"
     t.string   "metadescription"
     t.string   "metakeywords"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.string   "slug"
+    t.integer  "user_id"
+    t.string   "article_image_id"
+    t.text     "bleb"
   end
 
   create_table "clients", force: :cascade do |t|
@@ -67,6 +70,16 @@ ActiveRecord::Schema.define(version: 20171201130019) do
     t.boolean  "urgent",       default: false
   end
 
+  create_table "facebookads", force: :cascade do |t|
+    t.string   "resultsywant"
+    t.string   "budget"
+    t.string   "name"
+    t.string   "email"
+    t.string   "phonenumber"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
     t.integer  "sluggable_id",              null: false
@@ -94,6 +107,14 @@ ActiveRecord::Schema.define(version: 20171201130019) do
     t.string   "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string   "attachment"
+    t.integer  "article_id"
+    t.string   "article_image_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "potentials", force: :cascade do |t|
