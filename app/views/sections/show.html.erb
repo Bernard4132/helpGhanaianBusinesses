@@ -1,3 +1,13 @@
+<title>helpbusinessesonline.com | <%= @article.title %></title>
+<meta name="description" content="<%= @section.description %>">
+      <meta name="keywords" content="<%= @section.name %>">
+      <meta name="author" content="helpbusinessesonline.com">
+      <meta property="og:title" content="<%= @section.name %>">
+      <meta property="og:description" content="<%= @section.description %>">
+      <meta property="og:url" content="<%= section_url(@section) %>" />
+     <meta property="og:image" content="<%= @section.sectionimage %>" />
+
+
 <style type="text/css">
 .aduins{
  background:linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.1)),url(<%= @section.sectionimage %>);
