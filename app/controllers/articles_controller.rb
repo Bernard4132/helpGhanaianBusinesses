@@ -5,7 +5,10 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.last(3)
+    @digtalmarketingarticles = Section.find(1).articles.last(3)
+    @websitearticles = Section.find(2).articles.last(3)
+    @facebookarticles = Section.find(3).articles.last(3)
   end
 
   # GET /articles/1
