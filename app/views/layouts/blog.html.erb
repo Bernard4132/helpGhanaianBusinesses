@@ -73,6 +73,8 @@ a:hover {
   box-sizing: border-box;
 }
 
+
+
 html {
   font-size: 62.5%;
 }
@@ -94,6 +96,13 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.form-control{
+  font-size: 18px;
+}
+
+.btn{
+  font-size: 18px;
+}
 
 .cd-secondary-nav {
   position: relative;
@@ -317,8 +326,13 @@ body {
 
     <ul id="cd-navigation">
       <li><a href="#0">Other Services</a></li>
-      <li><a href="#0"><i class="fa fa-sign-in" aria-hidden="true"></i> Client login</a></li>
-      <li><a href="#0"><span style="color: #5cc804; font-weight: 900;">Join Our Business Community</span></a></li>
+      <% if signed_in? %>
+      <li><%= link_to '<span><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</span>'.html_safe, destroy_user_session_path, :method => :delete, :class => "" %></li>
+      <li><%= link_to '<span><i class="fa fa-user" aria-hidden="true"></i> Profile</span>'.html_safe, current_user %></li>
+      <% else %>
+      <li><a href="/users/sign_in"><i class="fa fa-sign-in" aria-hidden="true"></i> Client login</a></li>
+      <li><a href="/"><span style="color: #5cc804; font-weight: 900;">Join Our Business Community</span></a></li>
+      <% end %>
     </ul>
   </nav> <!-- .cd-primary-nav -->
 

@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  layout "blog"
 
   # GET /articles
   # GET /articles.json
@@ -15,6 +14,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1.json
   def show
     @article = Article.friendly.find(params[:id])
+    @lead = Lead.new
   end
 
   # GET /articles/new

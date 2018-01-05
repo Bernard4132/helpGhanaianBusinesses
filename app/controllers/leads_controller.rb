@@ -28,7 +28,7 @@ class LeadsController < ApplicationController
     respond_to do |format|
       if @lead.save
          LeadMailer.lead_message(@lead).deliver_later
-        format.html { redirect_to @lead, notice: 'Lead was successfully created.' }
+        format.html { redirect_to :back, notice: 'Lead was successfully created.' }
         format.json { render :show, status: :created, location: @lead }
       else
         format.html { render :new }
