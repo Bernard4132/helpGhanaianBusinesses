@@ -11,6 +11,7 @@ class SectionsController < ApplicationController
   # GET /sections/1.json
   def show
     @section = Section.friendly.find(params[:id])
+    @sectionarticles = @section.articles
   end
 
   # GET /sections/new

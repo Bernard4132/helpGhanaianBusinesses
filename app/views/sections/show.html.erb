@@ -9,59 +9,74 @@
 
 
 <style type="text/css">
+
 .aduins{
  background:linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.1)),url(<%= @section.sectionimage %>);
   background-position:center;
   min-height: 200px;
+  margin-top: 50px;
 }
 
-.sectionname{
-   text-align: left; 
-   color: white; 
-   position: relative; 
-   top: 75px; 
-   font-weight: 500; 
-   font-size: 30px; 
-   text-shadow: 1px 0px 6px rgba(0, 0, 0, 1);
+.blogpart{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  margin-top: 15px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
 }
 
-.sectiondescrip{
-	text-align: left; 
-   color: white; 
-   position: relative; 
-   top: 80px; 
-   font-weight: 300; 
-   font-size: 18px; 
+.blogsection{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.servss{
+  color: #595959;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+@media only screen and (min-width : 100px) and (max-width : 600px) {
+
+.aduins{
+  margin-top: 0px;
+}
+
 }
 
 </style>
 
+
 <section class="aduins">
   <div class="container">
-    <div class="row" style="margin-top: 50px">
+    <div class="row">
       <div class="col-lg-12">
-        <h1 class="sectionname" style=""><%= @section.name %></h1>
-        <p class="sectiondescrip"><%= @section.description %></p>
+        <h1 style="text-align: left; color: white; position: relative; top: 65px; font-weight: 900;  text-shadow: 1px 0px 6px rgba(0, 0, 0, 1);"><%= @section.name %></h1>
+        <p style="text-align: left; color: white; position: relative; top: 65px; font-weight: 300;  text-shadow: 1px 0px 6px rgba(0, 0, 0, 1);"><%= @section.description %></p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="sectionbody">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-7 col-md-12">
-				<div class="descriphold">
-        </div>
-			</div>
-			<div class="col-lg-5 col-md-12">
-        <div class="ctahold">
-        </div>
-			</div>
-		</div>
-	</div>
-</section>
-
+<div class="blogsection">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 col-md-12">
+      <h5 class="servss">All <%= @section.name %> Posts</h5>
+      <div class="blogpart">
+       <%= render @sectionarticles %>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
 
 
 
