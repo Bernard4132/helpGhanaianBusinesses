@@ -1,4 +1,10 @@
-<%= form_for(timeline) do |f| %>
+
+
+<div class="container">
+  <h1 style="text-align: center;" >New Timeline</h1>
+  <div class="row">
+    <div class="col-sm-6">
+<%= form_for [@project,@timeline] do |f| %>
   <% if timeline.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(timeline.errors.count, "error") %> prohibited this timeline from being saved:</h2>
@@ -11,32 +17,33 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :weareat %>
-    <%= f.text_field :weareat %>
+    <%= f.text_field :weareat, :class => "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :milestone %>
-    <%= f.text_field :milestone %>
+    <%= f.text_field :milestone, :class => "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :class => "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :timelink %>
-    <%= f.text_field :timelink %>
+    <%= f.text_field :timelink, :class => "form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :project_id %>
-    <%= f.number_field :project_id %>
-  </div>
+  
 
-  <div class="actions">
+  <div class="form-group">
     <%= f.submit %>
   </div>
 <% end %>
+
+</div>
+</div>
+</div>

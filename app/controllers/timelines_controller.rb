@@ -1,6 +1,6 @@
 class TimelinesController < ApplicationController
   before_action :set_timeline, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_project
   # GET /timelines
   # GET /timelines.json
   def index
@@ -14,7 +14,7 @@ class TimelinesController < ApplicationController
 
   # GET /timelines/new
   def new
-    @timeline = Timeline.new
+    @timeline = @project.timelines.new
   end
 
   # GET /timelines/1/edit
@@ -24,11 +24,11 @@ class TimelinesController < ApplicationController
   # POST /timelines
   # POST /timelines.json
   def create
-    @timeline = Timeline.new(timeline_params)
+    @timeline = @project.timelines.new(timeline_params)
 
     respond_to do |format|
       if @timeline.save
-        format.html { redirect_to @timeline, notice: 'Timeline was successfully created.' }
+        format.html { redirect_to @project }
         format.json { render :show, status: :created, location: @timeline }
       else
         format.html { render :new }
@@ -65,6 +65,10 @@ class TimelinesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_timeline
       @timeline = Timeline.find(params[:id])
+    end
+
+    def set_project
+      @project = Project.find(params[:project_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

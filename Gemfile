@@ -46,12 +46,14 @@ gem 'carrierwave', '~> 1.0'
 
 gem 'fog'
 
+gem 'redcarpet', '~> 3.0.0'
+
 gem 'friendly_id', '~> 5.1.0'
 
-group :production do
-gem 'pg'
-gem 'rails_12factor'
-end
+# group :production do
+# gem 'pg'
+# gem 'rails_12factor'
+# end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

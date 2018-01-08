@@ -330,6 +330,7 @@ GEM
       json (>= 1.8)
       nokogiri (~> 1.5)
       trollop (~> 2.1)
+    redcarpet (3.0.0)
     refile-s3 (0.2.0)
       aws-sdk (~> 2.0)
       refile (~> 0.6.0)
@@ -412,6 +413,7 @@ DEPENDENCIES
   jquery-rails
   puma (~> 3.0)
   rails (~> 5.0.2)
+  redcarpet (~> 3.0.0)
   refile!
   refile-mini_magick!
   refile-s3

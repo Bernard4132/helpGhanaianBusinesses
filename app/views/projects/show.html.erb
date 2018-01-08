@@ -1,32 +1,55 @@
-<br><br><br><br><br>
 
-<p id="notice"><%= notice %></p>
+<style type="text/css">
 
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
+.holdproj{
+  background-color: #ffffff;
+  border-radius: 0px;
+  padding: 15px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  margin-bottom: 20px;
+  margin-top: 6px;
+}
 
-<p>
-  <strong>Active:</strong>
-  <%= @project.active %>
-</p>
+</style>
+<br><br><br>
 
-<p>
-  <strong>Deploy:</strong>
-  <%= @project.deploy %>
-</p>
+<div class="container">
+  <p style="text-align: right;">
+    <a href="" class="btn btn-primary">Open a Ticket</a>
+  </p>
+  <div class="row">
+  <div class="col-lg-12">
+   <div class="holdproj">
+        <h2 style="font-weight: 700; font-size: 17px;"><%= @project.title %></h2>
+        <p>
+        <span style="color: #4d4d4d; font-weight: 500; font-size: 13px;">Belongs to: <%= @project.users.first.email %></span> | <% if @project.active? %>
+       <span style="color: #5cc804; font-size: 13px;"> Active <i class="fa fa-dot-circle-o" aria-hidden="true"></i></span>
+        <% else %>
+       <span style="color: #8c8c8c; font-size: 13px;"> Inactive | Work not started <i class="fa fa-dot-circle-o" aria-hidden="true"></i></span>
+        <% end %>
+        </p>
+        <p style="font-size: 13px;"><i class="fa fa-briefcase" aria-hidden="true"></i> <%= @project.projecttypes.first.name %></p>
+        <p style="font-family: 'Poppins', sans-serif; font-weight: 300; color: #4d4d4d; font-size: 15px; text-align: justify;"><%= @project.details %></p>
+    </div>
+    <div class="col-lg-12">
+       
+      <h2>Progress on Project</h2>
+    </div>
+</div>
+</div>
 
-<p><%= @project.costs.first.amount %></p>
+<div class="row">
+  <div class="col-lg-12">
+    <% if @project.timelines.any? %>
+    <%= render @project.timelines %>
+    <% else %>
+    <p style="font-weight: 300; font-size: 12px;">No Progress has been made on your project so far...</p>
+    <% end %>
+  </div>
+  </div>
 
-<p><%= @project.users.first.email %></p>
+</div>
 
-<p><%= @project.projecttypes.first.name %></p>
-
-<p>
-  <strong>Details:</strong>
-  <%= @project.details %>
-</p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<br>
