@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Expertleads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expertleads.each do |expertlead| %>
+      <tr>
+        <td><%= expertlead.name %></td>
+        <td><%= expertlead.email %></td>
+        <td><%= expertlead.phone %></td>
+        <td><%= link_to 'Show', expertlead %></td>
+        <td><%= link_to 'Edit', edit_expertlead_path(expertlead) %></td>
+        <td><%= link_to 'Destroy', expertlead, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Expertlead', new_expertlead_path %>

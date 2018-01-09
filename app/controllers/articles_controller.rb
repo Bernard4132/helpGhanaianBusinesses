@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
     @digtalmarketingarticles = Section.find(1).articles.last(3)
     @websitearticles = Section.find(2).articles.last(3)
     @facebookarticles = Section.find(3).articles.last(3)
+    @lead = Lead.new
   end
 
   # GET /articles/1
@@ -15,6 +16,7 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.friendly.find(params[:id])
     @lead = Lead.new
+    @newsletter = Newsletter.new
   end
 
   # GET /articles/new

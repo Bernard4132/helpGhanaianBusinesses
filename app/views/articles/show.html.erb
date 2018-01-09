@@ -83,7 +83,7 @@ display: inline;
 }
 
 .adonis{
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   padding: 10px;
 }
@@ -303,7 +303,7 @@ font-family: 'Poppins', sans-serif;
           <p style="text-align: center"><img src="https://res.cloudinary.com/nikasemo/image/upload/v1510353900/why_qdrevl.png" class="img-fluid"></p>
           <p style="font-weight: 300; font-size: 18px;">
            There is no successful business without a website!
-            <br> <span style="color: #42ade7;">When will you create yours?</span></p>
+            <br> <span style="color: #5cc804;">When will you create yours?</span></p>
           <p style="text-align: center;"><a href="" class="btn btn-primary adonis famcolor">Get yours today!</a></p>
         </div>
 
@@ -312,8 +312,28 @@ font-family: 'Poppins', sans-serif;
           <p style="font-weight: 300; font-size: 15px;">
            Get notified anytime we post a new article, an offer, or a lesson which will help you get more out of your website!
           </p>
-          <p><input type="text" placeholder="Your email" class="form-control" /></p>
-          <p style="text-align: center;"><a href="" class="btn btn-primary adonis famcolor">Sign Up!</a></p>
+          <%= form_for(@newsletter) do |f| %>
+  <% if @newsletter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@newsletter.errors.count, "error") %> prohibited this newsletter from being saved:</h2>
+
+      <ul>
+      <% @newsletter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+    <%= f.text_field :name, :class => "form-control", :placeholder => "First Name" %>
+    <br>
+    <%= f.text_field :email, :class => "form-control", :placeholder => "Your Email"  %>
+    <br>
+   <p style="text-align: center;"><%= f.submit "Sign Up for Newsletter!", :class => "btn btn-primary adonis famcolor" %></p>
+ 
+<% end %>
+
         </div>
 
       </div>

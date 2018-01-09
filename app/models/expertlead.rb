@@ -1,0 +1,2 @@
+class Expertlead < ApplicationRecord
+end

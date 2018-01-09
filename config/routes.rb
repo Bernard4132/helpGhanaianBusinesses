@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :expertleads
+  resources :newsletters
   resources :facebookads
   resources :projecttypes
   

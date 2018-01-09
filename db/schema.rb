@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180104014736) do
+ActiveRecord::Schema.define(version: 20180109221809) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -70,6 +70,14 @@ ActiveRecord::Schema.define(version: 20180104014736) do
     t.boolean  "urgent",       default: false
   end
 
+  create_table "expertleads", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "facebookads", force: :cascade do |t|
     t.string   "resultsywant"
     t.string   "budget"
@@ -105,6 +113,13 @@ ActiveRecord::Schema.define(version: 20180104014736) do
     t.string   "name"
     t.string   "email"
     t.string   "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "newsletters", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
