@@ -51,7 +51,7 @@ gem 'redcarpet', '~> 3.0.0'
 gem 'friendly_id', '~> 5.1.0'
 
 group :production do
-gem 'pg'
+gem 'pg', '~> 0.20'
 gem 'rails_12factor'
 end
 
