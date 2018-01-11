@@ -25,7 +25,7 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
-   config.action_mailer.default_url_options = { host: 'www.helpbusinessesonline.com' }
+   config.action_mailer.default_url_options = { host: 'www.helpghanaianbusinesses.com' }
 
   config.action_mailer.delivery_method = :smtp
 
@@ -46,10 +46,10 @@ Rails.application.configure do
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
   # config/environments/production.rb
-  config.action_mailer.default_url_options = { :host => 'helpbusinessesonline.com' }
+  config.action_mailer.default_url_options = { :host => 'helpghanaianbusinesses.com' }
   # Use a different logger for distributed setups.
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
-  config.action_mailer.asset_host = 'http://helpbusinessesonline.com'
+  config.action_mailer.asset_host = 'http://helpghanaianbusinesses.com'
 
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
