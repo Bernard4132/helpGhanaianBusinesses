@@ -29,7 +29,7 @@ class PotentialsController < ApplicationController
 
     respond_to do |format|
       if @potential.save
-        format.html { redirect_to @potential, notice: 'Potential was successfully created.' }
+        format.html { redirect_to :back, notice: 'Contact was successfully made to Help Businesses Online. We will get back to you in the course of the day. Thank you.' }
         format.json { render :show, status: :created, location: @potential }
       else
         format.html { render :new }

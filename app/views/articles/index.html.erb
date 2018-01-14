@@ -335,6 +335,10 @@
   border-radius: 50%;
   margin-bottom: 15px;
 }
+
+.margtopfm{
+  margin-top: 10px;
+}
  
 }
 
@@ -349,7 +353,12 @@
         <div class="holderimg">
           <p class="titler">Grow your Business online!<br>By using Proven Online Tactics and Ways.</p>
           <p class="subtler">All the expert articles, advice and services needed for you and your business to succeed online.</p>
-          <p class="ctaone"><a href="/users/sign_up" class="btn btn-primary adonis famcolor">Join Our Business Community!</a></p>
+
+          <p class="ctaone">
+            <button type="button" class="btn btn-primary btn-lg adonis famcolor" data-toggle="modal" data-target="#exampleModal">
+               Join Our Business Community!
+              </button>
+          </p>
         </div>
       </div>
       <div class="col-sm-12">
@@ -467,8 +476,8 @@
   <div class="row">
     <div class="col-sm-12 col-lg-6">
       <h1 class="exphead">Getting Expert Advice</h1>
-      <p>Meet other Experts in digital marketing who will give you the latest information and development in the space. Information that can help you 10X your business within the span of 1 year. Subscribe to get expert advice Today!</p>
-      <p><a href="" class="btn btn-primary adonis famcolor">Get Expert Advice</a></p>
+      <p class="expdescri">Meet other Experts in digital marketing who will give you the latest information and development in the space. Information that can help you 10X your business within the span of 1 year. Subscribe to get expert advice Today!</p>
+      <p><a href="/expertleads/new" class="btn btn-primary adonis famcolor">Get Expert Advice</a></p>
     </div>
     <div class="col-sm-12 col-lg-6">
       <img src="https://res.cloudinary.com/nikasemo/image/upload/v1514741594/businessman_dymrah.jpg" class="img-fluid">
@@ -509,10 +518,10 @@
   <% end %>
 
 <div class="form-row">
-    <div class="col">
+    <div class="col-lg-6 col-sm-12">
     <%= f.text_field :name, :class=> "form-control", :placeholder => "Your Name" %>
     </div>
-    <div class="col">
+    <div class="col-lg-6 col-sm-12 margtopfm">
     <%= f.text_field :organization, :class=> "form-control", :placeholder => "Your Organization" %>
     </div>
   </div>
@@ -535,5 +544,58 @@
 </div>
 
 </section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="text-align: center;" id="exampleModalLabel"><span style="font-weight: 300; font-size: 20px;">Register today for the best tips, advice and services to help grow your business!</span>
+        <strong></strong></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<%= form_for(@lead) do |f| %>
+  <% if @lead.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
+
+      <ul>
+      <% @lead.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="form-group">
+  <label>Your Name:</label>
+    <%= f.text_field :name, :class=> "form-control", :placeholder => "Your Name" %>
+    </div>
+    <div class="form-group">
+      <label>Your Organization's name:</label>
+    <%= f.text_field :organization, :class=> "form-control", :placeholder => "Your Organization" %>
+    </div>
+
+  <div class="form-group" style="">
+    <label>Your Email:</label>
+    <%= f.text_field :email, :class=> "form-control", :placeholder => "Your Email" %>
+  </div>
+  
+  <div class="form-group">
+    <label>Your Phone Number:</label>
+    <%= f.text_field :phone, :class=> "form-control", :placeholder => "Your Phone Number" %>
+  </div>
+<br>
+        <p style="text-align: right;"><button type="submit" class="btn btn-primary btn-lg" style="background-color: #5cc804; border: 1px solid #5cc804;">Submit</button>
+        </p>
+
+        <% end %>
+    </div>
+  </div>
+</div>
 
 

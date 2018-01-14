@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @web.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @web.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @web.phone %>
+</p>
+
+<p>
+  <strong>Aboutcompany:</strong>
+  <%= @web.aboutcompany %>
+</p>
+
+<p>
+  <strong>Aboutproject:</strong>
+  <%= @web.aboutproject %>
+</p>
+
+<p>
+  <strong>Projectdeadline:</strong>
+  <%= @web.projectdeadline %>
+</p>
+
+<p>
+  <strong>Projectbudget:</strong>
+  <%= @web.projectbudget %>
+</p>
+
+<p>
+  <strong>Targetaudience:</strong>
+  <%= @web.targetaudience %>
+</p>
+
+<%= link_to 'Edit', edit_web_path(@web) %> |
+<%= link_to 'Back', webs_path %>

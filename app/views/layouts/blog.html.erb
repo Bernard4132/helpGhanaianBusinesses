@@ -103,7 +103,7 @@ body {
 }
 
 .form-control{
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .btn{
@@ -331,14 +331,15 @@ body {
     </a> <!-- .nav-trigger -->
 
     <ul id="cd-navigation">
-      <li><a href="#0">Other Services</a></li>
+      <li><a href="/ourservices">Other Services</a></li>
       <% if signed_in? %>
       <li><%= link_to '<span><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</span>'.html_safe, destroy_user_session_path, :method => :delete, :class => "" %></li>
       <li><%= link_to '<span><i class="fa fa-user" aria-hidden="true"></i> Profile</span>'.html_safe, current_user %></li>
       <% else %>
       <li><a href="/users/sign_in"><i class="fa fa-sign-in" aria-hidden="true"></i> Client login</a></li>
-      <li><a href="/"><span style="color: #5cc804; font-weight: 900;">Join Our Business Community</span></a></li>
+      <li><a href="" data-toggle="modal" data-target="#exampleModal"><span style="color: #5cc804; font-weight: 900;">Join Our Business Community</span></a></li>
       <% end %>
+      <li><a href="/contacts/new"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Us</a></li>
     </ul>
   </nav> <!-- .cd-primary-nav -->
 
@@ -350,7 +351,7 @@ body {
       <li><a href="/sections/email-marketing">Email Marketing</a></li>
       <li><a href="/sections/facebook-marketing">Facebook Marketing</a></li>
       <li><a href="/sections/google-marketing">Google Adverts</a></li>
-      <li><a href="#0" class="active">Expert Advice</a></li>
+      <li><a href="/expertleads/new" class="active">Expert Advice</a></li>
     </ul>
   </nav> <!-- .cd-secondary-nav -->
 </header> <!-- .cd-auto-hide-header -->

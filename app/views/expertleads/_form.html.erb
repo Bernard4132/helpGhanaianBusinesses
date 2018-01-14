@@ -1,3 +1,45 @@
+
+<style type="text/css">
+
+.btnner{
+  position: relative;
+  float: right;
+}
+
+.holdforminit{
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  -webkit-box-shadow: -1px -1px 5px 6px rgba(0,0,0,0.1);
+-moz-box-shadow: -1px -1px 5px 6px rgba(0,0,0,0.1);
+box-shadow: -1px -1px 5px 6px rgba(0,0,0,0.1);
+}
+
+.famcolor{
+  background-color: #5cc804;
+  color: white;
+  border: 1px solid #5cc804;
+}
+
+.famcolor:hover{
+  background-color: #fdca00;
+  color: white;
+  border: 2px solid #5cc804;
+}
+
+.famcolor:active{
+  background-color: #fdca00;
+  color: white;
+  border: 1px solid #5cc804;
+}
+
+</style>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="holdforminit">
+         <h3 class="subscribehead">Get Adviced by the Experts!</h3>
+         <p style="font-weight: 300; text-align: center;">Meet other Experts in digital marketing who will give you the latest information and development in the space. Information that can help you <span style="font-weight: 700;">10X</span> your business within the span of 1 year. Subscribe to get expert advice Today!</p>
 <%= form_for(expertlead) do |f| %>
   <% if expertlead.errors.any? %>
     <div id="error_explanation">
@@ -11,22 +53,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => "form-control", :placeholder => "Your Name", :required => "true" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, :class => "form-control", :placeholder => "Your Email", :required => "true" %>
   </div>
 
-  <div class="field">
-    <%= f.label :phone %>
-    <%= f.text_field :phone %>
+  <div class="form-group">
+    <label>Phone Number</label>
+    <%= f.text_field :phone , :class => "form-control", :placeholder => "Your Phone Number", :required => "true"%>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <p style="text-align: center;"><%= f.submit "Send", :class => "btn btn-primary btn-lg famcolor" %></p>
   </div>
 <% end %>
+
+</div>
+</div>
+</div>
+</div>

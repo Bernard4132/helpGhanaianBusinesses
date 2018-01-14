@@ -183,7 +183,12 @@
       <div class="col-lg-5 col-md-12">
         <div class="ctahold">
           <h1 class="landingheader" style="font-weight: bold; text-align: center; color: white; font-size: 25px; margin-bottom: 25px;">Kindly fill this form.</h1>
-
+ <% if notice %>
+<div class="alert alert-success alert-dismissible" role="alert" style="margin-bottom: 10px;">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <p class="notice"><%= notice %></p>
+</div>
+<% end %>
        <%= form_for(@potential) do |f| %>
   <div class="form-group">
     <div class="form-group">

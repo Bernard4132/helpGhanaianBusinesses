@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :webs
+  resources :contacts
   resources :expertleads
   resources :newsletters
   resources :facebookads
@@ -30,5 +32,6 @@ Rails.application.routes.draw do
   match 'aboutus', to: 'static_pages#aboutus', via: 'get'
   match 'helpghanaianbusinessesleads', to: 'static_pages#helpghanaianbusinessesleads', via: 'get'
   match 'thankyoulead', to: 'static_pages#thankyoulead', via: 'get'
+  match 'ourservices', to: 'static_pages#ourservices', via: 'get'
   match 'fbadvertisementsleads', to: 'static_pages#fbadvertisementsleads', via: 'get'
 end

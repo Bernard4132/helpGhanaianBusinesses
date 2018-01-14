@@ -140,7 +140,12 @@
 			<div class="col-lg-5 col-md-12">
         <div class="ctahold">
           <h1 class="landingheader" style="font-weight: bold; text-align: center; color: white; font-size: 25px; margin-bottom: 25px;">Kindly fill this form.</h1>
-
+ <% if notice %>
+<div class="alert alert-success alert-dismissible" role="alert" style="margin-bottom: 10px;">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <p class="notice"><%= notice %></p>
+</div>
+<% end %>
        <%= form_for(@dream) do |f| %>
    <div class="form-group">
     <label style="font-weight: bold; color: white;">What type of website do you want?</label><br>
@@ -159,7 +164,6 @@
        <div class="form-group">
     <label style="font-weight: bold; color: white;">What is your budget Allocation for your website?</label><br>
         <select class="selectpicker" name="dream[dreambudget]" id="dream_dreambudget" style="width: 100%;">
-          <option name="dream[dreambudget]" id="dream_dreambudget" value="300 - 499">300 - 499 cedis</option>
           <option name="dream[dreambudget]" id="dream_dreambudget" value="500 - 699">500 - 699 cedis</option>
           <option name="dream[dreambudget]" id="dream_dreambudget" value="700 - 999">700 - 999 cedis</option>
           <option name="dream[dreambudget]" id="dream_dreambudget" value="1000 - 1499">1000 - 1499 cedis</option>
