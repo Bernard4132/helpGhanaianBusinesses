@@ -2,7 +2,8 @@
 
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
-Rails.application.config.assets.precompile += %w( Chart.bundle.js )
+Rails.application.config.assets.precompile += %w( chart.bundle.js )
+Rails.application.config.assets.precompile += %w( chartkick.js )
 Rails.application.config.assets.precompile += %w( bootstrap.css )
 Rails.application.config.assets.precompile += %w( style.css )
 Rails.application.config.assets.precompile += %w( main.js )
