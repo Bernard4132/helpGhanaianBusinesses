@@ -50,6 +50,7 @@ class PotentialsController < ApplicationController
         format.json { render json: @potential.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :update, @potential
   end
 
   # DELETE /potentials/1
@@ -60,6 +61,7 @@ class PotentialsController < ApplicationController
       format.html { redirect_to potentials_url, notice: 'Potential was successfully destroyed.' }
       format.json { head :no_content }
     end
+    authorize! :destroy, @potential
   end
 
   private

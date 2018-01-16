@@ -35,6 +35,7 @@ class TimelinesController < ApplicationController
         format.json { render json: @timeline.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :create, @timeline
   end
 
   # PATCH/PUT /timelines/1
@@ -49,6 +50,7 @@ class TimelinesController < ApplicationController
         format.json { render json: @timeline.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :update, @timeline
   end
 
   # DELETE /timelines/1
@@ -59,6 +61,7 @@ class TimelinesController < ApplicationController
       format.html { redirect_to timelines_url, notice: 'Timeline was successfully destroyed.' }
       format.json { head :no_content }
     end
+    authorize! :destroy, @timeline
   end
 
   private

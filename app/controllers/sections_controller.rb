@@ -39,6 +39,7 @@ class SectionsController < ApplicationController
         format.json { render json: @section.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :create, @section
   end
 
   # PATCH/PUT /sections/1
@@ -53,6 +54,7 @@ class SectionsController < ApplicationController
         format.json { render json: @section.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :update, @section
   end
 
   # DELETE /sections/1
@@ -63,6 +65,7 @@ class SectionsController < ApplicationController
       format.html { redirect_to sections_url, notice: 'Section was successfully destroyed.' }
       format.json { head :no_content }
     end
+    authorize! :destroy, @section
   end
 
   private

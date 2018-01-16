@@ -42,6 +42,7 @@ class ArticlesController < ApplicationController
         format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :create, @article
   end
 
   # PATCH/PUT /articles/1
@@ -56,6 +57,7 @@ class ArticlesController < ApplicationController
         format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :update, @article
   end
 
   # DELETE /articles/1
@@ -66,6 +68,7 @@ class ArticlesController < ApplicationController
       format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }
       format.json { head :no_content }
     end
+    authorize! :destroy, @article
   end
 
   private

@@ -335,6 +335,9 @@ body {
       <% if signed_in? %>
       <li><%= link_to '<span><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</span>'.html_safe, destroy_user_session_path, :method => :delete, :class => "" %></li>
       <li><%= link_to '<span><i class="fa fa-user" aria-hidden="true"></i> Profile</span>'.html_safe, current_user %></li>
+      <% if current_user.has_role? :admin %>
+      <li><a href="/dashboard"><i class="fa fa-lock" aria-hidden="true"></i> Admin Dashboard</a></li>
+      <% end %>
       <% else %>
       <li><a href="/users/sign_in"><i class="fa fa-sign-in" aria-hidden="true"></i> Client login</a></li>
       <li><a href="" data-toggle="modal" data-target="#exampleModal"><span style="color: #5cc804; font-weight: 900;">Join Our Business Community</span></a></li>

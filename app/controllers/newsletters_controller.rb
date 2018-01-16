@@ -49,6 +49,7 @@ class NewslettersController < ApplicationController
         format.json { render json: @newsletter.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :update, @newsletter
   end
 
   # DELETE /newsletters/1
@@ -59,6 +60,7 @@ class NewslettersController < ApplicationController
       format.html { redirect_to newsletters_url, notice: 'Newsletter was successfully destroyed.' }
       format.json { head :no_content }
     end
+    authorize! :destroy, @newsletter
   end
 
   private

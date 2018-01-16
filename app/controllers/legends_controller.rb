@@ -49,6 +49,7 @@ class LegendsController < ApplicationController
         format.json { render json: @legend.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :update, @legend
   end
 
   # DELETE /legends/1
@@ -59,6 +60,7 @@ class LegendsController < ApplicationController
       format.html { redirect_to legends_url, notice: 'Legend was successfully destroyed.' }
       format.json { head :no_content }
     end
+    authorize! :destroy, @legend
   end
 
   private

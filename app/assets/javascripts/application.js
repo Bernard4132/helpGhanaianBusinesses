@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require trix
+//= require Chart.bundle
+//= require chartkick
 //= require_tree .
 
 $(document).on("trixUploadEnd", function() {

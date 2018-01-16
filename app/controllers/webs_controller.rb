@@ -49,6 +49,7 @@ class WebsController < ApplicationController
         format.json { render json: @web.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :update, @web
   end
 
   # DELETE /webs/1
@@ -59,6 +60,7 @@ class WebsController < ApplicationController
       format.html { redirect_to webs_url, notice: 'Web was successfully destroyed.' }
       format.json { head :no_content }
     end
+    authorize! :destroy, @web
   end
 
   private

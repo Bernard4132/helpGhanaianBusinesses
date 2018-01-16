@@ -1,4 +1,5 @@
 class Project < ApplicationRecord
+	resourcify
 	has_many :costs
 	has_many :timelines
 	has_many :userprojects, :dependent => :destroy, :autosave => true

@@ -49,6 +49,7 @@ class LeadsController < ApplicationController
         format.json { render json: @lead.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :update, @lead
   end
 
   # DELETE /leads/1
@@ -59,6 +60,7 @@ class LeadsController < ApplicationController
       format.html { redirect_to leads_url, notice: 'Lead was successfully destroyed.' }
       format.json { head :no_content }
     end
+    authorize! :destroy, @lead
   end
 
   private

@@ -39,6 +39,8 @@ gem 'sinatra', github: 'sinatra/sinatra', branch: 'master'
 gem "refile-s3"
 # devise gem for authentication
 gem 'devise'
+gem 'cancancan'
+gem 'rolify'
 # bcrypt for password encryption
 #gem 'bcrypt', '~> 3.1.11', platforms: [:ruby, :x64_mingw, :mingw]
 
@@ -50,10 +52,13 @@ gem 'redcarpet', '~> 3.0.0'
 
 gem 'friendly_id', '~> 5.1.0'
 
-group :production do
-gem 'pg', '~> 0.20'
-gem 'rails_12factor'
-end
+gem 'groupdate'
+gem "chartkick"
+
+# group :production do
+# gem 'pg', '~> 0.20'
+# gem 'rails_12factor'
+# end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

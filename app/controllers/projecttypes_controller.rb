@@ -35,6 +35,7 @@ class ProjecttypesController < ApplicationController
         format.json { render json: @projecttype.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :create, @projecttype
   end
 
   # PATCH/PUT /projecttypes/1
@@ -49,6 +50,7 @@ class ProjecttypesController < ApplicationController
         format.json { render json: @projecttype.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :update, @projecttype
   end
 
   # DELETE /projecttypes/1
@@ -59,6 +61,7 @@ class ProjecttypesController < ApplicationController
       format.html { redirect_to projecttypes_url, notice: 'Projecttype was successfully destroyed.' }
       format.json { head :no_content }
     end
+    authorize! :destroy, @projecttype
   end
 
   private

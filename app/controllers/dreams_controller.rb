@@ -56,6 +56,7 @@ class DreamsController < ApplicationController
         format.json { render json: @dream.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :update, @dream
   end
 
   # DELETE /dreams/1
@@ -66,6 +67,7 @@ class DreamsController < ApplicationController
       format.html { redirect_to dreams_url, notice: 'Dream was successfully destroyed.' }
       format.json { head :no_content }
     end
+    authorize! :destroy, @dream
   end
 
   private

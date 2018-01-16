@@ -49,6 +49,7 @@ class FacebookadsController < ApplicationController
         format.json { render json: @facebookad.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :update, @facebookad
   end
 
   # DELETE /facebookads/1
@@ -59,6 +60,7 @@ class FacebookadsController < ApplicationController
       format.html { redirect_to facebookads_url, notice: 'Facebookad was successfully destroyed.' }
       format.json { head :no_content }
     end
+    authorize! :destroy, @facebookad
   end
 
   private

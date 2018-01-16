@@ -1,0 +1,321 @@
+<% if current_user.has_role? :admin %>
+<style type="text/css">
+	
+.statssection{
+	margin-top: 80px;
+}
+
+.marketingsection{
+	margin-top: 50px;
+}
+
+.statsholder{
+	width: 100%;
+	background-color: white;
+    border-bottom: 5px solid #5cc804;
+    padding: 15px;
+    margin-bottom: 20px;
+    height: 150px;
+}
+
+.statsholderer{
+	width: 100%;
+	background-color: white;
+    border-bottom: 5px solid #5cc804;
+    padding: 15px;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.dashhead{
+	text-align: center;
+	font-weight: 700;
+}
+
+.revhead{
+	background-color: #ffffff;
+	color: #5cc804;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+</style>
+
+
+<section class="statssection">
+<h1 class="dashhead">Our Dashboard</h1>
+<p style="text-align: center;">Our Dashboard gives you an insight of how our comapany is faring in terms of revenue, marketing and projects we are working on.</p>
+<br>
+<div class="container">
+	<h2 class="revhead">Revenue</h2>
+	<div class="row">
+		<div class="col-lg-6 col-sm-12">
+			<div class="row">
+				<div class="col-lg-3 col-sm-12">
+					<div class="statsholder">
+						<p><span style="font-weight: 700;">Daily Revenue:</span> 
+				          <span style="font-weight: 300;"> GHc
+				          <%= Cost.where(:created_at => (Time.zone.now.beginning_of_day..Time.zone.now.end_of_day)).sum(:amount) %>
+				          </span>
+			            </p>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-sm-12">
+					<div class="statsholder">
+						<p><span style="font-weight: 700;">Weekly Revenue:</span> 
+				          <span style="font-weight: 300;"> GHc
+				          <%= Cost.where(:created_at => (Time.zone.now.beginning_of_week..Time.zone.now.end_of_week)).sum(:amount) %>
+				          </span>
+			            </p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-12">
+					<div class="statsholder">
+						<p><span style="font-weight: 700;">Monthly Revenue:</span> 
+				          <span style="font-weight: 300;"> GHc
+				          <%= Cost.where(:created_at => (Time.zone.now.beginning_of_month..Time.zone.now.end_of_month)).sum(:amount) %>
+				          </span>
+			            </p>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-sm-12">
+					<div class="statsholder">
+						<p><span style="font-weight: 700;">Number of Deals</span> 
+				          <span style="font-weight: 300;"><br> 
+				          <%= Cost.where(:created_at => (Time.zone.now.beginning_of_year..Time.zone.now.end_of_year)).count %>
+				          projects
+				          </span>
+			            </p>
+					</div>
+				</div>
+
+
+			</div>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+			
+				<h3 style="font-weight: 700;">Weekly Revenue Chart in GHc</h3>
+		<%= line_chart Cost.group_by_week(:created_at).sum(:amount) , library: {yAxis:  {format: "currency"}} %>
+		</div>
+	</div>
+
+
+            
+</section>
+
+
+<section class="marketingsection">
+	
+	<div class="container">
+	<h2 class="revhead">Marketing</h2>
+	<div class="row">
+		<div class="col-lg-6 col-sm-12">
+			<div class="row">
+				<div class="col-lg-3 col-sm-12">
+					<div class="statsholder">
+						<p><span style="font-weight: 700; font-size: 14px;">Weekly Web Leads</span><br> 
+				          <span style="font-weight: 300;"> 
+				          <%= Dream.where(:created_at => (Time.zone.now.beginning_of_week..Time.zone.now.end_of_week)).count %>
+				          leads
+				          </span>
+			            </p>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-sm-12">
+					<div class="statsholder">
+						<p><span style="font-weight: 700; font-size: 14px;">Weekly Facebook Leads</span><br> 
+				          <span style="font-weight: 300;">
+				          <%= Facebookad.where(:created_at => (Time.zone.now.beginning_of_week..Time.zone.now.end_of_week)).count %> leads
+				          </span>
+			            </p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-12">
+					<div class="statsholder">
+						<p><span style="font-weight: 700; font-size: 14px;">Web leads from blog</span><br>
+				          <span style="font-weight: 300;"> 
+				          <%= Web.where(:created_at => (Time.zone.now.beginning_of_week..Time.zone.now.end_of_week)).count %>
+				          leads
+				          </span>
+			            </p>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-sm-12">
+					<div class="statsholder">
+						<p><span style="font-weight: 700;">Businesses Registered</span><br>
+				          <span style="font-weight: 300;">
+				          <%= Lead.where(:created_at => (Time.zone.now.beginning_of_year..Time.zone.now.end_of_year)).count %>
+				          Businesses
+				          </span>
+			            </p>
+					</div>
+				</div>
+
+				<div class="col-lg-12 col-sm-12">
+					<div class="statsholderer">
+						<p><a href="/dreams" style="color: #5cc804;">Website leads from Ads</a></p>
+						<p><a href="/facebookads" style="color: #5cc804;">Facebook Ads leads from Ads</a></p>
+						<p><a href="/webs" style="color: #5cc804;">Website leads blogs</a></p>
+						<p><a href="/leads" style="color: #5cc804;">Business Registrants</a></p>
+						<p><a href="/potentials" style="color: #5cc804;">leads from Digital Marketing</a></p>
+					</div>
+				</div>
+
+
+			</div>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+			
+				<h3 style="font-weight: 700;">Weekly Website leads Chart</h3>
+		<%= line_chart Dream.group_by_week(:created_at).count , library: {yAxis:  {format: "Clients"}} %>
+		</div>
+	</div>
+
+</section>
+
+
+<section class="marketingsection">
+	
+	<div class="container">
+	<h2 class="revhead">Projects</h2>
+	<div class="row">
+		<div class="col-lg-6 col-sm-12">
+			<div class="row">
+				<div class="col-lg-3 col-sm-12">
+					<div class="statsholder">
+						<p><span style="font-weight: 700; font-size: 14px;">All Projects</span><br> 
+				          <span style="font-weight: 300;"> 
+				          <%= Project.where(:created_at => (Time.zone.now.beginning_of_year..Time.zone.now.end_of_year)).count %>
+				          projects
+				          </span>
+			            </p>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-sm-12">
+					<div class="statsholder">
+						<p><span style="font-weight: 700; font-size: 14px;">Active Projects</span><br> 
+				          <span style="font-weight: 300;">
+				          <%= Project.where(:created_at => (Time.zone.now.beginning_of_week..Time.zone.now.end_of_week)).where(active: true).count %> projects
+				          </span>
+			            </p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-12">
+					<div class="statsholder">
+						<p><span style="font-weight: 700; font-size: 14px;">Inactive Projects</span><br>
+				          <span style="font-weight: 300;"> 
+				          <%= Project.where(:created_at => (Time.zone.now.beginning_of_week..Time.zone.now.end_of_week)).where(active: false).count %>
+				          projects
+				          </span>
+			            </p>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-sm-12">
+					<div class="statsholder">
+						<p><span style="font-weight: 700;">Deployed Projects</span><br>
+				          <span style="font-weight: 300;">
+				          <%= Project.where(:created_at => (Time.zone.now.beginning_of_year..Time.zone.now.end_of_year)).where(deploy: true).count %>
+				          projects
+				          </span>
+			            </p>
+					</div>
+				</div>
+
+				<div class="col-lg-12 col-sm-12">
+					<div class="statsholderer">
+						<p><a href="/projects" style="color: #5cc804;">See All Projects</a></p>
+					</div>
+				</div>
+
+
+			</div>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+			
+				<h3 style="font-weight: 700;">Weekly Projects Chart</h3>
+		<%= line_chart Project.group_by_week(:created_at).count , library: {yAxis:  {format: "Projects"}} %>
+		</div>
+	</div>
+
+</section>
+
+<section class="marketingsection">
+	
+	<div class="container">
+	<h2 class="revhead">Clients</h2>
+	<div class="row">
+		<div class="col-lg-6 col-sm-12">
+			<div class="row">
+
+				<div class="col-lg-3 col-sm-12">
+					<div class="statsholder">
+						<p><span style="font-weight: 700; font-size: 14px;">All Clients</span><br> 
+				          <span style="font-weight: 300;"> 
+				          <%= User.where(:created_at => (Time.zone.now.beginning_of_year..Time.zone.now.end_of_year)).count %>
+				          clients
+				          </span>
+			            </p>
+					</div>
+				</div>
+
+
+				<div class="col-lg-12 col-sm-12">
+					<div class="statsholderer">
+						<p><a href="/projects" style="color: #5cc804;">See All Clients</a></p>
+					</div>
+				</div>
+
+
+			</div>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+			
+				<h3 style="font-weight: 700;">Weekly Client Growth Chart</h3>
+		<%= line_chart User.group_by_week(:created_at).count , library: {yAxis:  {format: "Projects"}} %>
+		</div>
+	</div>
+
+</section>
+
+<section class="marketingsection">
+	
+	<div class="container">
+	<h2 class="revhead">Post Articles, Create Sections, Project types</h2>
+	<div class="row">
+		<div class="col-lg-6 col-sm-12">
+			<div class="row">
+
+				<div class="col-lg-12 col-sm-12">
+					<div class="statsholderer">
+						<p><a href="/articles/new" style="color: #ffffff;" class="btn btn-primary">Post Article</a></p>
+						<p><a href="/sections/new" style="color: #ffffff;" class="btn btn-primary">Create Section</a></p>
+						<p><a href="/projects/new" style="color: #ffffff;" class="btn btn-primary">Create Projects</a></p>
+						<p><a href="/projecttypes/new" style="color: #ffffff;" class="btn btn-primary">Create Project Types</a></p>
+					</div>
+				</div>
+
+
+			</div>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+	          <h3 style="font-weight: 700;">Articles Posted Weekly Chart</h3>
+		      <%= line_chart Article.group_by_week(:created_at).count , library: {yAxis:  {format: "Articles"}} %>
+		</div>
+	</div>
+
+</section>
+
+<% else %>
+<br><br><br><br>
+<h1 style="text-align: center; font-weight: 700; color: red">Access to this page is Unauthorized</h1>
+<p style="text-align: center; font-weight: 300; font-size: 15px;">Onlyan admin has the right to be here or act here. See any of our admins if you need any information. Thank you.</p>
+<br>
+<br>
+<% end %>
+

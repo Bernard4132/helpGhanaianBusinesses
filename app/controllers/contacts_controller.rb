@@ -49,6 +49,7 @@ class ContactsController < ApplicationController
         format.json { render json: @contact.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :update, @contact
   end
 
   # DELETE /contacts/1
@@ -59,6 +60,7 @@ class ContactsController < ApplicationController
       format.html { redirect_to contacts_url, notice: 'Contact was successfully destroyed.' }
       format.json { head :no_content }
     end
+    authorize! :destroy, @contact
   end
 
   private

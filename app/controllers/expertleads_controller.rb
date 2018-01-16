@@ -49,6 +49,7 @@ class ExpertleadsController < ApplicationController
         format.json { render json: @expertlead.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :update, @expertlead
   end
 
   # DELETE /expertleads/1
@@ -59,6 +60,7 @@ class ExpertleadsController < ApplicationController
       format.html { redirect_to expertleads_url, notice: 'Expertlead was successfully destroyed.' }
       format.json { head :no_content }
     end
+    authorize! :destroy, @expertlead
   end
 
   private

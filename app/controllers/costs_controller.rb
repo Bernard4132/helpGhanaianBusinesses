@@ -35,6 +35,7 @@ class CostsController < ApplicationController
         format.json { render json: @cost.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :create, @cost
   end
 
   # PATCH/PUT /costs/1
@@ -49,6 +50,7 @@ class CostsController < ApplicationController
         format.json { render json: @cost.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :update, @cost
   end
 
   # DELETE /costs/1
@@ -59,6 +61,7 @@ class CostsController < ApplicationController
       format.html { redirect_to costs_url, notice: 'Cost was successfully destroyed.' }
       format.json { head :no_content }
     end
+    authorize! :destroy, @cost
   end
 
   private
