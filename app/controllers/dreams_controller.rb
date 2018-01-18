@@ -28,7 +28,7 @@ class DreamsController < ApplicationController
 
     respond_to do |format|
       if @dream.save
-        DreamMailer.delay(run_at: 1.minute.from_now).dream_message(@dream)
+        DreamMailer.delay(run_at: 3.minutes.from_now).dream_message(@dream)
         DreamMailer.delay(run_at: 1.day.from_now).dream_message1(@dream)
         DreamMailer.delay(run_at: 3.days.from_now).dream_message2(@dream)
         DreamMailer.delay(run_at: 6.days.from_now).dream_message3(@dream)
