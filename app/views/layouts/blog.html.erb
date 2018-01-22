@@ -7,18 +7,16 @@
 <meta name="theme-color" content="#ffffff">
 
     <%= csrf_meta_tags %>
-     <link rel="manifest" href="/manifest.json">
-  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
-  <script>
-    var OneSignal = window.OneSignal || [];
-    OneSignal.push(["init", {
-      appId: "6eb1cfb7-d35d-4286-99ab-fb0c9c922b51",
-      autoRegister: true,
-      notifyButton: {
-        enable: false /* Set to false to hide */
-      }
-    }]);
-  </script>
+    <link rel="manifest" href="/manifest.json" />
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "9c3b4b42-6ad6-4e8e-80a0-8bfa84a4d853",
+    });
+  });
+</script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/trix/0.9.1/trix.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
