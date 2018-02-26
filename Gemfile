@@ -55,10 +55,10 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'groupdate'
 gem "chartkick"
 
-group :production do
-gem 'pg', '~> 0.20'
-gem 'rails_12factor'
-end
+# group :production do
+# gem 'pg', '~> 0.20'
+# gem 'rails_12factor'
+# end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

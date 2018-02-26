@@ -1,0 +1,2 @@
+class Emailcourse < ApplicationRecord
+end

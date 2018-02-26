@@ -1,0 +1,47 @@
+<%= form_for(emailcourse) do |f| %>
+  <% if emailcourse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(emailcourse.errors.count, "error") %> prohibited this emailcourse from being saved:</h2>
+
+      <ul>
+      <% emailcourse.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :businessname %>
+    <%= f.text_field :businessname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phonenumber %>
+    <%= f.text_field :phonenumber %>
+  </div>
+
+  <div class="field">
+    <%= f.label :staff %>
+    <%= f.check_box :staff %>
+  </div>
+
+  <div class="field">
+    <%= f.label :resultsiwant %>
+    <%= f.text_field :resultsiwant %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

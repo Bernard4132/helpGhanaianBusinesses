@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180116043542) do
+ActiveRecord::Schema.define(version: 20180226081715) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -52,6 +52,13 @@ ActiveRecord::Schema.define(version: 20180116043542) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "courses", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer  "priority",   default: 0, null: false
     t.integer  "attempts",   default: 0, null: false
@@ -77,6 +84,17 @@ ActiveRecord::Schema.define(version: 20180116043542) do
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
     t.boolean  "urgent",       default: false
+  end
+
+  create_table "emailcourses", force: :cascade do |t|
+    t.string   "name"
+    t.string   "businessname"
+    t.string   "email"
+    t.string   "phonenumber"
+    t.boolean  "staff",        default: false
+    t.string   "resultsiwant"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
   create_table "expertleads", force: :cascade do |t|
