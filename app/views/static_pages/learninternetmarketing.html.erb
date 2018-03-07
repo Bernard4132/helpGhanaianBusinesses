@@ -1,0 +1,247 @@
+  <style type="text/css">
+
+   a {
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+  .navbackground{
+     background-color: #ffffff;
+    -webkit-box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.29);
+-moz-box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.29);
+box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.29);
+  }
+
+
+
+.navbar-brand1 {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+
+
+
+.navbar-light .navbar-brand1{
+color: #5cc804; 
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+}
+
+.navbar-scroll{
+color: #000; 
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+  color: white;
+}
+
+.navbar-light .navbar-scroll:focus, .navbar-light .navbar-scroll:hover {
+  color: #343a40;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #00141a;
+  font-weight: 300;
+  font-family: 'Asap Condensed', sans-serif;
+  transition: border-color .5s ease-in-out;
+    -webkit-transition: border-color .5s ease-in-out;
+    -moz-transition: border-color .5s ease-in-out;
+  border-bottom: 4px solid transparent;
+}
+
+.navlinkscroll{
+  color: #343a40;
+  
+}
+
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #00141a;
+  font-weight: 700;
+  border-bottom-color:#00141a;
+}
+
+ .navbar-light .navbar-nav .nav-link:hover {
+  color: #00141a;
+  font-weight: 700;
+  border-bottom-color: #00141a;
+}
+
+.navbar-light .navbar-nav .nav-link.disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+  color: #ffffff;
+  font-weight: 500;
+  background-color: #00e600;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.topfront{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+}
+
+.topfront1{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  color: red;
+}
+
+.rowertop{
+  margin-top: 120px;
+}
+
+.catchheader{
+  text-align: center;
+  font-weight: 300;
+  line-height: 40px;
+}
+
+.subcompeller{
+  font-weight: 300;
+  text-align: center;
+}
+
+#option_button {
+ white-space: normal;
+ color: white;
+ font-size: 24px;
+ text-transform: uppercase;
+ font-weight: 700;
+}
+
+#option_button small {
+     display: block
+}
+
+  </style>
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top navbackground">
+      <div class="container">
+       <a class="navbar-brand1" href="/" style=""><img src="https://res.cloudinary.com/nikasemo/image/upload/v1515260231/logowebsite11_di7vbl.png" height="38px" width="55px" style="margin-right:5px; margin-top: 0px;">
+          <span style="position:relative; top: 0px;">Help Businesses Online</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+   <div class="container">
+    <div class="row rowertop">
+      <div class="col-lg-12">
+        <p class="topfront">Free Online Course that teaches you wisdom to scale your business rapidly online</p><br>
+        <h2 class="catchheader">"Learn about secrets in marketing, how to use internet marketing, and finally scaling your sales to a point where you cant handle clients and customers who come in your Gates."</h2>
+        <br>
+        <p class="subcompeller">By dividing this course into just 7 emails, we will provide you with the right knowledge to set you up for success in this internet age. </p>
+
+        <p>
+          <a id="option_button" data-toggle="modal" data-target="#exampleModal" class="btn btn-success btn-block" >Enroll in Course Today! <small>
+            <span style="font-size: 14px; font-weight: 300;">Learn in Seven days what will take you a lifetime to figure out by yourself</span></small></a>
+        </p>
+
+        <p class="topfront1">We will stop accepting people by tomorrow! Get in Now! Don't miss it for anything..</p>
+        <p>
+
+      </div>
+    </div>
+   </div>
+
+
+
+
+
+
+
+
+   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Kindly fill this form to be enrolled in Course.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <%= form_for(@emailcourse) do |f| %>
+  <% if @emailcourse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@emailcourse.errors.count, "error") %> prohibited this emailcourse from being saved:</h2>
+
+      <ul>
+      <% @emailcourse.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <label>Full Name</label>
+    <%= f.text_field :name, :class => "form-control", :placeholder => "Your Full Name", :required => "true" %>
+  </div>
+
+  <div class="form-group">
+    <label>Business Name</label>
+    <%= f.text_field :businessname, :class => "form-control", :placeholder => "Your Business Name", :required => "true" %>
+  </div>
+
+  <div class="form-group">
+    <label>Phone Number</label>
+    <%= f.text_field :phonenumber, :class => "form-control", :placeholder => "Your Phone Number", :required => "true" %>
+  </div>
+
+  <div class="form-group">
+    <label>Email</label>
+    <%= f.text_field :email, :class => "form-control", :placeholder => "Your Active Email", :required => "true" %>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.submit "Enroll in Course", :class => "btn btn-info" %>
+  </div>
+<% end %>
+         </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

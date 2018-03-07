@@ -56,6 +56,11 @@ def ourservices
 	
 end
 
+def learninternetmarketing
+	@emailcourse = Emailcourse.new
+	render layout: "lead"
+end
+
 def dashboard
 	
 end

@@ -28,7 +28,7 @@ class EmailcoursesController < ApplicationController
 
     respond_to do |format|
       if @emailcourse.save
-        format.html { redirect_to @emailcourse, notice: 'Emailcourse was successfully created.' }
+        format.html { redirect_to "/thankyoulead" }
         format.json { render :show, status: :created, location: @emailcourse }
       else
         format.html { render :new }

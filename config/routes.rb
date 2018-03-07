@@ -37,4 +37,5 @@ Rails.application.routes.draw do
   match 'ourservices', to: 'static_pages#ourservices', via: 'get'
   match 'dashboard', to: 'static_pages#dashboard', via: 'get'
   match 'fbadvertisementsleads', to: 'static_pages#fbadvertisementsleads', via: 'get'
+  match 'learninternetmarketing', to: 'static_pages#learninternetmarketing', via: 'get'
 end
