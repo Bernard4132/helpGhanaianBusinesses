@@ -95,6 +95,11 @@ font-family: 'Poppins', sans-serif;
   padding: 5px;
 }
 
+.learnmorerow{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .topfront{
   text-transform: uppercase;
   text-align: center;
@@ -116,11 +121,46 @@ font-family: 'Poppins', sans-serif;
   text-align: center;
   font-weight: 300;
   line-height: 40px;
+  color: #5cc804;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .subcompeller{
   font-weight: 300;
   text-align: center;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+
+.modal-backdrop.fade {
+  opacity: 0;
+}
+
+.modal-backdrop.show {
+  opacity: 0.95;
+}
+
+li {
+  padding-left: 1.3em ;
+  list-style: none;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+
+li:before {
+  content: '\f00c';
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.3em;
 }
 
 #option_button {
@@ -129,23 +169,90 @@ font-family: 'Poppins', sans-serif;
  font-size: 24px;
  text-transform: uppercase;
  font-weight: 700;
+ line-height: 30px;
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 #option_button small {
      display: block
 }
 
+.forlandia{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #f7cfcf;
+  padding: 18px;
+}
+
+@media only screen and (min-width : 100px) and (max-width : 600px) {
+
+.navbar-brand1 {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 18px;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+
+.topfront{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.topfront1{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  color: red;
+}
+
+.rowertop{
+  margin-top: 90px;
+}
+
+.catchheader{
+  text-align: center;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 30px;
+  color: #5cc804;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.subcompeller{
+  font-weight: 300;
+  text-align: center;
+}
+
+.aborider{
+  margin-top: 30px;
+}
+
+.wetenby{
+  font-size: 20px;
+}
+
+.adolaja{
+  font-size: 14px;
+}
+
+}
+
   </style>
 
+  <body style="background-color: #d9d9db;">
 
     <!-- Navigation -->
     <nav class="navbar navbar-light navbar-expand-lg fixed-top navbackground">
       <div class="container">
        <a class="navbar-brand1" href="/" style=""><img src="https://res.cloudinary.com/nikasemo/image/upload/v1515260231/logowebsite11_di7vbl.png" height="38px" width="55px" style="margin-right:5px; margin-top: 0px;">
           <span style="position:relative; top: 0px;">Help Businesses Online</span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+       
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             
@@ -158,24 +265,87 @@ font-family: 'Poppins', sans-serif;
    <div class="container">
     <div class="row rowertop">
       <div class="col-lg-12">
-        <p class="topfront">Free Online Course that teaches you wisdom to scale your business rapidly online</p><br>
-        <h2 class="catchheader">"Learn about secrets in marketing, how to use internet marketing, and finally scaling your sales to a point where you cant handle clients and customers who come in your Gates."</h2>
+        <p class="topfront">Free Email Course that teaches you what to do to grow your business online</p><br>
+        <h2 class="catchheader">"Learn about the secrets in <span style="font-weight: 700;">marketing</span> and how to use 
+          <span style="font-weight: 700;">internet marketing.</span> Finally we will show you how to position yourself in the market to get an exceeding number of customers and clients!"</h2>
         <br>
+        
         <p class="subcompeller">By dividing this course into just 7 emails, we will provide you with the right knowledge to set you up for success in this internet age. </p>
 
         <p>
-          <a id="option_button" data-toggle="modal" data-target="#exampleModal" class="btn btn-success btn-block" >Enroll in Course Today! <small>
-            <span style="font-size: 14px; font-weight: 300;">Learn in Seven days what will take you a lifetime to figure out by yourself</span></small></a>
+          <a id="option_button" data-toggle="modal" data-target="#exampleModal" class="btn btn-success btn-block" >
+            <i class="fa fa-arrow-right" aria-hidden="true"></i> Enroll in this free Course Today! <small>
+            <span style="font-size: 14px; font-weight: 300;">Learn in Seven days what may take you a lifetime to figure out!</span></small></a>
         </p>
 
-        <p class="topfront1">We will stop accepting people by tomorrow! Get in Now! Don't miss it for anything..</p>
+        <p class="topfront1">Course closes in <span style="font-size: 12px; font-weight: 300;" id="demo"></span> ..</p>
         <p>
 
       </div>
     </div>
    </div>
 
+   <div class="container">
+    <div class="row learnmorerow">
+      <div class="col-sm-12 col-lg-6">
+      <h3 class="wetenby">This email course was written by:</h3>
+      <div class="row">
+        <div class="col-sm-4">
+      <img src="https://res.cloudinary.com/nikasemo/image/upload/v1520667734/imagedp_qymsux.png" width="150px" height="150px" class="rounded-circle img-fluid">
+    </div>
+    <div class="col-sm-8">
+      <br>
+      <span style="font-weight: 700; font-size: 20px;">Bernard Lomo</span><br>
+      Founder and CEO of Help Businesses Online and guy behind some of the most successful online launches in Africa.
+    </div>
+    </div>
+      </div>
+      <div class="col-sm-12 col-lg-6 aborider">
+        <h3 style="text-align: center;">Your'e going to learn...</h3><br>
+        <ul style="text-align: left;">
+          <li style="font-weight: 300;"><span style="font-weight: 700;">How</span> business should apporach marketing their business. From an expert's point of view.</li>
+          <li style="font-weight: 300;"><span style="font-weight: 700;">How</span> Ghana's finest Businesssman, Osei Kwame Despite built his business and what we can learn from him.</li>
+          <li style="font-weight: 300;"><span style="font-weight: 700;">How</span> to practically apply the same Techniques he used using internet marketing and make a fortune doing that.</li>
+          <li style="font-weight: 300;"><span style="font-weight: 700;">How</span> we have used this practical techniques to help our clients 2-3x their businesses in a month.</li>
+          <li style="font-weight: 300;">And a lot more you can learn when you get on.</li>
+        </ul>
+      </div>
+    </div>
+   </div>
 
+
+<div class="container">
+<div class="row">
+  <div class="col-lg-12">
+    <div class="row forlandia">
+      <div class="col-lg-1">
+        <i class="fa fa-exclamation-triangle fa-2x" style="color: #f76a6a;" aria-hidden="true"></i>
+      </div>
+      <div class="col-lg-11 adolaja">
+        <span style="font-weight: 700;">QUICK NOTICE:</span> We know business owners and marketers are very busy and do not have a lot of time to spare. We made this email course in a way so simple you could read over coffee break or while having lunch. You stand to loose nothing when you enroll in this course. We only handle 250 businesses at a time. 
+        <span style="font-weight: 500;">Click on the button below to join the course now.</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <p>
+          <a id="option_button" data-toggle="modal" data-target="#exampleModal" class="btn btn-success btn-block" >
+            <i class="fa fa-arrow-right" aria-hidden="true"></i> Enroll in this free Course Today! <small>
+            <span style="font-size: 14px; font-weight: 300;">Put yourself and your business ahead of your competetion. Join course today!</span></small></a>
+        </p>
+  </div>
+</div>
+</div>
+
+<div class="container">
+  <div class="row" style="margin-top: 70px;">
+    <div class="col-lg-12">
+      <h5 style="text-align: center; font-weight: 300;">Copyright 2018, Help Businesses Online. www.helpbusinessesonline.com</h5>
+      <p style="font-weight: 300; font-size: 18px; text-align: center;">Terms | Privacy Policy | Disclaimer</p>
+<br><br>
+    </div>
+  </div>
+</div>
 
 
 
@@ -186,7 +356,7 @@ font-family: 'Poppins', sans-serif;
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Kindly fill this form to be enrolled in Course.</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Fill this form with your details to be enrolled in Course.</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -206,22 +376,22 @@ font-family: 'Poppins', sans-serif;
   <% end %>
 
   <div class="form-group">
-    <label>Full Name</label>
+    <label>Your Full Name.</label>
     <%= f.text_field :name, :class => "form-control", :placeholder => "Your Full Name", :required => "true" %>
   </div>
 
   <div class="form-group">
-    <label>Business Name</label>
+    <label>Your Business Name.</label>
     <%= f.text_field :businessname, :class => "form-control", :placeholder => "Your Business Name", :required => "true" %>
   </div>
 
   <div class="form-group">
-    <label>Phone Number</label>
+    <label>Your Phone Number.</label>
     <%= f.text_field :phonenumber, :class => "form-control", :placeholder => "Your Phone Number", :required => "true" %>
   </div>
-
+ 
   <div class="form-group">
-    <label>Email</label>
+    <label>Your Email.</label>
     <%= f.text_field :email, :class => "form-control", :placeholder => "Your Active Email", :required => "true" %>
   </div>
 
@@ -237,9 +407,40 @@ font-family: 'Poppins', sans-serif;
 
 
 
+</body>
 
 
 
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Mar 12, 2018 23:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "days " + hours + "hours "
+    + minutes + "minutes " + seconds + "seconds ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
 
 
 
