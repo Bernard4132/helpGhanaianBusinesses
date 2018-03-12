@@ -28,15 +28,15 @@ class CoursesController < ApplicationController
 
     respond_to do |format|
       if @course.save
-        CourseMailer.delay(run_at: 1.minute.from_now).lesson_one(@course)
-        CourseMailer.delay(run_at: 3.minutes.from_now).lesson_two(@course)
-        CourseMailer.delay(run_at: 5.minutes.from_now).lesson_three(@course)
-        CourseMailer.delay(run_at: 7.minutes.from_now).lesson_four(@course)
-        CourseMailer.delay(run_at: 9.minutes.from_now).lesson_five(@course)
-        CourseMailer.delay(run_at: 10.minutes.from_now).lesson_six(@course)
-        CourseMailer.delay(run_at: 12.minutes.from_now).lesson_seven(@course)
-        CourseMailer.delay(run_at: 13.minutes.from_now).lesson_eight(@course)
-        CourseMailer.delay(run_at: 15.minutes.from_now).lesson_nine(@course)
+        CourseMailer.delay(run_at: 30.minutes.from_now).lesson_one(@course)
+        CourseMailer.delay(run_at: 1.day.from_now).lesson_two(@course)
+        CourseMailer.delay(run_at: 2.days.from_now).lesson_three(@course)
+        CourseMailer.delay(run_at: 3.days.from_now).lesson_four(@course)
+        CourseMailer.delay(run_at: 4.days.from_now).lesson_five(@course)
+        CourseMailer.delay(run_at: 5.days.from_now).lesson_six(@course)
+        CourseMailer.delay(run_at: 7.days.from_now).lesson_seven(@course)
+        CourseMailer.delay(run_at: 9.days.from_now).lesson_eight(@course)
+        CourseMailer.delay(run_at: 11.days.from_now).lesson_nine(@course)
         format.html { redirect_to @course, notice: 'Course was successfully created.' }
         format.json { render :show, status: :created, location: @course }
       else
