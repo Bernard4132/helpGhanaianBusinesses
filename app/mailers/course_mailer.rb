@@ -43,7 +43,32 @@ class CourseMailer < ApplicationMailer
 
   def lesson_nine(course)
   	@course = course
-  	mail to: course.email , subject: "[A deal of a life time] What's next for you and your business? Start Acting Now!"
+  	mail to: course.email , subject: "[The right plan for your business] What's next for you and your business? Start Acting Now!"
+  end
+
+  def lesson_ten(course)
+    @course = course
+    mail to: course.email , subject: "[The right plan for your business] What's next for you and your business? Start Acting Now!"
+  end
+
+  def lesson_eleven(course)
+    @course = course
+    mail to: course.email , subject: "[The right plan for your business] What's next for you and your business? Start Acting Now!"
+  end
+
+  def lesson_tweleve(course)
+    @course = course
+    mail to: course.email , subject: "[The right plan for your business] What's next for you and your business? Start Acting Now!"
+  end
+
+  def lesson_thirteen(course)
+    @course = course
+    mail to: course.email , subject: "[The right plan for your business] What's next for you and your business? Start Acting Now!"
+  end
+
+  def lesson_fourteen(course)
+    @course = course
+    mail to: course.email , subject: "[The right plan for your business] What's next for you and your business? Start Acting Now!"
   end
 
 end

@@ -1,0 +1,449 @@
+<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+ <style>
+  body {
+      position: relative; 
+  }
+  .affix {
+      top:0;
+      width: 100%;
+      z-index: 9999 !important;
+  }
+  .nav11 {
+      margin-bottom: 0px;
+      background-color: green;
+      padding: 12px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: none;
+      width: 100%;
+  }
+  
+  .navbar1{
+   	display: block;
+  }
+  
+  .navbar11{
+   	display: none;
+  }
+
+  .affix ~ .container-fluid {
+     position: relative;
+     top: 50px;
+  }
+  #section1 {padding-top:50px;height:200px;color: #fff; background-color: #333333;}
+  #section2 {padding-top:20px;height:150px;color: #000000; background-color: #333333;}
+
+  #section3 {
+    padding:20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    color: #000000; 
+    background-color: #ffffff;
+  }
+
+  #section41 {
+    padding:20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    color: #ffffff; 
+    background-color: #454647;
+  }
+
+  #section42 {padding:20px;color: #000000; background-color: #f2f2f2;}
+
+  .aduins{
+ background:linear-gradient(0deg,rgba(92, 200, 4,0.5),rgba(92, 200, 4,0.5)),url(https://res.cloudinary.com/nikasemo/image/upload/v1517426262/Events_g4jomo.jpg);
+  background-position:center;
+  min-height: 450px;
+  padding: 50px;
+}
+
+.myscrollbtn {
+	background-color: #5cc804;
+	border: 1.5px solid #5ab510;
+	cursor: pointer;
+	-webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.31);
+-moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.31);
+box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.31);
+}
+
+.myscrollbtn:hover {
+	background-color: #5ab510;
+	border: 1.5px solid #5ab510;
+	text-shadow: 1px 0px 3px rgba(0, 0, 0, 0.7);
+}
+
+
+	.holdtimer{
+       background-color: #4fb201;
+       width: 80px;
+       height: 80px;
+       margin: 2px;
+       padding: 2px;
+       padding-top: 12px;
+       border: 1px solid #4fb201;
+       text-align: center;
+       border-radius: 7px;
+	}
+
+	.countdownholder{
+	   margin-top: 0px;
+       padding: 5px;
+	}
+
+	.formpersonalinfo {
+		background-color: #f2f2f2;
+		padding: 30px;
+	}
+
+	.paymentinfo {
+		background-color: #ffffff;
+		padding: 30px;
+	}
+
+	.timebig{
+        text-align: center;
+        font-weight: 700;
+        font-size: 25px;
+	}
+
+	.inwords{
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 10px;
+	}
+    
+    .ctdownh1{
+    	font-size: 35px;
+    }
+
+    .holdcapt{
+    	margin-left: 10px;
+    }
+
+    .mobiledisp1{
+    display: none;
+  	}
+
+  	.aduinsh1 {
+  		text-align: center; 
+  		color: white; 
+  		position: relative; 
+  		top: 45px; 
+  		font-weight: 900;  
+  		text-shadow: 1px 0px 3px rgba(0, 0, 0, 0.5); 
+  		font-family: 'Rubik', sans-serif; 
+  		font-size: 50px; 
+  		line-height: 60px;
+  	}
+
+
+@media only screen and (min-width : 100px) and (max-width : 600px) {
+
+  .mobiledisp{
+    display: none;
+  }
+
+  .mobiledisp1{
+    display: block;
+  }
+
+   .aduins{
+ background:linear-gradient(0deg,rgba(92, 200, 4,0.5),rgba(92, 200, 4,0.5)),url(https://res.cloudinary.com/nikasemo/image/upload/v1517426262/Events_g4jomo.jpg);
+  background-position:center;
+  min-height: 450px;
+  padding: 20px;
+}
+
+.aduinsh1 {
+  		text-align: center; 
+  		color: white; 
+  		position: relative; 
+  		top: 45px; 
+  		font-weight: 900;  
+  		text-shadow: 1px 0px 3px rgba(0, 0, 0, 0.5); 
+  		font-family: 'Rubik', sans-serif; 
+  		font-size: 25px; 
+  		line-height: 35px;
+  	}
+
+
+}
+
+  </style>
+   <script type="text/javascript">
+$(window).scroll(function () {
+        if ($(window).scrollTop() > 500) {
+              $(".nav11").addClass("navbar1");            
+        } else {
+            $(".nav11").removeClass('navbar1');
+        }
+    });
+
+    </script>
+
+    <script type="text/javascript">
+    	var body = $('html, body');
+    	$(function() {
+    $("#scrolltoknow").on("click", function() {
+        body.animate({"scrollTop": window.scrollY+500}, 1000);
+        return false;
+    });
+}); 
+    </script>
+</head>
+
+
+<body>
+
+<div class="container-fluid" style="background-color:#5cc804;color:#fff;height:50px;">
+<div class="container">
+  <div class="row">
+  	<div class=col-sm-9>
+  		<span style="position: relative; top: 12px; color: white; font-weight: 300;">Help Businesses <span style="font-weight: 700;">Online</span></span>
+  	</div>
+  	<div class="col-sm-3 mobiledisp">
+  		<span style="position: relative; top: 12px;">
+  			<a style="color: white; font-weight: 300; font-size: 14px; font-weight: 500;" href="/users/sign_in">Client login</a> 
+  			<a style="color: white; margin-left: 20px; font-weight: 300; font-size: 14px; font-weight: 500;" href="/buy_first_1">Join Now</a></span>
+  	</div>
+  </div>
+</div>
+</div>
+
+
+
+<section class="aduins">
+  <div class="container">
+    <div class="row" style="margin-top: 0px">
+      <div class="col-lg-12">
+        <h1 style="" class="aduinsh1">
+        	Take your Business from no sales online<br> to making a killing with sales<br> on the internet in less than 60 days!
+        </h1>
+        <p style="text-align: center; color: white; position: relative; top: 55px;">
+        	<a class="btn btn-lg btn-primary myscrollbtn" id="scrolltoknow">Find out how!</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="section2" class="container-fluid">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<p style="text-align: center; color: #727271; font-size: 14px; font-weight: 400;">Praised and featured in:</p>
+  				<p style="text-align: center;"><img src="https://res.cloudinary.com/nikasemo/image/upload/v1523644696/badges_jfvoql.png" class="img-fluid"></p>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="section3" class="container-fluid">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<p style="text-align: center;">Here is something to ask yourself....</p><br>
+        <h4 style="text-align: center;">Why do some businesses make 1000’s of sales monthly on the internet, and others do not even know the how to make one sale….</h4>
+       <!-- <p style="text-align: center;"><small>What the big brands like MTN, Nestle, Beige Bank and Ecobank know. And how smaller businesses like yours can leverage it to their great advantage...</small></p> -->
+        <br>
+        <p style="text-align: left;">Businesses that are great with sales have 3 qualities in common:</p>
+        <br>
+        <ul>
+          <li>They get a lot of high paying customers.</li>
+          <li>They have more cash on hand and can choose to increase cash flow just at a turn of a button.</li>
+          <li>They have the freedom to choose the best clients and customer to work with.</li>
+        </ul>
+        <br>
+        <p style="text-align: left;">
+          You are probably thinking it is because the already have a popular brand or because their brands are already being in the face of the market and they are acquainted with them.
+          <br><br>
+          You’d think in the lines of that right. They may be factors but their influence are very subtle.
+          We also have to consider the fact that there are brands that have created a name for themselves on TV and radio but because they have not done same on the internet, their selling points on the internet is very week. They are also making little to no sales on the internet.
+          <br><br>
+          To win on the internet, you have to recognize that it is a different game hence a different turf and winning on this turf requires a different skillset. Companies that invest time and resources into these skillsets and tools always see tremendous growth in their sales.
+          <br><br>
+          You have to put in effort, not necessarily at the scale of big brands, but at the scale that will make you lead in your own market.
+        </p>
+        <br>
+        <h4>What I have figured out that I believe can grow your business greatly!</h4>
+        <br>
+        <p>
+          As a business owner, marketing does not come to you as a firsthand. 
+          <br><br>
+          Very much often your craft comes first then the ability to manage whatever you have, then the others follow suit.
+          <br><br>
+          But when you decide to go out there to grow your business and expand, it hits you like a ton of bricks that success requires more than being a master of your craft and more about how good you are at selling something to someone. Sales is the only driver of growth. Nothing else..
+          <br>
+          <hr>
+          I am Bernrd Lomo, a start up founder turned agency owner. I've been on my own for almost about 5 years now..
+          <br><br>
+          When I started in 2016, I didn’t know anything about internet Marketing. I have had previous experience in starting and failing a startup I began (Basically I had to regroup to raise money on my own to build what I taught was the future of learning). I had a lot of experience building websites since I was the lead developer and founder of the startup. I grew up with the internet hence my interest in it. I went out and started building out websites for businesses and individuals.
+          <br><br> 
+          But I realized one thing and it is that people who wanted a website wanted their website to serve a purpose predominantly to get new customers and client and retain them too. Most want to strengthen their relationships with their current customers and clients. 
+          <br><br>
+          Many of them know a website can help them but do not have the necessary know how to make it happen. Some also had an idea but they could not implement it themselves.
+          <br><br>
+          I realized helping them was not by just building a website for them but helping them achieve whatever purpose their website is intended to achieve.
+          <br><br>
+          Having a website, being on social media, setting up company emails is great! But, the most important thing is to know how to use these great tools to unleash a powerful force to grow your business. 
+          <br><br>
+          After making my first 10,000 cedis in a month at age 24, I have with my experience so far helped companies to 5x their revenues in 2-3 months. As I have learnt freely, I also want to teach freely and probably help you and your 
+          business move to the next level. Sales is the engine of growth for every company and it is enabled by good marketing.
+          <br><br>
+        </p>
+        <br>
+        <h4>What would increasing your sales do for you?</h4>
+        <br>
+        <p>
+          Increase your sales gives you an optimistic projection of your revenue. Giving you more cash at hand and also the flexibility to be more creative and working on your own terms.
+        </p>
+        <br>
+        <h4>Things that must happen if you want to increase your sales with the advent of the internet.</h4>
+        <br>
+        <p>
+          The first thing to do is to take a proactive approach towards sales. Sitting and waiting for something to happen before you make an effort is a bad approach. Start investing in learning about digital marketing tools. 
+          <br><br>
+          Start working these tools to help you increase your sales. And start learning how to achieve and measure results to even achieve greater results.
+          <br><br>
+          Sounds like a lot right…
+          <br><br>
+          Let me break it down for you. For you to have sales online, you need to have these three pieces in place first. Otherwise, you are not going to see any results.
+          <br><br>
+
+          <h5>Requirement #1: Having a website</h5>
+          <hr>
+          You see, as a business that wants to leverage the internet, your website is the front face on the internet AKA your global office. Accessible to anyone from everyone in the world.
+          <br><br>
+          This Global office (website) should look great and attractive. The first impression your website makes should be great. Ever been to an office that looked so disorganized you decided not to do business with that company? You should ensure your website is not in that position.
+          <br><br>
+          A good website also needs to have a strong call to action. You see, you are bringing people to your website not just for an excursion. You want them to complete an action that will lead to a sale. Make sure you ensure that on all pages of the website.
+          <br><br>
+
+          <h5>Requirement #2: Knowing how to use digital marketing tools</h5>
+          <hr>
+          Digital marketing tools consist of things and web services we use to enhance our experience on the internet. 
+          <br><br>
+          Ever seen and advert on social media, or received an email from a brand you are affiliated asking you to take an action?
+          <br><br>
+          For example, email marketing is a marketing tool that helps businesses leverage customer emails to create campaigns and buy campaigns. Social media marketing is a tool where business leverage social media platforms to grow their businesses.
+          <br><br>
+          Businesses ought to know about these tools and know how they can leverage them in all situations to create a sale.
+
+          <br><br>
+          <h5>Requirement #3: Having a workable execution strategy and taking action</h5>
+          <hr>
+          Finally, you have to act with a strategy that has defined objectives. Normally when people start, they start by doing everything at the same time without a strategy. I was a victiom of that too.
+          <br><br>
+          The trouble with this is that you are going to burn out when you do not see immediate results. You will be looking for immediate gratification rather than working toward a set goal which will give you results anyways. 
+          <br><br>
+          You need to take action. And you need to take action on an actionable strategy.
+        </p>
+			</div>
+		</div>
+	</div>
+  
+</section>
+
+<section id="section41">
+</section>
+
+
+
+<section style="background-color: #5cc804; color: white; padding: 0px;" class="nav11">
+<div class="container" style="padding: 0px;">
+	<div class="row justify-content-md-center countdownholder" style="">
+    <div class="col-sm-12 col-lg-10 col-lg-offset-1">
+    	<div class="row">
+    		<div class="col-lg-7 col-sm-12 mobiledisp" style="text-align: right; padding-top: 15px;">
+    			
+    			<span style="font-size: 14px; font-weight: 500;">Get your business up to speed on the internet today, at a 33% discount!</span><br>
+    			<h1 class="ctdownh1">Hurry Up! Offer Expires in:</h1>
+    		</div>
+    		<div class="col-lg-5 col-sm-12">
+    			<span class="mobiledisp1" style="font-weight: 500; font-size: 12px;">33% discount for you! This offer ends in:</span>
+    			<div class="row">
+    				<div class="col-xs-3">
+    					<div class="holdtimer">
+    					<span id="days" class="timebig"></span><br>
+    						<span class="inwords">Days</span>
+    					</div>
+    				</div>
+    				<div class="col-xs-3">
+    					<div class="holdtimer">
+    					<span id="hours" class="timebig"></span><br>
+    						<span class="inwords">Hours</span>
+    					</div>
+    				</div>
+    				<div class="col-xs-3">
+    					<div class="holdtimer">
+    					<span id="minutes" class="timebig"></span><br>
+    						<span class="inwords">Minutes</span>
+    					</div>
+    				</div>
+    				<div class="col-xs-3">
+    					<div class="holdtimer">
+    					<span id="seconds" class="timebig"></span><br>
+    						<span class="inwords">Seconds</span>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</div>
+</div>
+</section>
+
+    
+</body>
+
+
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Apr 16, 2018 23:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+

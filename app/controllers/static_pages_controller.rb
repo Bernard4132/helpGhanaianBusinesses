@@ -56,6 +56,15 @@ def ourservices
 	
 end
 
+def buy_first_1
+	@order = Order.new
+	render layout: "application"
+end
+
+def landbyknowing
+	render layout: "emptylayout"
+end
+
 def learninternetmarketing
 	@emailcourse = Emailcourse.new
 	render layout: "lead"

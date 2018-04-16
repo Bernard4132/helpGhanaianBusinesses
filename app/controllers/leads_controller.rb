@@ -27,15 +27,15 @@ class LeadsController < ApplicationController
     @lead = Lead.new(lead_params)
     respond_to do |format|
       if @lead.save
-         LeadMailer.delay(run_at: 3.minutes.from_now).lead_message(@lead)
-         LeadMailer.delay(run_at: 1.day.from_now).lead_message2(@lead)
-         LeadMailer.delay(run_at: 3.days.from_now).lead_message3(@lead)
-         LeadMailer.delay(run_at: 5.days.from_now).lead_message4(@lead)
-         LeadMailer.delay(run_at: 9.days.from_now).lead_message5(@lead)
-         LeadMailer.delay(run_at: 12.days.from_now).lead_message6(@lead)
-         LeadMailer.delay(run_at: 15.days.from_now).lead_message7(@lead)
-         LeadMailer.delay(run_at: 21.days.from_now).lead_message8(@lead)
-         LeadMailer.delay(run_at: 29.days.from_now).lead_message9(@lead)
+         # LeadMailer.delay(run_at: 3.minutes.from_now).lead_message(@lead)
+         # LeadMailer.delay(run_at: 1.day.from_now).lead_message2(@lead)
+         # LeadMailer.delay(run_at: 3.days.from_now).lead_message3(@lead)
+         # LeadMailer.delay(run_at: 5.days.from_now).lead_message4(@lead)
+         # LeadMailer.delay(run_at: 9.days.from_now).lead_message5(@lead)
+         # LeadMailer.delay(run_at: 12.days.from_now).lead_message6(@lead)
+         # LeadMailer.delay(run_at: 15.days.from_now).lead_message7(@lead)
+         # LeadMailer.delay(run_at: 21.days.from_now).lead_message8(@lead)
+         # LeadMailer.delay(run_at: 29.days.from_now).lead_message9(@lead)
         format.html { redirect_to :back, notice: 'Lead was successfully created.' }
         format.json { render :show, status: :created, location: @lead }
       else

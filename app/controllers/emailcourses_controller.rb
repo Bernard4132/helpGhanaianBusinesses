@@ -69,6 +69,6 @@ class EmailcoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def emailcourse_params
-      params.require(:emailcourse).permit(:name, :businessname, :email, :phonenumber, :staff, :resultsiwant)
+      params.require(:emailcourse).permit(:name, :businessname, :email, :phonenumber, :staff, :resultsiwant, :qualified)
     end
 end

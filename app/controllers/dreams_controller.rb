@@ -28,13 +28,13 @@ class DreamsController < ApplicationController
 
     respond_to do |format|
       if @dream.save
-        DreamMailer.delay(run_at: 3.minutes.from_now).dream_message(@dream)
-        DreamMailer.delay(run_at: 1.day.from_now).dream_message1(@dream)
-        DreamMailer.delay(run_at: 3.days.from_now).dream_message2(@dream)
-        DreamMailer.delay(run_at: 6.days.from_now).dream_message3(@dream)
-        DreamMailer.delay(run_at: 10.days.from_now).dream_message4(@dream)
-        DreamMailer.delay(run_at: 12.days.from_now).dream_message5(@dream)
-        DreamMailer.delay(run_at: 15.days.from_now).dream_message6(@dream)
+        # DreamMailer.delay(run_at: 3.minutes.from_now).dream_message(@dream)
+        # DreamMailer.delay(run_at: 1.day.from_now).dream_message1(@dream)
+        # DreamMailer.delay(run_at: 3.days.from_now).dream_message2(@dream)
+        # DreamMailer.delay(run_at: 6.days.from_now).dream_message3(@dream)
+        # DreamMailer.delay(run_at: 10.days.from_now).dream_message4(@dream)
+        # DreamMailer.delay(run_at: 12.days.from_now).dream_message5(@dream)
+        # DreamMailer.delay(run_at: 15.days.from_now).dream_message6(@dream)
         format.html { redirect_to "/thankyoulead", notice: 'Thank you! An email will be sent to you shortly.' }
         format.json { render :show, status: :created, location: @dream }
       else

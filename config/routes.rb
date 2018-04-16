@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders
   resources :courses
   resources :emailcourses
   resources :webs
@@ -38,4 +39,8 @@ Rails.application.routes.draw do
   match 'dashboard', to: 'static_pages#dashboard', via: 'get'
   match 'fbadvertisementsleads', to: 'static_pages#fbadvertisementsleads', via: 'get'
   match 'learninternetmarketing', to: 'static_pages#learninternetmarketing', via: 'get'
+  match 'buy_first_1', to: 'static_pages#buy_first_1', via: 'get'
+  match 'landbyknowing', to: 'static_pages#landbyknowing', via: 'get'
 end
+
+

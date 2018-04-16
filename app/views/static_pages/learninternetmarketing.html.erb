@@ -277,7 +277,7 @@ li:before {
             <i class="fa fa-arrow-right" aria-hidden="true"></i> Enroll in this free Course Today! <small>
             <span style="font-size: 14px; font-weight: 300;">Learn in Seven days what may take you a lifetime to figure out!</span></small></a>
         </p>
-
+         <p style="text-align: center;"> <span id="days"></span> | <span id="hours"></span> | <span id="minutes"></span> | <span id="seconds"></span> </p>
         <p class="topfront1">Course closes in <span style="font-size: 12px; font-weight: 300;" id="demo"></span> ..</p>
         <p>
 
@@ -413,7 +413,7 @@ li:before {
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Mar 12, 2018 23:59:59").getTime();
+var countDownDate = new Date("Apr 12, 2018 23:59:59").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -431,6 +431,10 @@ var x = setInterval(function() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
     // Output the result in an element with id="demo"
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
     document.getElementById("demo").innerHTML = days + "days " + hours + "hours "
     + minutes + "minutes " + seconds + "seconds ";
     

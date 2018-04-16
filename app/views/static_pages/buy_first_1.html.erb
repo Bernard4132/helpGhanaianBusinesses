@@ -1,0 +1,798 @@
+<style type="text/css">
+
+	.holdtimer{
+       background-color: #e3e4e5;
+       width: 80px;
+       height: 80px;
+       margin: 2px;
+       padding: 2px;
+       padding-top: 12px;
+       border: 1px solid #b7b7b7;
+       text-align: center;
+       border-radius: 2px;
+	}
+
+	.countdownholder{
+	   margin-top: 0px;
+       padding: 30px;
+	}
+
+	.formpersonalinfo {
+		background-color: #f2f2f2;
+		padding: 30px;
+	}
+
+	.paymentinfo {
+		background-color: #ffffff;
+		padding: 30px;
+	}
+
+	.timebig{
+        text-align: center;
+        font-weight: 700;
+        font-size: 25px;
+	}
+
+	.inwords{
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 10px;
+	}
+    
+    .ctdownh1{
+    	font-size: 35px;
+    }
+
+    .holdcapt{
+    	margin-left: 10px;
+    }
+
+    .nummer{
+    	background-color: #fdca00;
+    	color: black;
+    	font-size: 20px;
+    	font-weight: 500;
+    	text-align: center;
+    	width: 50px;
+    	height: 50px;
+    	padding-top: 10px;
+    }
+
+    .nummer1 {
+      background-color: #ffffff;
+      border: 1.5px solid #fdca00;
+      color: #fdca00;
+      font-size: 20px;
+      font-weight: 500;
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      padding-top: 4px;
+    }
+    
+    .holdcapbig{
+    	font-size: 20px;
+    	font-weight: 500;
+    	color: #292928;
+    }
+
+    .holdcapsmall{
+    	font-size: 14px;
+    	font-weight: 300;
+    	color: #292928;
+    }
+
+    .formbodybuy{
+    	padding-top: 30px;
+    	padding-bottom: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    #order_paymentplan:checked~.logoib {
+  
+}
+
+input[type=radio] + label {
+  color: #fff;
+  font-style: italic;
+  background-color: #535354;
+  padding: 10px;
+} 
+input[type=radio]:checked + label {
+  color: #ffffff;
+  font-style: normal;
+  background-color: #5cc804;
+  padding: 10px;
+}
+
+.newClass {
+  color: black;
+  border: 8px solid #292928;
+  padding: 0px;
+  margin: 10px;
+   -webkit-box-shadow: 2px 6px 28px 2px rgba(0,0,0,0.33);
+-moz-box-shadow: 2px 6px 28px 2px rgba(0,0,0,0.33);
+box-shadow: 2px 6px 28px 2px rgba(0,0,0,0.33);
+}
+
+.thickfont{
+  font-weight: bold;
+}
+
+.logodance{
+  color: black;
+  border: 8px solid black;
+  padding: 0px;
+  margin: 10px;
+
+}
+
+.newClass1 {
+  color: black;
+  border: 8px solid #292928;
+  padding: 15px;
+  margin: 10px;
+}
+
+.thickfont1{
+  font-weight: bold;
+}
+
+.logodance1{
+  color: black;
+  border: 1px solid black;
+  padding: 15px;
+  margin: 10px;
+}
+
+.newClass2 {
+  color: black;
+  border: 8px solid #292928;
+  padding: 15px;
+  margin: 10px;
+}
+
+.thickfont2 {
+  font-weight: bold;
+}
+
+.logodance2 {
+  color: black;
+  border: 1px solid black;
+  padding: 15px;
+  margin: 10px;
+}
+
+.newClass3 {
+  color: black;
+  border: 8px solid #292928;
+  padding: 15px;
+  margin: 10px;
+}
+
+.thickfont3 {
+  font-weight: bold;
+}
+
+.logodance3 {
+  color: black;
+  border: 1px solid black;
+  padding: 15px;
+  margin: 10px;
+}
+
+.plansrow {
+  margin-bottom: 15px;
+}
+
+.discountcatch{
+  background-color: #5cc804;
+  padding: 10px;
+  color: white;
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.affirmation{
+  font-weight: 700;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+}
+
+.offer {
+  font-weight: 300;
+  text-align: center;
+  font-size: 13px;
+  color: #535354;
+  line-height: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.divider{
+  height: 10px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed black;
+}
+
+.costprice{
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* common */
+.ribbon {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+}
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid #fdca00;
+}
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 225px;
+  padding: 15px 0;
+  background-color: #fdca00;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  color: #fff;
+  font: 700 18px/1 'Lato', sans-serif;
+  text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.ribbon-top-right {
+  top: 10px;
+  right: 20px;
+}
+.ribbon-top-right::before,
+.ribbon-top-right::after {
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+.ribbon-top-right::before {
+  top: 0;
+  left: 0;
+}
+.ribbon-top-right::after {
+  bottom: 0;
+  right: 0;
+}
+.ribbon-top-right span {
+  left: -25px;
+  top: 30px;
+  transform: rotate(45deg);
+}
+
+.paysmallcommitment{
+  text-align: center;
+  color: #ef7a7a;
+  font-weight: 700;
+  font-size: 12px;
+  margin: 10px;
+}
+
+.paysmallcommitment1{
+  text-align: center;
+  color: #ccc;
+  font-weight: 400;
+  font-size: 10px;
+  margin: 10px;
+}
+
+.accordion {
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    margin-top: 18px;
+    border: 1px solid #ccc;
+}
+
+.accordion:hover {
+    background-color: #e5e6e8; 
+}
+
+.activebuy {
+    border: 1px solid #c4c4c4;
+}
+
+.panel {
+    padding: 0 18px;
+    
+    background-color: white;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.addedbenfits {
+    border: 1px solid #c4c4c4;
+    padding: 15px;
+    margin-top: 18px;
+}
+
+.hypeholder {
+  background-color: #5cc804;
+  padding: 5px;
+  padding-left: 85px;
+  width: 100%;
+  margin-top: 75px;
+}
+
+.hypeitself {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.mypaysi {
+  border-radius: 0px;
+  cursor: pointer;
+  border: 1.5px solid black;
+}
+
+.mypaysi:hover {
+  background-color: #5cc804;
+  border: 1px solid #5cc804;
+  text-shadow: 3px 1px 2px rgba(150, 150, 150, 0.55);
+}
+
+.freecoursebody {
+  margin-top: 20px; 
+  padding: 15px;
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+</style>
+
+<body>
+ <section class="hypeholder">
+     <i class="fa fa-check-square-o hypeitself" aria-hidden="true"></i>
+    <span class="hypeitself">Trusted by Hundreds of Companies for digital marketing advice and services.</span>
+    </section>
+<section style="background-color: #f2f2f2;">
+<div class="container">
+	<div class="row justify-content-md-center countdownholder" style="">
+    <div class="col-sm-12 col-lg-10 col-lg-offset-1">
+    	<div class="row">
+    		<div class="col-lg-7 col-sm-12" style="text-align: right; padding-top: 15px;">
+    			
+    			<span style="font-size: 14px; font-weight: 500;">Get your business up to speed on the internet today, at a 33% discount!</span><br>
+    			<h1 class="ctdownh1">Hurry Up! Offer Expires in:</h1>
+    		</div>
+    		<div class="col-lg-5 col-sm-12">
+    			<div class="row">
+    				<div class="col-xs-3">
+    					<div class="holdtimer">
+    					<span id="days" class="timebig"></span><br>
+    						<span class="inwords">Days</span>
+    					</div>
+    				</div>
+    				<div class="col-xs-3">
+    					<div class="holdtimer">
+    					<span id="hours" class="timebig"></span><br>
+    						<span class="inwords">Hours</span>
+    					</div>
+    				</div>
+    				<div class="col-xs-3">
+    					<div class="holdtimer">
+    					<span id="minutes" class="timebig"></span><br>
+    						<span class="inwords">Minutes</span>
+    					</div>
+    				</div>
+    				<div class="col-xs-3">
+    					<div class="holdtimer">
+    					<span id="seconds" class="timebig"></span><br>
+    						<span class="inwords">Seconds</span>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</div>
+</div>
+</section>
+
+<section class="formbodybuy">
+
+
+	<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-2">
+				<div class="nummer">
+				1
+			   </div>
+			</div>
+			<div class="col-xs-10">
+				<p class="holdcapt">
+				<span class="holdcapbig">Chose the Best plan for your business:</span><br>
+				<span class="holdcapsmall">All offers set you up with a professionally built website, expert created social media pages and a well planned winning online strategy for your business. </span>
+			   </p>
+			</div>
+		</div>
+		<div class="row plansrow">
+			<div class="col-lg-12">
+
+				<div id="logo" class="logoib logodance logodon">
+          <div class="ribbon ribbon-top-right"><span>BEST OFFER!</span></div>
+          <p class="discountcatch">Save 33% on this Offer!</p>
+          <p class="affirmation">All you need to set yourself up for online Success</p>
+          <p class="costprice"><span>GH&cent; 1000</span> <span style="font-size: 14px; font-weight: 300;"><s>GH&cent; 1500</s></span></p>
+                <p class="offer">
+                <span id="bvbuy" class=""> Best Value!</span><br>
+                
+                <span class="divider"> A Seven page professional website</span><br>
+
+                <span class="divider"> Social media profiles built by experts</span><br>
+                <span class="divider"> One on One coaching and online strategy session</span><br>
+                <span class="divider"> A winning online sales Strategy</span><br>
+                <span class="divider"> 3 months social media page management with 50 cedis Facebook ads budget</span><br>
+                <span class="divider"> Ads Monitoring and Audience creation blueprint</span><br>
+                <span class="divider"> Monthly Reports</span><br>
+                <span class="divider"> 3 months installment payment* <span style="color: #ef7a7a;">(Optional)</span></span><br>
+                
+                </p>
+                <p style="text-align: center;">
+                <input type="radio" value="GHc35"  name="order[paymentplan]" id="order_paymentplan1" onchange="myFunction()" class="messageCheckbox1" checked="true">
+                <label for="order_paymentplan_1" class="modmenu logoib">
+                <span>Select</span>
+                </label>
+                </p>
+                <p class="paysmallcommitment">Pay only GH&cent;50 (5% of GH&cent;1000)  of total price at checkout.</p>
+                </div>
+
+			</div>
+			<div class="col-lg-4">
+				
+                <div id="logo1" class="logoib logodance1 marginplan">
+                  <p class="costprice"><span>GH&cent; 700</span></p>
+                <p class="offer">
+                <span id="bvbuy1" class=""> STANDARD BUSINESS</span><br>
+                
+                <span class="divider"> A Five page professional website</span><br>
+
+                <span class="divider"> Social media profiles built by experts</span><br>
+                <span class="divider"> One on One coaching and online strategy session</span><br>
+                <span class="divider"> A winning online sales Strategy</span><br>
+                
+                </p>
+                <p style="text-align: center;">
+                <input type="radio" value="GHc20"  name="order[paymentplan]" id="order_paymentplan2" onchange="myFunction()" class="messageCheckbox1">
+                <label for="order_paymentplan_2" class="modmenu logoib">
+                <span>Select</span>
+                </label>
+                </p>
+                <p class="paysmallcommitment1">Pay only GH&cent;35 (5% of GH&cent;700)  of total price at checkout.</p>
+                </div>
+
+			</div>
+			<div class="col-lg-4">
+				
+				<div id="logo2" class="logoib logodance2 marginplan">
+          <p class="costprice"><span>GH&cent; 1000</span></p>
+                <p class="offer">
+                <span id="bvbuy2" class=""> STANDARD BUSINESS PROFESSIONAL</span><br>
+                
+                <span class="divider"> A Seven page professional website</span><br>
+
+                <span class="divider"> Social media profiles built by experts</span><br>
+                <span class="divider"> One on One coaching and online strategy session</span><br>
+                <span class="divider"> A winning online sales Strategy</span><br>
+                
+                </p>
+                <p style="text-align: center;">
+                <input type="radio" value="GHc35"  name="order[paymentplan]" id="order_paymentplan3" onchange="myFunction()" class="messageCheckbox1">
+                <label for="order_paymentplan_3" class="modmenu logoib">
+                <span>Select</span>
+                </label>
+                </p>
+                <p class="paysmallcommitment1">Pay only GH&cent;50 (5% of GH&cent;1000)  of total price at checkout.</p>
+                </div>
+
+			</div>
+			<div class="col-lg-4">
+				
+				<div id="logo3" class="logoib logodance3 marginplan">
+          <p class="costprice"><span>GH&cent; 2500</span></p>
+                <p class="offer">
+                <span id="bvbuy3" class=""> WEB APPLICATIONS</span><br>
+                
+                <span class="divider"> A multi page professional Web application</span><br>
+
+                <span class="divider"> Social media profiles built by experts</span><br>
+                <span class="divider"> One on One coaching and online strategy session</span><br>
+                <span class="divider"> A winning online sales Strategy</span><br>
+                
+                </p>
+                <p style="text-align: center;">
+                <input type="radio" value="GHc50"  name="order[paymentplan]" id="order_paymentplan4" onchange="myFunction()" class="messageCheckbox1">
+                <label for="order_paymentplan_4" class="modmenu logoib">
+                <span>Select</span>
+                </label>
+                </p>
+                <p class="paysmallcommitment1">Pay only GH&cent;125 (5% of GH&cent;2500)  of total price at checkout.</p>
+                </div>
+
+			</div>
+
+      <div class="col-sm-12">
+        <div class="row freecoursebody" style="">
+      <div class="col-xs-2">
+        <div class="nummer1">
+        <i class="fa fa-2x fa-star" aria-hidden="true"></i>
+         </div>
+      </div>
+      <div class="col-xs-10">
+        <p class="holdcapt">
+        <span class="holdcapbig">+ 1 free email course that teaches you all about winning on the internet!</span><br>
+        <span class="holdcapsmall">An email course that teaches you all you have to know about the internet and how to leverage it to your advantage. Delivered at your own pace! </span>
+        </p>
+      </div>
+    </div>
+      </div>
+
+		</div>
+
+	
+</section>
+
+<section class="formpersonalinfo">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-2">
+				<div class="nummer">
+				2
+			   </div>
+			</div>
+			<div class="col-xs-10">
+				<p class="holdcapt">
+				<span class="holdcapbig">Give your contact details.</span><br>
+				<span class="holdcapsmall">All offers set you up with a professionally built website, expert created social media pages and a well planned winning online strategy for your business. </span>
+			   </p>
+			</div>
+			<div class="col-sm-12">
+
+            <label for="order_name">Name</label>
+            <input type="text" name="order[name]" id="order_name" class="form-control" required="true" placeholder="Your full name" style="margin-bottom: 10px;" />
+ 
+            <label for="order_email">Email</label>
+            <input type="text" name="order[email]" id="order_email" class="form-control" required="true" placeholder="Your Email" style="margin-bottom: 10px;" />
+ 
+            <label for="order_phone">Phone</label>
+            <input type="text" name="order[phone]" id="order_phone" class="form-control" required="true" placeholder="Your phone number" style="margin-bottom: 10px;" />
+            <br>
+            <span style="font-size: 12px; font-weight: 300;">Rest assured: we are a privacy company, therefore we won’t share your details with third parties and we will only contact you to send you service updates.
+            	<br>
+            	<span style="font-weight: 500;">
+            		You get your account credentials and billing information to this email address.
+            	</span>
+            </span>
+			</div>
+		</div>
+	</div>
+	</div>
+</section>
+
+<section class="paymentinfo">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-2">
+				<div class="nummer">
+				3
+			   </div>
+			</div>
+			<div class="col-xs-10">
+				<p class="holdcapt">
+				<span class="holdcapbig">Complete your Purchase.</span>
+				<span class="holdcapsmall">Secure Checkout</span>
+			   </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8">
+
+        <button class="accordion">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i> Pay with your Bank Card or Mobile Money Wallet
+        </button>
+        <div class="panel">
+          <p style="text-align: center;">
+          <img src="https://res.cloudinary.com/nikasemo/image/upload/v1523315812/paynow_mfeljq.png" class="img-fluid">
+          </p>
+          <br>
+         <p style="text-align: center; font-weight: 300;">Checkout with Rave Pay.<br>
+        You are to pay <span id="dayso" style="font-weight: 500;">GH&cent;50</span> at checkout. We accept mobile money payments and Atm cards at Checkout. The remainder will be collected after you choose a 3 month payment plan or a 1 off payment (At our first strategy meeting with you after payment confirmation). Thank you.</p>
+         <p style="text-align: center;"><%= f.submit "Continue to Payment", :class => "btn btn-success mypaysi" %></p>
+         <p style="text-align: center; color: #ccc; font-size:14px; font-weight: 300;"><span>*You're 100% protected by Us.</span></p>
+         <p style="text-align: center; font-size:12px; font-weight: 300;">
+         By clicking “Continue”, you agree with the Help Businesses Online Privacy Policy and Terms and Conditions.</p>
+        </div>
+
+				
+			</div>
+			<div class="col-sm-4">
+				<div class="addedbenfits">
+          <h5 style="margin-bottom: 12px;">Why Choose Help Businesses Online?</h5>
+          <p style="line-height: 30px;">
+            <span style="font-size: 15px; font-weight: 300;"><i class="fa fa-check-circle-o" style="color: #fdca00;" aria-hidden="true"></i> &nbsp;<span style="font-weight: 700;">Result</span> oriented company.</span><br>
+            <span style="font-size: 15px; font-weight: 300;"><i class="fa fa-check-circle-o" style="color: #fdca00;" aria-hidden="true"></i> &nbsp;Increased sales.</span><br>
+            <span style="font-size: 15px; font-weight: 300;"><i class="fa fa-check-circle-o" style="color: #fdca00;" aria-hidden="true"></i> &nbsp;<span style="font-weight: 700;">Experience</span> in <span style="font-weight: 700;">Web Technologies</span>.</span><br>
+            <span style="font-size: 15px; font-weight: 300;"><i class="fa fa-check-circle-o" style="color: #fdca00;" aria-hidden="true"></i> &nbsp;Sales copies that convert.</span><br>
+            <span style="font-size: 15px; font-weight: 300;"><i class="fa fa-check-circle-o" style="color: #fdca00;" aria-hidden="true"></i> &nbsp;Increase in your <span style="font-weight: 700;">brand equity</span>.</span><br>
+            <span style="font-size: 15px; font-weight: 300;"><i class="fa fa-check-circle-o" style="color: #fdca00;" aria-hidden="true"></i> &nbsp;<span style="font-weight: 700;">Trusted</span> by over <span style="font-weight: 700;">100 brands</span> and companies.</span><br>
+          </p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<% end %>
+</section>
+
+</body>
+
+<script type="text/javascript">
+	function myFunction() {
+  var cb = document.getElementById('order_paymentplan1');
+  var checkedValue1 = document.querySelector('.messageCheckbox1:checked').value;
+  //var checkedValue2 = document.querySelector('.messageCheckbox2:checked').value;
+  var dayso = document.getElementById("dayso");
+  console.log(checkedValue1);
+  //console.log(checkedValue2);
+  var cb1 = document.getElementById('order_paymentplan2');
+  var cb2 = document.getElementById('order_paymentplan3');
+  var cb3 = document.getElementById('order_paymentplan4');
+  var logo = document.getElementById('logo');
+  var bvbuy = document.getElementById('bvbuy');
+  var logo1 = document.getElementById('logo1');
+  var bvbuy1 = document.getElementById('bvbuy1');
+  dayso.style.fontWeight = "700";
+  document.getElementById("dayso").innerHTML = checkedValue1;
+  
+  if (cb.checked) {
+    logo.setAttribute("class", "newClass");
+    bvbuy.setAttribute("class", "thickfont");
+   // document.getElementById("dayso").innerHTML = checkedValue1;
+   // dayso.style.color = "red";
+  } else {
+    logo.removeAttribute("class");
+    logo.setAttribute("class", "logodance");
+   // dayso.style.display = "none";
+  }
+
+  // if (.messageCheckbox1.checked == true){
+  //   dayso.style.display = "block";
+  //   document.getElementById("dayso").innerHTML = checkedValue1;
+  // } else {
+  //   dayso.style.display = "none";
+  // }
+
+  if (cb1.checked) {
+    logo1.setAttribute("class", "newClass1");
+    bvbuy1.setAttribute("class", "thickfont1");
+  } else {
+    logo1.removeAttribute("class");
+    logo1.setAttribute("class", "logodance1");
+  }
+
+   if (cb2.checked) {
+    logo2.setAttribute("class", "newClass2");
+    bvbuy2.setAttribute("class", "thickfont2");
+  } else {
+    logo2.removeAttribute("class");
+    logo2.setAttribute("class", "logodance2");
+  }
+
+   if (cb3.checked) {
+    logo3.setAttribute("class", "newClass3");
+    bvbuy3.setAttribute("class", "thickfont3");
+  } else {
+    logo3.removeAttribute("class");
+    logo3.setAttribute("class", "logodance3");
+  }
+  
+}
+</script>
+
+
+<script>
+// var acc = document.getElementsByClassName("accordion");
+// var i;
+
+// for (i = 0; i < acc.length; i++) {
+//     acc[i].addEventListener("click", function() {
+//         this.classList.toggle("activebuy");
+//         var panel = this.nextElementSibling;
+//         if (panel.style.display === "block") {
+//             panel.style.display = "none";
+//         } else {
+//             panel.style.display = "block";
+//         }
+//     });
+// }
+</script>
+
+<!-- <script type="text/javascript">
+	$(".logodon").click(function () {
+
+    if ($(this).find('input:radio[name="order[paymentplan]"]').is(":checked")) {
+
+        $(this).find('input:radio[name="order[paymentplan]"]').removeAttr("checked");
+    } else {
+        $(this).find('input:radio[name="order[paymentplan]"]').attr("checked", true);
+    }
+
+});
+</script>
+ -->
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Apr 16, 2018 23:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>

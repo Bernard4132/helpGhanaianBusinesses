@@ -25,10 +25,9 @@ class ExpertleadsController < ApplicationController
   # POST /expertleads.json
   def create
     @expertlead = Expertlead.new(expertlead_params)
-
     respond_to do |format|
       if @expertlead.save
-        format.html { redirect_to @expertlead, notice: 'Expertlead was successfully created.' }
+        format.html { redirect_to '/'}
         format.json { render :show, status: :created, location: @expertlead }
       else
         format.html { render :new }
