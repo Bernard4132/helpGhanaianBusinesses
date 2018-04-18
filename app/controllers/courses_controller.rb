@@ -37,6 +37,7 @@ class CoursesController < ApplicationController
         CourseMailer.delay(run_at: 7.days.from_now).lesson_seven(@course)
         CourseMailer.delay(run_at: 9.days.from_now).lesson_eight(@course)
         CourseMailer.delay(run_at: 11.days.from_now).lesson_nine(@course)
+        CourseMailer.delay(run_at: 15.days.from_now).lesson_ten(@course)
         format.html { redirect_to @course, notice: 'Course was successfully created.' }
         format.json { render :show, status: :created, location: @course }
       else
