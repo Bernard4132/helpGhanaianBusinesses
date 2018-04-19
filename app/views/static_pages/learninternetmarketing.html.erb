@@ -366,19 +366,19 @@ li:before {
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Fill this form with your details to be enrolled in Course.</h5>
+        <h5 class="modal-title" style="text-align: center;" id="exampleModalLabel">Your name and your active email</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-          <%= form_for(@emailcourse) do |f| %>
-  <% if @emailcourse.errors.any? %>
+          <%= form_for(@course) do |f| %>
+  <% if @course.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@emailcourse.errors.count, "error") %> prohibited this emailcourse from being saved:</h2>
+      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
 
       <ul>
-      <% @emailcourse.errors.full_messages.each do |message| %>
+      <% @course.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -386,29 +386,19 @@ li:before {
   <% end %>
 
   <div class="form-group">
-    <label>Your Full Name.</label>
+    <label>Name</label>
     <%= f.text_field :name, :class => "form-control", :placeholder => "Your Full Name", :required => "true" %>
-  </div>
-
-  <div class="form-group">
-    <label>Your Business Name.</label>
-    <%= f.text_field :businessname, :class => "form-control", :placeholder => "Your Business Name", :required => "true" %>
-  </div>
-
-  <div class="form-group">
-    <label>Your Phone Number.</label>
-    <%= f.text_field :phonenumber, :class => "form-control", :placeholder => "Your Phone Number", :required => "true" %>
   </div>
  
   <div class="form-group">
-    <label>Your Email.</label>
+    <label>Email</label>
     <%= f.text_field :email, :class => "form-control", :placeholder => "Your Active Email", :required => "true" %>
   </div>
 
 
-  <div class="form-group">
-    <%= f.submit "Enroll in Course", :class => "btn btn-info" %>
-  </div>
+ 
+    <p style="text-align: center;"><%= f.submit "Enroll in Course", :class => "btn btn-info" %></p>
+  
 <% end %>
          </div>
   </div>
@@ -423,7 +413,7 @@ li:before {
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Apr 18, 2018 23:59:59").getTime();
+var countDownDate = new Date("Apr 20, 2018 23:59:59").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {

@@ -66,7 +66,7 @@ def landbyknowing
 end
 
 def learninternetmarketing
-	@emailcourse = Emailcourse.new
+	@course = Course.new
 	render layout: "lead"
 end
 
