@@ -40,7 +40,6 @@ Rails.application.routes.draw do
   match 'fbadvertisementsleads', to: 'static_pages#fbadvertisementsleads', via: 'get'
   match 'learninternetmarketing', to: 'static_pages#learninternetmarketing', via: 'get'
   match 'buy_first_1', to: 'static_pages#buy_first_1', via: 'get'
+  match 'thankyouhbo', to: 'static_pages#thankyouhbo', via: 'get'
   match 'landbyknowing', to: 'static_pages#landbyknowing', via: 'get'
 end
-
-

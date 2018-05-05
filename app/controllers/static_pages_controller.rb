@@ -56,6 +56,10 @@ def ourservices
 	
 end
 
+def thankyouhbo
+	
+end
+
 def buy_first_1
 	@order = Order.new
 	render layout: "application"
