@@ -343,7 +343,12 @@
 }
 
 </style>
-
+<% if notice %>
+<div class="alert alert-success alert-dismissible" style="position: absolute; top: 100px; left: 10px; z-index: 999;" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <p class="notice"><%= notice %></p>
+</div>
+<% end %>
 <section class="homeer">
 <div class="containit">
 <div class="row">

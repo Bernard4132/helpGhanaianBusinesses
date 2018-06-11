@@ -28,7 +28,8 @@ class OrdersController < ApplicationController
     payurl = params[:order][:paymentplan]
     respond_to do |format|
       if @order.save
-        format.html { redirect_to 'https://rave.flutterwave.com/pay/' + payurl }
+        # format.html { redirect_to 'https://rave.flutterwave.com/pay/' + payurl }
+        format.html { redirect_to "/", notice: 'Your order has been placed successfully. We will get back to you soon. Thank you!'}
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
