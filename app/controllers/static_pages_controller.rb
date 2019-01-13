@@ -78,6 +78,11 @@ def dashboard
 	
 end
 
+def homeadappointment
+	@appointment = Appointment.new
+	render layout: "lead"
+end
+
 end
 
 

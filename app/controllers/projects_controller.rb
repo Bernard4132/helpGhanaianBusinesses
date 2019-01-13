@@ -53,6 +53,29 @@ class ProjectsController < ApplicationController
     end
     authorize! :update, @project
   end
+#   ben = User.find_by_email("bernardlomo2@gmail.com")
+#   ray = User.find_by_email("rkesseku@st.ug.edu.gh")
+#   ray.delete
+#   ben.add_role :admin
+#   ray.add_role :admin 
+#   ben.update_attributes(paid: true)
+
+#   user = User.find_by_email("fatetteh003@st.ug.edu.gh")
+
+#   ob = User.find_by_email("obkwadwoantwi@gmail.com")
+#   ob.update_attributes(paid: true)
+
+#   pascal = User.find_by_email("pascalnewton99@gmail.com")
+#   user.delete
+#   pascal.update_attributes(paid: true)
+#   user.update_attributes(authentication_token: nil)
+#   user.authentication_token = nil
+#   user.save
+# sudo chown $benardmaticlomo ~/Library/Caches/com.microsoft.VSCode.ShipIt/* xattr -dr com.apple.quarantine /Applications/Visual\ Studio\ Code.app
+#   curl -v -H 'Content-Type: application/json' -H 'Accept: application/json' -X DELETE https://www.legendmatic.herokuapp.com/api/v1/sessions/\?auth_token\=aa_ZHjTkRXPkfzbnn7SD
+
+# curl -v -H 'Content-Type: application/json' -H 'Accept: application/json' -X DELETE https://legendmatic.herokuapp.com/api/v1/sessions -d "{\"auth_token\":\"cdrAuaoosZy71aNR1SEm\"}"
+
 
   # DELETE /projects/1
   # DELETE /projects/1.json

@@ -1,0 +1,62 @@
+<%= form_for(appointment) do |f| %>
+  <% if appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+
+      <ul>
+      <% appointment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :companyname %>
+    <%= f.text_field :companyname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :numofemployees %>
+    <%= f.number_field :numofemployees %>
+  </div>
+
+  <div class="field">
+    <%= f.label :usedsocmedmarket %>
+    <%= f.text_field :usedsocmedmarket %>
+  </div>
+
+  <div class="field">
+    <%= f.label :wasiteffective %>
+    <%= f.text_field :wasiteffective %>
+  </div>
+
+  <div class="field">
+    <%= f.label :doyouhave %>
+    <%= f.text_field :doyouhave %>
+  </div>
+
+  <div class="field">
+    <%= f.label :usedanytopromote %>
+    <%= f.text_field :usedanytopromote %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phonenum %>
+    <%= f.text_field :phonenum %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

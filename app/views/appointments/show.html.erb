@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @appointment.name %>
+</p>
+
+<p>
+  <strong>Companyname:</strong>
+  <%= @appointment.companyname %>
+</p>
+
+<p>
+  <strong>Numofemployees:</strong>
+  <%= @appointment.numofemployees %>
+</p>
+
+<p>
+  <strong>Usedsocmedmarket:</strong>
+  <%= @appointment.usedsocmedmarket %>
+</p>
+
+<p>
+  <strong>Wasiteffective:</strong>
+  <%= @appointment.wasiteffective %>
+</p>
+
+<p>
+  <strong>Doyouhave:</strong>
+  <%= @appointment.doyouhave %>
+</p>
+
+<p>
+  <strong>Usedanytopromote:</strong>
+  <%= @appointment.usedanytopromote %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @appointment.email %>
+</p>
+
+<p>
+  <strong>Phonenum:</strong>
+  <%= @appointment.phonenum %>
+</p>
+
+<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
+<%= link_to 'Back', appointments_path %>

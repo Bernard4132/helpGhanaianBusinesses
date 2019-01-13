@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :appointments
   resources :orders
   resources :courses
   resources :emailcourses
@@ -42,4 +43,5 @@ Rails.application.routes.draw do
   match 'buy_first_1', to: 'static_pages#buy_first_1', via: 'get'
   match 'thankyouhbo', to: 'static_pages#thankyouhbo', via: 'get'
   match 'landbyknowing', to: 'static_pages#landbyknowing', via: 'get'
+  match 'homeadappointment', to: 'static_pages#homeadappointment', via: 'get'
 end

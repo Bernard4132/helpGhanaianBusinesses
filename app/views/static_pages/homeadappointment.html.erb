@@ -1,0 +1,566 @@
+  
+<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+  <style type="text/css">
+
+   a {
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+  .navbackground{
+     background-color: #fefaf9;
+    -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.29);
+-moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.29);
+box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.29);
+  }
+
+
+
+.navbar-brand1 {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+
+
+
+.navbar-light .navbar-brand1{
+color: #5cc804; 
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+}
+
+.navbar-scroll{
+color: #000; 
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+  color: white;
+}
+
+.navbar-light .navbar-scroll:focus, .navbar-light .navbar-scroll:hover {
+  color: #343a40;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #00141a;
+  font-weight: 300;
+  font-family: 'Asap Condensed', sans-serif;
+  transition: border-color .5s ease-in-out;
+    -webkit-transition: border-color .5s ease-in-out;
+    -moz-transition: border-color .5s ease-in-out;
+  border-bottom: 4px solid transparent;
+}
+
+.navlinkscroll{
+  color: #343a40;
+  
+}
+
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #00141a;
+  font-weight: 700;
+  border-bottom-color:#00141a;
+}
+
+ .navbar-light .navbar-nav .nav-link:hover {
+  color: #00141a;
+  font-weight: 700;
+  border-bottom-color: #00141a;
+}
+
+.navbar-light .navbar-nav .nav-link.disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+  color: #ffffff;
+  font-weight: 500;
+  background-color: #00e600;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+
+
+input[type=checkbox] + label:before { content: "\f096"; } /* unchecked icon */
+input[type=checkbox] + label:before { letter-spacing: 10px; } /* space between checkbox and label */
+
+input[type=checkbox]:checked + label:before { content: "\f046";
+color: green;} /* checked icon */
+input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow space for check mark */
+
+.learnmorerow{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.topfront{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+}
+
+.topfront1{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  color: red;
+}
+
+.rowertop{
+  margin-top: 40px;
+}
+
+.catchheader{
+  text-align: center;
+  font-weight: 600;
+  line-height: 45px;
+  font-size: 40px;
+  color: #5cc804;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.subcompeller{
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  top: -10px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+
+.modal-backdrop.fade {
+  opacity: 0;
+}
+
+.modal-backdrop.show {
+  opacity: 0.95;
+}
+
+li {
+  padding-left: 1.3em ;
+  list-style: none;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+
+li:before {
+  content: '\f00c';
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.3em;
+}
+
+#option_button {
+ white-space: normal;
+ color: white;
+ font-size: 24px;
+ text-transform: uppercase;
+ font-weight: 700;
+ line-height: 30px;
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+#option_button small {
+     display: block
+}
+
+.forlandia{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #f7cfcf;
+  padding: 18px;
+}
+
+.bodyholdcontent {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.labeltitle {
+  font-weight: 700;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* do not group these rules */
+*::-webkit-input-placeholder {
+    color: #a6a7a8!important;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #a6a7a8!important;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #a6a7a8!important;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #a6a7a8!important;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.spanlabeltext {
+  font-size: 15px;
+  font-family: 'Asap Condensed', sans-serif;
+}
+
+@media only screen and (min-width : 100px) and (max-width : 600px) {
+
+.navbar-brand1 {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 18px;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.bodyholdcontent {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.topfront{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.topfront1{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  color: red;
+}
+
+.rowertop{
+  margin-top: 40px;
+}
+
+.catchheader{
+  text-align: center;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  color: #5cc804;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.subcompeller{
+  font-weight: 600;
+  text-align: center;
+}
+
+.aborider{
+  margin-top: 30px;
+}
+
+.wetenby{
+  font-size: 20px;
+}
+
+.adolaja{
+  font-size: 14px;
+}
+
+.paddy{
+    font-size: 14px;
+  }
+
+}
+
+  </style>
+
+  <body style="background-color: #ffffff;">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light navbar-expand-lg navbackground">
+      <div class="container">
+       <a class="navbar-brand1" href="/" style=""><img src="https://res.cloudinary.com/nikasemo/image/upload/v1515260494/logowebsite111_hqcvbh.png" height="30px" width="55px" style="margin-right:5px; margin-top: 5px;">
+        <span style="font-weight: 300;" class="paddy">Help Businesses <span style="font-weight: 700; color: #fdca00;">Online</span></span></a>
+       
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<section class="bodyholdcontent">
+   <div class="container">
+    <div class="row rowertop">
+      <div class="col-lg-12">
+        <h2 class="catchheader">"Grow your Business Online (Using the Internet) and get Customers and Clients Anytime and Everytime using Proven and Timeless Strategies"</h2>
+        <br>
+        
+        <p class="subcompeller">Getting customers and clients is the only key to grow your business. Know ways that works! </p>
+
+        
+
+      </div>
+    </div>
+   </div>
+
+   <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <img src="https://res.cloudinary.com/nikasemo/image/upload/v1546736980/meforhbo1_hxa934.jpg" class="img-fluid">
+      </div>
+      <div class="col-lg-6 aborider">
+        <h6 style="text-align: center; color: #f41e13; font-weight: 600;">Exclusive Discusion with Bernard Lomo on</h6>
+        <ul style="text-align: left;">
+          <li style="font-weight: 300;"><span style="font-weight: 700;">How</span> you should approach marketing your business's products and services on the internet.</li>
+          <li style="font-weight: 300;"><span style="font-weight: 700;">How</span> to bring in a flood of new customers for your business even if you are brand new to online marketing.</li>
+          <li style="font-weight: 300;"><span style="font-weight: 700;">How</span> to scale and build a consistent stream of customers that pay you money for your products or services.</li>
+        </ul>
+
+        <p>
+          <a id="option_button" data-toggle="modal" data-target="#exampleModal" class="btn btn-success btn-block" >
+            <i class="fa fa-arrow-right" aria-hidden="true"></i> Yes! Book a free Consultation <small>
+            <span style="font-size: 14px; font-weight: 300;">Let's help you Grow your Business with the internet!</span></small></a>
+        </p>
+        <p style="text-align: center;"><a style="color: #28a745;" href="/appointments/new">Button does not work? Click here!</a></p>
+         <p style="text-align: center; display: none;"> <span id="days"></span> | <span id="hours"></span> | <span id="minutes"></span> | <span id="seconds"></span> </p>
+        <p class="topfront1">Closes in <span style="font-size: 12px; font-weight: 300;" id="demo"></span> ..</p>
+        <p>
+
+      </div>
+    </div>
+   </div>
+
+   <div class="container">
+    <div class="row learnmorerow">
+      <div class="col-sm-12 col-lg-6">
+      
+      </div>
+      <div class="col-sm-12 col-lg-6 aborider">
+        
+      </div>
+    </div>
+   </div>
+
+
+<div class="container" style="position: relative; top: -30px;">
+<div class="row">
+  <div class="col-lg-12">
+    <div class="row forlandia">
+      <div class="col-lg-1">
+        <i class="fa fa-exclamation-triangle fa-2x" style="color: #f76a6a;" aria-hidden="true"></i>
+      </div>
+      <div class="col-lg-11 adolaja">
+        <span style="font-weight: 700;">QUICK NOTICE:</span> We know business owners are very busy and do not have a lot of time to spare. We will first schedule a 15 minute call with you to help you address some problems you have concerning internet marketing. You stand to loose nothing when you take the appointment. <span style="font-weight: 500;"> We can only handle a limited number of businesses at a time. Click on the button below to book a free consultation today.</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <br>
+    <p>
+          <a id="option_button" data-toggle="modal" data-target="#exampleModal" class="btn btn-success btn-block" >
+            <i class="fa fa-arrow-right" aria-hidden="true"></i> Yes! Book a free Consultation <small>
+            <span style="font-size: 14px; font-weight: 300;">Let's help you Grow your Business with the internet!</span></small></a>
+        </p>
+        <p style="text-align: center;"><a style="color: #28a745;" href="/appointments/new">Button does not work? Click here!</a></p>
+  </div>
+</div>
+</div>
+
+<div class="container">
+  <div class="row" style="margin-top: 70px;">
+   
+    <div class="col-lg-12">
+      <h5 style="text-align: center; font-weight: 300;">Copyright 2019, Help Businesses Online. www.helpbusinessesonline.com</h5>
+      <p style="font-weight: 300; font-size: 18px; text-align: center;">Terms | Privacy Policy | Disclaimer</p>
+<br><br>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="text-align: center;" id="exampleModalLabel">Kindly fill this form so we can know more about you.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      
+
+        <%= form_for(@appointment) do |f| %>
+  <% if @appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+
+      <ul>
+      <% @appointment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label "Name", :class => "labeltitle" %>
+    <%= f.text_field :name, :class => "form-control", :Placeholder => "Your name" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Company Name", :class => "labeltitle" %>
+    <%= f.text_field :companyname, :class => "form-control", :Placeholder => "Your Company Name" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Number of Employees: ", :class => "labeltitle" %>
+    <%= f.number_field :numofemployees, :Placeholder => "Enter number" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Have you used the internet as a tool to market your company or service before?", :class => "labeltitle" %><br>
+    <input type="checkbox" name="appointment[usedsocmedmarket][]" id="appointment_usedsocmedmarket_1" value="Yes">
+    <span style="margin-right: 10px; margin-left: 2px;" class="spanlabeltext">Yes</span> 
+<input type="checkbox" name="appointment[usedsocmedmarket][]" id="appointment_usedsocmedmarket_2" value="Maybe"><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">No</span>
+<input type="checkbox" name="appointment[usedsocmedmarket][]" id="appointment_usedsocmedmarket_3" value=""><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">Maybe</span>
+<input type="checkbox" name="appointment[usedsocmedmarket][]" id="appointment_usedsocmedmarket_4" value="I dont know about internet marketing."><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">I dont know about internet marketing.</span><br> 
+  </div>
+
+  <div class="form-group">
+    <%= f.label "If you answered yes above, was it effective?", :class => "labeltitle" %><br>
+    <input type="checkbox" name="appointment[wasiteffective][]" id="appointment_wasiteffective_1" value="Yes">
+    <span style="margin-right: 10px; margin-left: 2px;" class="spanlabeltext">Yes</span> 
+<input type="checkbox" name="appointment[wasiteffective][]" id="appointment_wasiteffective_2" value="No"><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">No</span>
+<input type="checkbox" name="appointment[wasiteffective][]" id="appointment_wasiteffective_3" value="Maybe"><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">Maybe</span>
+<input type="checkbox" name="appointment[wasiteffective][]" id="appointment_wasiteffective_4" value="I couldn't measure my performance."><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">I couldn't measure my performance.</span><br>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Do you have a (Tick what you have)", :class => "labeltitle" %><br>
+    <input type="checkbox" name="appointment[doyouhave][]" id="appointment_doyouhave_1" value="a Website">
+    <span style="margin-right: 10px; margin-left: 2px;" class="spanlabeltext">a Website</span> 
+<input type="checkbox" name="appointment[doyouhave][]" id="appointment_doyouhave_2" value="Social media presence (Facebook, Twitter, Instagram)"><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">Social media presence (Facebook, Twitter, Instagram)</span><br>
+<input type="checkbox" name="appointment[doyouhave][]" id="appointment_doyouhave_3" value="Video content for social media"><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext"">Video content for social media</span>
+<input type="checkbox" name="appointment[doyouhave][]" id="appointment_doyouhave_4" value="Have Google search optimization."><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext"">Have Google search optimization.</span><br>
+<input type="checkbox" name="appointment[doyouhave][]" id="appointment_doyouhave_5" value="I don't have any."><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">I don't have any.</span><br>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Have you used any of these platforms to promote your Business before?", :class => "labeltitle" %><br>
+     <input type="checkbox" name="appointment[usedanytopromote][]" id="appointment_usedanytopromote_1" value="Yes">
+    <span style="margin-right: 10px; margin-left: 2px;" class="spanlabeltext">Yes</span> 
+<input type="checkbox" name="appointment[usedanytopromote][]" id="appointment_usedanytopromote_2" value="Maybe"><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">No</span>
+<input type="checkbox" name="appointment[usedanytopromote][]" id="appointment_usedanytopromote_3" value=""><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">Maybe</span>
+<input type="checkbox" name="appointment[usedanytopromote][]" id="appointment_usedanytopromote_4" value="I dont know about internet marketing."><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">I cannot recall using any of these.</span><br> 
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Your Email", :class => "labeltitle" %>
+    <%= f.text_field :email, :class => "form-control", :Placeholder => "Your Email" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Your Phone Number", :class => "labeltitle" %>
+    <%= f.text_field :phonenum, :class => "form-control", :Placeholder => "Your Phone Number" %>
+  </div>
+
+  <div class="form-group">
+    <p style="text-align: center;"><%= f.submit "Submit", :class => "btn btn-lg btn-success" %></p>
+  </div>
+<% end %>
+
+
+
+         </div>
+  </div>
+</div>
+</div>
+
+  
+
+<img src="https://res.cloudinary.com/nikasemo/image/upload/v1528688258/adsimagegroups1_b68ws8.jpg" class="img-fluid" style="display: none;">
+
+
+</body>
+
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("January 9, 2019 23:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+    document.getElementById("demo").innerHTML = days + " days " + hours + " hours "
+    + minutes + " minutes " + seconds + " seconds ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+
+
+
+
+
