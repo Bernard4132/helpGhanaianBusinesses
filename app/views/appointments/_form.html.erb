@@ -11,52 +11,72 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <%= f.label "Name", :class => "labeltitle" %>
+    <%= f.text_field :name, :class => "form-control", :Placeholder => "Your name" %>
   </div>
 
-  <div class="field">
-    <%= f.label :companyname %>
-    <%= f.text_field :companyname %>
+  <div class="form-group">
+    <%= f.label "Company Name", :class => "labeltitle" %>
+    <%= f.text_field :companyname, :class => "form-control", :Placeholder => "Your Company Name" %>
   </div>
 
-  <div class="field">
-    <%= f.label :numofemployees %>
-    <%= f.number_field :numofemployees %>
+  <div class="form-group">
+    <%= f.label "Number of Employees: ", :class => "labeltitle" %>
+    <%= f.number_field :numofemployees, :Placeholder => "Enter number" %>
   </div>
 
-  <div class="field">
-    <%= f.label :usedsocmedmarket %>
-    <%= f.text_field :usedsocmedmarket %>
+  <div class="form-group">
+    <%= f.label "Have you used the internet as a tool to market your company or service before?", :class => "labeltitle" %><br>
+    <input type="checkbox" name="appointment[usedsocmedmarket]" id="appointment_usedsocmedmarket" value="Yes">
+    <span style="margin-right: 10px; margin-left: 2px;" class="spanlabeltext">Yes</span> 
+<input type="checkbox" name="appointment[usedsocmedmarket]" id="appointment_usedsocmedmarket" value="Maybe"><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">No</span>
+<input type="checkbox" name="appointment[usedsocmedmarket]" id="appointment_usedsocmedmarket" value=""><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">Maybe</span>
+<input type="checkbox" name="appointment[usedsocmedmarket]" id="appointment_usedsocmedmarket" value="I dont know about internet marketing."><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">I dont know about internet marketing.</span><br> 
   </div>
 
-  <div class="field">
-    <%= f.label :wasiteffective %>
-    <%= f.text_field :wasiteffective %>
+  <div class="form-group">
+    <%= f.label "If you answered yes above, was it effective?", :class => "labeltitle" %><br>
+    <input type="checkbox" name="appointment[wasiteffective]" id="appointment_wasiteffective" value="Yes">
+    <span style="margin-right: 10px; margin-left: 2px;" class="spanlabeltext">Yes</span> 
+<input type="checkbox" name="appointment[wasiteffective]" id="appointment_wasiteffective" value="No"><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">No</span>
+<input type="checkbox" name="appointment[wasiteffective]" id="appointment_wasiteffective" value="Maybe"><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">Maybe</span>
+<input type="checkbox" name="appointment[wasiteffective]" id="appointment_wasiteffective" value="I couldn't measure my performance."><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">I couldn't measure my performance.</span><br>
   </div>
 
-  <div class="field">
-    <%= f.label :doyouhave %>
-    <%= f.text_field :doyouhave %>
+  <div class="form-group">
+    <%= f.label "Do you have a (Tick what you have)", :class => "labeltitle" %><br>
+    <input type="checkbox" name="appointment[doyouhave][]" id="appointment_doyouhave_1" value="a Website">
+    <span style="margin-right: 10px; margin-left: 2px;" class="spanlabeltext">a Website</span> 
+<input type="checkbox" name="appointment[doyouhave][]" id="appointment_doyouhave_2" value="Social media presence (Facebook, Twitter, Instagram)"><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">Social media presence (Facebook, Twitter, Instagram)</span><br>
+<input type="checkbox" name="appointment[doyouhave][]" id="appointment_doyouhave_3" value="Video content for social media"><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext"">Video content for social media</span>
+<input type="checkbox" name="appointment[doyouhave][]" id="appointment_doyouhave_4" value="Have Google search optimization."><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext"">Have Google search optimization.</span><br>
+<input type="checkbox" name="appointment[doyouhave][]" id="appointment_doyouhave_5" value="I don't have any."><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">I don't have any.</span><br>
   </div>
 
-  <div class="field">
-    <%= f.label :usedanytopromote %>
-    <%= f.text_field :usedanytopromote %>
+  <div class="form-group">
+    <%= f.label "Have you used any of these platforms to promote your Business before?", :class => "labeltitle" %><br>
+     <input type="checkbox" name="appointment[usedanytopromote]" id="appointment_usedanytopromote" value="Yes">
+    <span style="margin-right: 10px; margin-left: 2px;" class="spanlabeltext">Yes</span> 
+<input type="checkbox" name="appointment[usedanytopromote]" id="appointment_usedanytopromote" value="Maybe"><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">No</span>
+<input type="checkbox" name="appointment[usedanytopromote]" id="appointment_usedanytopromote" value=""><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">Maybe</span>
+<input type="checkbox" name="appointment[usedanytopromote]" id="appointment_usedanytopromote" value="I dont know about internet marketing."><span style="margin-right: 10px; margin-left: 5px;" class="spanlabeltext">I cannot recall using any of these.</span><br> 
   </div>
 
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+  <div class="form-group">
+    <%= f.label "Your Email", :class => "labeltitle" %>
+    <%= f.text_field :email, :class => "form-control", :Placeholder => "Your Email" %>
   </div>
 
-  <div class="field">
-    <%= f.label :phonenum %>
-    <%= f.text_field :phonenum %>
+  <div class="form-group">
+    <%= f.label "Your Phone Number", :class => "labeltitle" %>
+    <%= f.text_field :phonenum, :class => "form-control", :Placeholder => "Your Phone Number" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <p style="text-align: center;">A call appointment will be scheduled with you after getting your information.</p>
+
+  <div class="form-group">
+    <p style="text-align: center;"><%= f.submit "Submit", :class => "btn btn-lg btn-success" %></p>
   </div>
 <% end %>
+
