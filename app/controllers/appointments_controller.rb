@@ -28,7 +28,7 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       if @appointment.save
-        format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
+        format.html { redirect_to '/', notice: 'Your appointment has been successfully Booked. Someone from help Businesses Online will get back to you in the hour. Thank you.' }
         format.json { render :show, status: :created, location: @appointment }
       else
         format.html { render :new }
