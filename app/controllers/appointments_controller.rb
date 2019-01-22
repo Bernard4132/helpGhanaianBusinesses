@@ -69,7 +69,6 @@ class AppointmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def appointment_params
-      params[:appointment][:doyouhave] = params[:appointment][:doyouhave].join(",")
       params.require(:appointment).permit(:name, :companyname, :numofemployees, :usedsocmedmarket, :wasiteffective, :doyouhave, :usedanytopromote, :email, :phonenum)
     end
 end
